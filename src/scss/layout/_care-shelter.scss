@@ -19,9 +19,7 @@
     margin-right: 9.5rem;
   }
   &__title {
-    font-family: "Amatic SC", sans-serif;
-    font-size: 4rem;
-    font-weight: 700;
+    @include subtitle($mainText, 4rem);
     line-height: 1.23;
     margin-bottom: 1.25rem;
   }
