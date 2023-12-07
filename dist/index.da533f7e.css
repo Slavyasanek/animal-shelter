@@ -211,62 +211,120 @@ address {
   margin-inline: auto;
 }
 
-.button-yellow {
+.icon {
   cursor: pointer;
+  transition: all .25s cubic-bezier(.4, 0, .2, 1);
+}
+
+.icon:hover, .icon:focus {
+  transform: scale(1.1);
+}
+
+.white-paw {
+  fill: #fff;
+}
+
+.black-paw {
+  fill: #000;
+}
+
+.icon-arrow {
+  stroke: #fff;
+}
+
+.icon-facebook {
+  fill: #04397b;
+}
+
+.icon-telegram {
+  fill: #669ad3;
+}
+
+.btn {
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all .25s cubic-bezier(.4, 0, .2, 1);
+}
+
+.btn-amatic {
+  font-family: Amatic SC, sans-serif;
+  font-weight: 700;
+}
+
+.btn-yellow {
   background-color: #eddb51;
   border: none;
   border-radius: 2.5rem;
   width: max-content;
+}
+
+.btn-yellow:hover, .btn-yellow:focus {
+  background-color: #d5c548;
+}
+
+.btn-yellow--cleaned {
   min-width: 20.75rem;
   padding: 1.625rem 7.875rem;
-  font-family: Amatic SC, sans-serif;
   font-size: 1.5rem;
-  font-weight: 700;
   display: block;
 }
 
-.button-dark, .news__button {
+.btn-yellow--paw {
+  padding: .625rem 5.625rem;
+  font-size: 1.125rem;
+}
+
+.btn-dashed {
+  background-color: #0000;
+  border-style: dashed;
+  border-width: .125rem;
+  font-size: 1.5rem;
+}
+
+.btn-dashed--dark {
   color: #020202;
-  cursor: pointer;
-  background-color: #0000;
-  border: 2px dashed #000;
+  border-color: #000;
   border-radius: 2.5rem;
-  width: max-content;
-  min-width: 20.75rem;
-  padding: 1.625rem 9rem;
-  font-family: Amatic SC, sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  display: block;
 }
 
-.button-transparent {
+.btn-dashed--blue {
   color: #04397b;
-  cursor: pointer;
-  background-color: #0000;
-  border: 2px dashed #04397b;
+  border-color: #04397b;
   border-radius: 3.125rem;
-  padding: 1rem 3.75rem;
-  font-family: Amatic SC, sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
 }
 
-.button-blue {
-  cursor: pointer;
+.btn-blue {
   color: #fff;
   background-color: #04397b;
   border-radius: 3.125rem;
+  font-size: 1.5rem;
+}
+
+.btn-blue:hover, .btn-blue:focus {
+  background-color: #03336e;
+}
+
+.btn-paw {
   align-items: center;
   column-gap: .375em;
-  padding: .625rem 4rem;
-  font-family: Amatic SC, sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
   display: flex;
 }
 
-.button-skyblue {
+.btn-transparent {
+  border: 1px dashed #0000;
+  border-radius: 3.125rem;
+  padding: .625rem 1.25rem;
+  font-family: e-Ukraine, sans-serif;
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+.btn-transparent:hover, .btn-transparent:focus, .btn-transparent:active, .btn-transparent.active {
+  border-color: #000;
+}
+
+.btn-skyblue {
   text-transform: uppercase;
   color: #fff;
   cursor: pointer;
@@ -284,17 +342,8 @@ address {
   display: flex;
 }
 
-.button-skyblue.active, .button-skyblue:hover, .button-skyblue:focus {
+.btn-skyblue:hover, .btn-skyblue:focus, .btn-skyblue.active {
   background-color: #04397b;
-}
-
-.white-paw {
-  fill: #fff;
-  transform: scale(-1, 1);
-}
-
-.icon-arrow {
-  stroke: #fff;
 }
 
 .header--wrapper {
@@ -386,11 +435,6 @@ address {
 
 .footer__socials-icon {
   fill: #fff;
-  transition: all .25s cubic-bezier(.4, 0, .2, 1);
-}
-
-a:hover .footer__socials-icon {
-  transform: scale(1.1);
 }
 
 .footer__address p {
@@ -605,8 +649,15 @@ a:hover .footer__socials-icon {
   margin-top: 2.25rem;
 }
 
-.care-shelter__btns .button-yellow {
+.care-shelter__btn-yellow {
   margin-bottom: 1.25rem;
+}
+
+.care-shelter__btn-dashed {
+  width: max-content;
+  min-width: 20.75rem;
+  padding: 1.625rem 9rem;
+  display: block;
 }
 
 .subscription {
@@ -705,6 +756,14 @@ a:hover .footer__socials-icon {
   font-weight: 300;
 }
 
+.help-shelter__btn-paw {
+  padding: .625rem 4rem;
+}
+
+.help-shelter__btn-dashed {
+  padding: 1rem 3.75rem;
+}
+
 .help-shelter__input {
   appearance: none;
   cursor: pointer;
@@ -754,6 +813,43 @@ a:hover .footer__socials-icon {
 .demands__btns {
   flex-direction: column;
   row-gap: 1.875rem;
+  min-width: 30vw;
+  margin-right: 4.06vw;
+  display: flex;
+}
+
+.demands__subcategories {
+  flex-direction: row;
+  column-gap: 3.22vw;
+  margin-bottom: 4rem;
+  display: flex;
+}
+
+.demands__content {
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1.4;
+  list-style: disc;
+}
+
+.demands__help {
+  text-align: end;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1.4;
+  display: flex;
+}
+
+.demands__help-btn {
+  margin-bottom: 1rem;
+}
+
+.demands__icons {
+  justify-content: flex-end;
+  column-gap: 1.25rem;
+  margin-top: 1.25rem;
   display: flex;
 }
 
