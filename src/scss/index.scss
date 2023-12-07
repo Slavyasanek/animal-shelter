@@ -1,4 +1,5 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+@import '../../node_modules/swiper/swiper.scss';
 @import './utils/variables';
 @import './utils/mixins';
 @import './base/fonts';
@@ -14,4 +15,5 @@
 @import './layout/subscription';
 @import './layout/help-shelter';
 @import './layout/demands';
+@import './layout/location';
 @import './layout/news';

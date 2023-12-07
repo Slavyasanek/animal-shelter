@@ -12,6 +12,7 @@
     border: none;
     border-radius: 2.5rem;
     width: max-content;
+    color: $mainText;
     &:hover, &:focus {
       background-color: $yellowDarkHover;
     }
