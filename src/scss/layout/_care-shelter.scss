@@ -1,0 +1,34 @@
+.care-shelter {
+  padding: 9.375rem 0;
+  &--wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__details {
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    font-size: 1.5rem;
+    font-weight: 200;
+    max-width: 33.438rem;
+  }
+  &__img {
+    width: 35.25rem;
+    margin-right: 9.5rem;
+  }
+  &__title {
+    font-family: "Amatic SC", sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.23;
+    margin-bottom: 1.25rem;
+  }
+  &__btns{
+    margin-top: 2.25rem;
+    .button-yellow {
+        margin-bottom: 1.25rem;
+    }
+  }
+}

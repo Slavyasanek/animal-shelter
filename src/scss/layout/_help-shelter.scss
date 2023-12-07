@@ -1,0 +1,73 @@
+.help-shelter {
+  padding: 9.375rem 0;
+  &--wrapper {
+    color: $white;
+    background-color: $skyBlueBackground;
+    padding: 8.75rem 12.5rem 8.375rem 7.5rem;
+    border-radius: 2.5rem;
+    display: flex;
+    column-gap: 10rem;
+    background-image: url('../static/paws-track.svg');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+  }
+  &__subtitle {
+    font-family: "Amatic SC", sans-serif;
+    font-size: 2.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+  &__text {
+    max-width: 30rem;
+  }
+  &__radio-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 2.5rem;
+    column-gap: 6.875rem;
+  }
+  &__radio {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    column-gap: 0.625rem;
+    width: calc((100% - 2 * 6.875rem) / 3);
+  }
+  &__btns {
+    display: flex;
+    margin-top: 2.813rem;
+    column-gap: 7em;
+  }
+  &__label {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  &__input {
+    margin: 0;
+    appearance: none;
+    border-radius: 50%;
+    width: 1.75rem;
+    height: 1.75rem;
+    border: 2px solid $white;
+    cursor: pointer;
+    position: relative;
+    &::before {
+      content: "";
+      width: 0.875rem;
+      height: 0.875rem;
+      border-radius: 50%;
+      display: block;
+      transition: 120ms transform ease-in-out;
+      background-color: $white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: scale(0) translate(-50%, -50%);
+    }
+    &:checked::before {
+      transform: scale(1) translate(-50%, -50%);
+    }
+  }
+}

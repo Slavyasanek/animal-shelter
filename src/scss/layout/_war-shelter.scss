@@ -1,0 +1,19 @@
+.war-shelter {
+    background-size: 900px 368px, 922px 369px;
+    background-position: top left, top right;
+    background-repeat: no-repeat;
+    background-image: url('../static/cat-bg.png'), url('../static/dog-bg.png');
+    &__container {
+        padding-top: 3.75rem;
+        padding-bottom: 5.125rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 3.25rem;
+        background: linear-gradient(270deg, rgba(36, 31, 28, 0.00) 6.77%, rgba(36, 31, 28, 0.92) 38.02%, #241F1C 49.48%, rgba(36, 31, 28, 0.98) 61.98%, rgba(36, 31, 28, 0.00) 94.79%);
+    }
+    &__title {
+        @include subtitle($white);
+;    }
+}

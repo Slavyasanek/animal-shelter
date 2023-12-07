@@ -1,0 +1,7 @@
+@mixin subtitle($color) {
+  font-family: 'Amatic SC', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $color;
+}

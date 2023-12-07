@@ -1,0 +1,40 @@
+.header {
+    &--wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+    }
+    &__logo {
+        fill: $darkBlueDecorative;
+    }
+    &__nav {
+        display: flex;
+        flex-direction: row;
+        column-gap: 3rem;
+    }
+    &__link {
+        color: $darkBlueDecorative;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 0.875rem;
+    }
+}
+
+.lang-switch {
+    display: inline-flex;
+    column-gap: 1rem;
+    font-size: 0.875rem;
+    &__item {
+        color: $transparentBlue;
+        cursor: pointer;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        &.active {
+            color: $darkBlueDecorative;
+        }
+        &:hover, &:focus, &:active {
+            color: $darkBlueDecorative;
+        }
+    }
+}
