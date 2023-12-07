@@ -1,5 +1,5 @@
 .help-shelter {
-  padding: 9.375rem 0;
+  @extend %section;
   &--wrapper {
     color: $white;
     background-color: $skyBlueBackground;
@@ -40,6 +40,14 @@
   &__label {
     font-size: 1.5rem;
     font-weight: 300;
+  }
+  &__btn {
+    &-paw {
+      padding: 0.625rem 4rem;
+    }
+    &-dashed {
+      padding: 1rem 3.75rem;
+    }
   }
   &__input {
     margin: 0;

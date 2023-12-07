@@ -1,5 +1,5 @@
 .care-shelter {
-  padding: 9.375rem 0;
+  @extend %section;
   &--wrapper {
     display: flex;
     flex-direction: row;
@@ -25,8 +25,16 @@
   }
   &__btns{
     margin-top: 2.25rem;
-    .button-yellow {
-        margin-bottom: 1.25rem;
+  }
+  &__btn {
+    &-yellow {
+      margin-bottom: 1.25rem;
+    }
+    &-dashed {
+      min-width: 20.75rem;
+      padding: 1.625rem 9rem;
+      display: block;
+      width: max-content;
     }
   }
 }
