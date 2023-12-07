@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Nunito&display=swap" rel="stylesheet">
+    <script src="/index.739bf03c.js" defer=""></script>
     <title>Бест френдз</title>
   </head>
   <body>
@@ -19,25 +20,25 @@
     </a>
     <nav>
       <ul class="header__nav">
-        <li class="header__page">
+        <li>
           <a href="" class="header__link">Взяти хвостика</a>
         </li>
-        <li class="header__page">
+        <li>
           <a href="" class="header__link">Стати опікуном</a>
         </li>
-        <li class="header__page">
+        <li>
           <a href="" class="header__link">Про нас</a>
         </li>
-        <li class="header__page">
+        <li>
           <a href="" class="header__link">Підтримати притулок</a>
         </li>
-        <li class="header__page">
+        <li>
           <a href="" class="header__link">Потреби притулку</a>
         </li>
-        <li class="header__page">
+        <li>
           <a href="" class="header__link">Вже дома</a>
         </li>
-        <li class="header__page">
+        <li>
           <a href="" class="header__link">Сувеніри</a>
         </li>
       </ul>
@@ -54,7 +55,7 @@
   <div class="container">
     <div class="main-hero__quote">
       <div>
-        <p class="main-hero__title">не купуй, візьми з притулку!</p>
+        <p class="main-hero__title">не купуй,<br> візьми з притулку!</p>
         <button class="btn btn-amatic btn-yellow btn-yellow--cleaned">взяти друга</button>
       </div>
       <ul class="main-hero__gallery">
@@ -94,10 +95,14 @@
       <div class="main-hero__paragraph">
         <h2 class="main-hero__subtitle">про притулок</h2>
         <p class="main-hero__text">Частный приют для животных «Бест френдз» был основан в 2014 году селе Фасовая, Макаровского района, Киевской области на базе общественной организации «Зооцентр «Ковчег» Оноприенко Галиной Федоровной и построен за ее собственные средства. Галина Федоровна является владельцем приюта и его директором.</p>
-        <img src="/shelter1.c8b2ca3c.jpg" alt="friendly dogs" width="768" class="main-hero__img">
+        <div class="main-hero__img--wrapper">
+          <img src="/shelter1.c8b2ca3c.jpg" alt="friendly dogs" width="768" class="main-hero__img">
+        </div>
       </div>
       <div class="main-hero__paragraph">
-        <img src="/shelter2.c223a610.jpg" alt="friendly dogs" width="790" class="main-hero__img">
+        <div class="main-hero__img--wrapper">
+          <img src="/shelter2.c223a610.jpg" alt="friendly dogs" width="790" class="main-hero__img">
+        </div>
         <p class="main-hero__text">
           Частный приют для животных «Бест френдз» был основан в 2014 году селе Фасовая, Макаровского района, Киевской области на базе общественной организации «Зооцентр «Ковчег» Оноприенко Галиной Федоровной и построен за ее собственные средства. Галина Федоровна является владельцем приюта и его директором.
         </p>
@@ -132,7 +137,7 @@
       </ul>
       <div class="help-shelter__btns">
         <a href="" class="btn btn-amatic btn-blue help-shelter__btn-paw btn-paw">
-            <svg width="35" height="35" class="white-paw">
+            <svg width="35" height="35" class="icon-white">
                 <use href="/icons.c1b8ed40.svg#icon-paw"></use>
             </svg>
             Сплатити</a>
@@ -142,6 +147,32 @@
   </div>
 </section>
 
+    <section class="slider">
+    <div class="swiper" data-slider="big-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          ...
+        </div>
+        <div class="swiper-pagination"></div>
+      
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-scrollbar"></div>
+      </div>
+    <div class="container">
+        <h2 class="slider__title">Шукає дім</h2>
+        <div class="slider__info">
+            <p class="slider__name">Дівчинка</p>
+            <p class="slider__age">1 рік</p>
+        </div>
+        <div class="slider__btns">
+            <a href="" class="btn btn-yellow btn-yellow--cleaned btn-amatic">познайомитись</a>
+            <a href="" class="btn btn-dashed btn-dashed--dark slider__btn-dashed">Подивитись усіх</a>
+        </div>
+    </div>
+</section>
     <section class="care-shelter">
     <div class="container care-shelter--wrapper">
         <div class="care-shelter__details">
@@ -152,7 +183,7 @@
                 <a href="" class="btn btn-amatic btn-dashed btn-dashed--dark care-shelter__btn-dashed">Детальніше</a>
             </div>
         </div>
-        <img src="/maine-coon.a2a9c464.jpg" width="564" alt="maine coon" class="care-shelter__img">
+        <img src="/maine-coon.974c6752.png" width="564" alt="maine coon" class="care-shelter__img">
     </div>
 </section>
     <section class="subscription">
@@ -233,7 +264,7 @@
         </ul>
       </div>
       <div class="demands__help">
-        <div class="">
+        <div>
           <button class="btn btn-yellow btn-yellow--paw btn-paw btn-amatic demands__help-btn">
             <svg width="35" height="35" class="black-paw">
               <use href="/icons.c1b8ed40.svg#icon-paw"></use>
@@ -282,6 +313,68 @@
         </div>
     </div>
 </section>
+    <section class="location">
+  <div class="container">
+    <!-- socials -->
+    <h2 class="location__subtitle">Де нас знайти</h2>
+    <div class="location--wrapper">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5489.381967068849!2d30.512038145318567!3d50.436628448891724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cefc648ccd2f%3A0x1b871d253685c27e!2z0LLRg9C7LiDQkNC90YLQvtC90L7QstC40YfQsCwgMjEsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1701964670929!5m2!1suk!2sua" width="800" height="450" style="border: 0" allowfullscreen="" class="location__map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="location__block">
+        <div class="location__info">
+          <div class="location__text-block">
+            <p class="location__name">Адреса</p>
+            <address>вул. Антоновича, 21</address>
+          </div>
+          <div class="location__text-block">
+            <p class="location__name">Години роботи</p>
+            <p>Пн-Нд</p>
+            <time>10:00 - 16:00</time>
+          </div>
+          <div class="location__text-block">
+            <p class="location__name">Контакти</p>
+            <a href="tel:+380993554433">+38(099)355-44-33</a>
+          </div>
+          <a href="http://" target="_blank" rel="noopener noreferrer" class="btn btn-yellow btn-amatic btn-yellow--paw btn-paw location__btn">
+            <svg width="35" height="35" class="dark-paw">
+              <use href="/icons.c1b8ed40.svg#icon-paw"></use>
+            </svg>
+            Прокласти маршрут</a>
+        </div>
+        <ul class="location__socials">
+          <li>
+            <a href="http://" target="_blank" rel="noopener noreferrer">
+              <svg width="40" height="40" class="icon icon-white">
+                <use href="/icons.c1b8ed40.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="http://" target="_blank" rel="noopener noreferrer">
+              <svg width="40" height="40" class="icon icon-white">
+                <use href="/icons.c1b8ed40.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="http://" target="_blank" rel="noopener noreferrer">
+              <svg width="40" height="40" class="icon icon-white">
+                <use href="/icons.c1b8ed40.svg#icon-telegram"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="http://" target="_blank" rel="noopener noreferrer">
+              <svg width="40" height="40" class="icon icon-white">
+                <use href="/icons.c1b8ed40.svg#icon-youtube"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
     <footer class="footer">
   <div class="container">
     <div class="footer--wrapper">
@@ -322,35 +415,35 @@
         <ul class="footer__socials-list">
           <li>
             <a href="http://" target="_blank" rel="noopener noreferrer">
-              <svg class="icon footer__socials-icon" width="40" height="40">
+              <svg class="icon icon-white" width="40" height="40">
                 <use href="/icons.c1b8ed40.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
           <li>
             <a href="http://" target="_blank" rel="noopener noreferrer">
-              <svg class="icon footer__socials-icon" width="40" height="40">
+              <svg class="icon icon-white" width="40" height="40">
                 <use href="/icons.c1b8ed40.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
           <li>
             <a href="http://" target="_blank" rel="noopener noreferrer">
-              <svg class="icon footer__socials-icon" width="40" height="40">
+              <svg class="icon icon-white" width="40" height="40">
                 <use href="/icons.c1b8ed40.svg#icon-telegram"></use>
               </svg>
             </a>
           </li>
           <li>
             <a href="http://" target="_blank" rel="noopener noreferrer">
-              <svg class="icon footer__socials-icon" width="40" height="40">
+              <svg class="icon icon-white" width="40" height="40">
                 <use href="/icons.c1b8ed40.svg#icon-youtube"></use>
               </svg>
             </a>
           </li>
           <li>
             <a href="http://" target="_blank" rel="noopener noreferrer">
-              <svg class="icon footer__socials-icon" width="40" height="40">
+              <svg class="icon icon-white" width="40" height="40">
                 <use href="/icons.c1b8ed40.svg#icon-tiktok"></use>
               </svg>
             </a>
@@ -362,5 +455,5 @@
   </div>
 </footer>
 
-  <script src="/animal-shelter.59712999.js"></script></body>
+  </body>
 </html>

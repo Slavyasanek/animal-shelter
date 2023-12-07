@@ -9,7 +9,8 @@
   "author": "Polishchuk Olexandra <sasha03092003@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "modern-normalize": "^2.0.0"
+    "modern-normalize": "^2.0.0",
+    "swiper": "^11.0.5"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.10.3",
