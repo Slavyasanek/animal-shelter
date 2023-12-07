@@ -9,16 +9,20 @@
     margin-bottom: 4.75rem;
   }
   &__image-wrapper {
-    max-width: 50rem;
-    height: 27.125rem;
+    max-width: 41.9vw;
+    height: auto;
     flex-shrink: 0;
     border-radius: 0.313rem;
     overflow: hidden;
+    & > img {
+      object-fit: cover;
+      height: 100%;
+    }
   }
   &__wrapper {
     display: flex;
     flex-direction: row;
-    column-gap: 6.25rem;
+    column-gap: 5.2vw;
   }
   &__text {
     font-weight: 200;
@@ -30,7 +34,7 @@
   &__button {
     align-self: flex-end;
     font-size: 1.125rem;
-    padding: 1rem 3.75rem;
-    min-width: 13.75rem;
+    padding: 1rem 3.125vw;
+    min-width: 11.5vw;
   }
 }

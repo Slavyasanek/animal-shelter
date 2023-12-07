@@ -1,6 +1,7 @@
 .war-shelter {
-    background-size: 900px 368px, 922px 369px;
-    background-position: top left, top right;
+    width: 100%;
+    // background-size: 900px 368px, 922px 369px;
+    background-position: left, right;
     background-repeat: no-repeat;
     background-image: url('../static/cat-bg.png'), url('../static/dog-bg.png');
     &__container {

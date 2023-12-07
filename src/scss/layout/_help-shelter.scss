@@ -3,10 +3,10 @@
   &--wrapper {
     color: $white;
     background-color: $skyBlueBackground;
-    padding: 8.75rem 12.5rem 8.375rem 7.5rem;
+    padding: 8.75rem 10.51vw 8.375rem 6.25vw;
     border-radius: 2.5rem;
     display: flex;
-    column-gap: 10rem;
+    column-gap: 8.33vw;
     background-image: url('../static/paws-track.svg');
     background-repeat: no-repeat;
     background-position: left bottom;
@@ -16,26 +16,26 @@
     margin-bottom: 1.5rem;
   }
   &__text {
-    max-width: 30rem;
+    max-width: 25vw;
   }
   &__radio-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     row-gap: 2.5rem;
-    column-gap: 6.875rem;
+    column-gap: 5.72vw;
   }
   &__radio {
     display: flex;
     flex-direction: row-reverse;
     justify-content: start;
     column-gap: 0.625rem;
-    width: calc((100% - 2 * 6.875rem) / 3);
+    width: calc((100% - 2 * 5.72vw) / 3);
   }
   &__btns {
     display: flex;
     margin-top: 2.813rem;
-    column-gap: 7em;
+    column-gap: 5.83vw;
   }
   &__label {
     font-size: 1.5rem;
@@ -43,10 +43,10 @@
   }
   &__btn {
     &-paw {
-      padding: 0.625rem 4rem;
+      padding: 0.625rem 3.33vw;
     }
     &-dashed {
-      padding: 1rem 3.75rem;
+      padding: 1rem 3.125vw;
     }
   }
   &__input {
@@ -58,6 +58,7 @@
     border: 2px solid $white;
     cursor: pointer;
     position: relative;
+    flex-shrink: 0;
     &::before {
       content: "";
       width: 0.875rem;
