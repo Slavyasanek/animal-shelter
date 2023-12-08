@@ -32,7 +32,6 @@ function swiperSlider() {
             modules: [Navigation],
             slidesPerView: 4,
             spaceBetween: 20,
-            // centeredSlides: true,
             speed: 1000,
             navigation: {
                 nextEl: '.swiper-button-next',
