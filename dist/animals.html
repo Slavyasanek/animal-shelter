@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/about.da533f7e.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Nunito&display=swap" rel="stylesheet">
+    <script src="/about.739bf03c.js" defer=""></script>
+    <title>Усі хвостики</title>
+</head>
+<body>
+    <header class="header">
+  <div class="container header--wrapper">
+    <a href="./">
+      <svg width="100" height="75" class="header__logo">
+        <use href="/icons.c1b8ed40.svg#icon-logo"></use>
+      </svg>
+    </a>
+    <nav>
+      <ul class="header__nav">
+        <li>
+          <a href="/animals.html" class="header__link">Взяти хвостика</a>
+        </li>
+        <li>
+          <a href="" class="header__link">Стати опікуном</a>
+        </li>
+        <li>
+          <a href="/about.html" class="header__link">Про нас</a>
+        </li>
+        <li>
+          <a href="#support" class="header__link">Підтримати притулок</a>
+        </li>
+        <li>
+          <a href="#demands" class="header__link">Потреби притулку</a>
+        </li>
+        <li>
+          <a href="" class="header__link">Вже дома</a>
+        </li>
+        <li>
+          <a href="" class="header__link">Сувеніри</a>
+        </li>
+      </ul>
+    </nav>
+    <button type="button" class="donation">Терміновий збір</button>
+    <ul class="lang-switch">
+      <li><a href="" class="lang-switch__item active">UA</a></li>
+      <li><a href="" class="lang-switch__item">EN</a></li>
+    </ul>
+  </div>
+</header>
+
+    <main>
+        <section class="friends">
+    <div class="container">
+       <form class="friends__input--wrapper">
+        <input type="text" name="animal" id="animal" placeholder="Пошук" class="friends__input">
+        <button type="submit" class="btn btn-icon friends__input-btn">
+            <svg width="24" height="24" class="icon-search">
+                <use href="/icons.c1b8ed40.svg#icon-search"></use>
+            </svg>
+        </button>
+       </form>
+       <div class="friends--wrapper">
+        <div class="filter">
+    <p class="filter__title">Фільтр</p>
+    <ul class="filter__options">
+        <li class="filter__block">
+            <p class="filter__subtitle">Тваринки</p>
+            <ul class="filter__btns">
+                <li>
+                    <button type="button" class="btn filter__btn active">
+                        <svg width="35" height="35" class="filter-icon">
+                            <use href="/icons.c1b8ed40.svg#icon-paw"></use>
+                        </svg>
+                        <p class="filter__btn-title">Всі</p>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="btn filter__btn">
+                        <svg width="35" height="35" class="filter-icon">
+                            <use href="/icons.c1b8ed40.svg#icon-dog"></use>
+                        </svg>
+                        <p class="filter__btn-title">Песики</p>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="btn filter__btn">
+                        <svg width="35" height="35" class="filter-icon">
+                            <use href="/icons.c1b8ed40.svg#icon-cat"></use>
+                        </svg>
+                        <p class="filter__btn-title">Котики</p>
+                    </button>
+                </li>
+            </ul>
+        </li>
+        <li class="filter__block">
+            <ul class="filter__list">
+                <li class="filter__item"><input type="radio" name="priority" id="all-priority" class="custom-radio filter__radio" value="all-priority" checked=""><label for="all-priority">Всі</label></li>
+                <li class="filter__item"><input type="radio" name="priority" id="caretaker" class="custom-radio filter__radio" value="caretaker"><label for="caretaker">Стати опікуном</label></li>
+            </ul>
+        </li>
+        <li class="filter__block">
+            <button class="btn btn-icon filter__expand">
+                <svg height="20" width="18" class="icon-arrow-black">
+                    <use href="/icons.c1b8ed40.svg#icon-arrow-small"></use>
+                </svg>
+            </button>
+            <p class="filter__subtitle">Стать</p>
+            <ul class="js-expand-list">
+                <li class="filter__item"><input type="radio" name="gender" id="all" value="all" class="custom-radio filter__radio" checked=""><label for="all">Всі</label></li>
+                <li class="filter__item"><input type="radio" name="gender" id="girls" value="girls" class="custom-radio filter__radio"><label for="girls">Дівчинка</label></li>
+                <li class="filter__item"><input type="radio" name="gender" id="boys" value="boys" class="custom-radio filter__radio"><label for="boys">Хлопчик</label></li>
+            </ul>
+        </li>
+        <li class="filter__block">
+            <button class="btn btn-icon filter__expand">
+                <svg height="20" width="18" class="icon-arrow-black">
+                    <use href="/icons.c1b8ed40.svg#icon-arrow-small"></use>
+                </svg>
+            </button>
+            <p class="filter__subtitle">Вік</p>
+            <ul class="js-expand-list">
+                <li class="filter__item"><input type="checkbox" name="age" id="all-age" class=" custom-checkbox filter__checkbox"><label for="all-age">Всі</label></li>
+                <li class="filter__item"><input type="checkbox" name="age" id="up-to-one" class=" custom-checkbox filter__checkbox"><label for="up-to-one">до 1р.</label></li>
+                <li class="filter__item"><input type="checkbox" name="age" id="one-two" class=" custom-checkbox filter__checkbox"><label for="one-two">1-2р.</label></li>
+                <li class="filter__item"><input type="checkbox" name="age" id="two-five" class=" custom-checkbox filter__checkbox"><label for="two-five">2-5р.</label></li>
+                <li class="filter__item"><input type="checkbox" name="age" id="up-five" class=" custom-checkbox filter__checkbox"><label for="up-five">більше 5р.</label></li>
+            </ul>
+        </li>
+        <li class="filter__block">
+            <button class="btn btn-icon filter__expand">
+                <svg height="20" width="18" class="icon-arrow-black">
+                    <use href="/icons.c1b8ed40.svg#icon-arrow-small"></use>
+                </svg>
+            </button>
+            <p class="filter__subtitle">Розмір</p>
+            <ul class="js-expand-list">
+                <li class="filter__item"><input class=" custom-checkbox filter__checkbox" type="checkbox" name="size" value="all-size" id="all-size"><label for="all-size">Усі</label></li>
+                <li class="filter__item"><input class=" custom-checkbox filter__checkbox" type="checkbox" name="size" value="big" id="big"><label for="big">Великі</label></li>
+                <li class="filter__item"><input class=" custom-checkbox filter__checkbox" type="checkbox" name="size" value="medium" id="medium"><label for="medium">Середні</label></li>
+                <li class="filter__item"><input class=" custom-checkbox filter__checkbox" type="checkbox" name="size" value="small" id="small"><label for="small">Маленькі</label></li>
+            </ul>
+        </li>
+        <li class="filter__block">
+            <button class="btn btn-icon filter__expand">
+                <svg height="20" width="18" class="icon-arrow-black">
+                    <use href="/icons.c1b8ed40.svg#icon-arrow-small"></use>
+                </svg>
+            </button>
+            <p class="filter__subtitle">Стерилізація</p>
+            <ul class="js-expand-list">
+                <li class="filter__item"><input type="radio" name="sterilization" id="all-sterilization" value="all-sterilization" class="custom-radio filter__radio" checked=""><label for="all-sterilization">Всі</label></li>
+                <li class="filter__item"><input type="radio" name="sterilization" id="sterilized" value="sterilized" class="custom-radio filter__radio"><label for="sterilized">Зроблена</label></li>
+                <li class="filter__item"><input type="radio" name="sterilization" id="without" value="without" class="custom-radio filter__radio"><label for="without">Немає</label></li>
+            </ul>
+        </li>
+        <li class="filter__block">
+            <button class="btn btn-icon filter__expand">
+                <svg height="20" width="18" class="icon-arrow-black">
+                    <use href="/icons.c1b8ed40.svg#icon-arrow-small"></use>
+                </svg>
+            </button>
+            <p class="filter__subtitle">Шерсть</p>
+            <ul class="js-expand-list">
+                <li class="filter__item"><input type="checkbox" name="fur" value="all-fur" id="all-fur" class=" custom-checkbox filter__checkbox"><label for="all-fur">Всі</label></li>
+                <li class="filter__item"><input type="checkbox" name="fur" value="short" id="short" class=" custom-checkbox filter__checkbox"><label for="short">Коротка</label></li>
+                <li class="filter__item"><input type="checkbox" name="fur" value="average" id="average" class=" custom-checkbox filter__checkbox"><label for="average">Середня</label></li>
+                <li class="filter__item"><input type="checkbox" name="fur" value="long" id="long" class=" custom-checkbox filter__checkbox"><label for="long">Довга</label></li>
+            </ul>
+        </li>
+        <li class="filter__block">
+            <button class="btn btn-icon filter__expand">
+                <svg height="20" width="18" class="icon-arrow-black">
+                    <use href="/icons.c1b8ed40.svg#icon-arrow-small"></use>
+                </svg>
+            </button>
+            <p class="filter__subtitle">Характер</p>
+            <ul class="js-expand-list">
+                <li class="filter__item"><input type="radio" name="personality" value="all-personality" id="all-personality" class="custom-radio filter__radio" checked=""><label for="all-personality">Всі</label></li>
+                <li class="filter__item"><input type="radio" name="personality" value="calm" id="calm" class="custom-radio filter__radio"><label for="calm">Спокійний</label></li>
+                <li class="filter__item"><input type="radio" name="personality" value="active" id="active" class="custom-radio filter__radio"><label for="active">Активний</label></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+        <div class="friends__list--wrapper">
+            <ul class="friends__list">
+                <li class="friends__card">
+                    <img src="/animal1.88e773ab.jpg" alt="" class="friends__img">
+                    <p class="friends__name">Мурка</p>
+                    <div class="friends__state">
+                        <p>Під опікою</p>
+                    </div>
+                </li>
+                <li class="friends__card">
+                    <img src="/animal2.ab319109.jpg" alt="" class="friends__img">
+                                        <p class="friends__name">Мурка</p>
+                    <div class="friends__state">
+                        <p>Під опікою</p>
+                    </div>
+                </li>
+                <li class="friends__card">
+                    <img src="/animal1.88e773ab.jpg" alt="" class="friends__img">
+                                        <p class="friends__name">Мурка</p>
+                    <div class="friends__state">
+                        <p>Під опікою</p>
+                    </div>
+                </li>
+                <li class="friends__card">
+                    <img src="/animal1.88e773ab.jpg" alt="" class="friends__img">
+                                        <p class="friends__name">Мурка</p>
+                    <div class="friends__state">
+                        <p>Під опікою</p>
+                    </div>
+                </li>
+                <li class="friends__card">
+                    <img src="/animal1.88e773ab.jpg" alt="" class="friends__img">
+                                        <p class="friends__name">Мурка</p>
+                    <div class="friends__state">
+                        <p>Під опікою</p>
+                    </div>
+                </li>
+                <li class="friends__card">
+                    <img src="/animal2.ab319109.jpg" alt="" class="friends__img">
+                                        <p class="friends__name">Мурка</p>
+                    <div class="friends__state">
+                        <p>Під опікою</p>
+                    </div>
+                </li>
+                <li class="friends__card">
+                    <img src="/animal1.88e773ab.jpg" alt="" class="friends__img">
+                                        <p class="friends__name">Мурка</p>
+                    <div class="friends__state">
+                        <p>Під опікою</p>
+                    </div>
+                </li>
+            </ul>
+            <button type="button" class="btn btn-amatic btn-dashed btn-dashed--dark friends__btn">Детальніше</button>
+        </div>
+       </div>
+    </div>
+</section>
+        <section class="section help-shelter" id="support">
+  <div class="container help-shelter--wrapper">
+    <div class="help-shelter__text">
+      <h2 class="help-shelter__subtitle">Підтримати притулок</h2>
+      <p>
+        Якщо бажаєш ощасливити наших хвостатих улюбленців, найдієвіший спосіб -
+        пожертвувати гроші на їх утримання та лікування.
+      </p>
+    </div>
+    <form>
+      <ul class="help-shelter__radio-list">
+        <li class="help-shelter__radio"><label class="help-shelter__label" for="25">25 грн</label><input class="custom-radio help-shelter__input" type="radio" name="price" id="25" value="25"></li>
+        <li class="help-shelter__radio"><label class="help-shelter__label" for="50">50 грн</label><input class="custom-radio help-shelter__input" type="radio" name="price" id="50" value="50"></li>
+        <li class="help-shelter__radio"><label class="help-shelter__label" for="100">100 грн</label><input class="custom-radio help-shelter__input" type="radio" name="price" id="100" value="100"></li>
+        <li class="help-shelter__radio"><label class="help-shelter__label" for="200">200 грн</label><input class="custom-radio help-shelter__input" type="radio" name="price" id="200" value="200"></li>
+        <li class="help-shelter__radio"><label class="help-shelter__label" for="500">500 грн</label><input class="custom-radio help-shelter__input" type="radio" name="price" id="500" value="500"></li>
+        <li class="help-shelter__radio"><label class="help-shelter__label" for="other">Інша сума</label><input class="custom-radio help-shelter__input" type="radio" name="price" id="other" value="other"></li>
+      </ul>
+      <div class="help-shelter__btns">
+        <a href="" class="btn btn-amatic btn-blue help-shelter__btn-paw btn-paw">
+            <svg width="35" height="35" class="icon-white">
+                <use href="/icons.c1b8ed40.svg#icon-paw"></use>
+            </svg>
+            Сплатити</a>
+        <a href="" class="btn btn-dashed btn-dashed--blue btn-amatic help-shelter__btn-dashed">Усі реквізити</a>
+      </div>
+    </form>
+  </div>
+</section>
+
+        <section class="news">
+    <div class="container">
+        <h2 class="news__subtitle">важливі новини притулку</h2>
+        <div class="news__wrapper">
+            <div class="news__image-wrapper">
+                <img src="/dog.90664e4d.jpg" alt="dog" width="806">
+            </div>
+            <div class="news__text">
+                <p>Інформація...Lorem ipsum dolor sit amet consectetur. Nec dictumst eu mauris ac purus pharetra viverra. Nullam egestas et nisl id pulvinar enim et. Vestibulum neque in ultrices nunc non. Purus suspendisse praesent urna pulvinar egestas arcu eget suspendisse. Arcu feugiat orci erat feugiat arcu laoreet. Mauris ultrices amet cras eget in magnis mauris nibh. Nisl semper duis gravida purus tellus posuere. Sem arcu vel arcu lorem vel eget a in. Nisi urna quis platea luctus. Інформація...Lorem ipsum dolor sit amet consectetur. Nec dictumst eu mauris ac purus pharetra viverra. Nullam egestas et nisl id pulvinar enim et. Vestibulum neque in ultrices nunc non. 
+                </p>
+                <button class="btn btn-dashed btn-dashed--dark btn-amatic news__button">Детальніше</button>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+    <footer class="footer">
+  <div class="container">
+    <div class="footer--wrapper">
+      <a href="./">
+        <svg width="181" height="136" class="footer__logo">
+          <use href="/icons.c1b8ed40.svg#icon-logo"></use>
+        </svg>
+      </a>
+      <div class="footer__links">
+        <ul class="footer__list">
+          <li><a href="">Взяти хвостика</a></li>
+          <li><a href="">Стати опікуном</a></li>
+          <li><a href="">Вже вдома</a></li>
+        </ul>
+        <ul class="footer__list">
+          <li><a href="">Про притулок</a></li>
+          <li><a href="">Звітність</a></li>
+          <li><a href="">Сувеніри</a></li>
+        </ul>
+        <ul class="footer__list">
+          <li><a href="#support">Підтримати притулок</a></li>
+          <li><a href="#demands">Потреби притулку</a></li>
+          <li><a href="">Стати спонсором</a></li>
+        </ul>
+        <ul class="footer__list">
+          <li class="footer__address">
+            <p>Адреса</p>
+            <address>вул. Антоновича, 21</address>
+          </li>
+          <li class="footer__address">
+            <p>Контакти</p>
+            <a href="tel:+380993554433">+38(099) 355-44-33</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__socials">
+        <p>Соціальні мережі</p>
+        <ul class="footer__socials-list">
+          <li>
+            <a href="http://" target="_blank" rel="noopener noreferrer">
+              <svg class="icon icon-white" width="40" height="40">
+                <use href="/icons.c1b8ed40.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="http://" target="_blank" rel="noopener noreferrer">
+              <svg class="icon icon-white" width="40" height="40">
+                <use href="/icons.c1b8ed40.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="http://" target="_blank" rel="noopener noreferrer">
+              <svg class="icon icon-white" width="40" height="40">
+                <use href="/icons.c1b8ed40.svg#icon-telegram"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="http://" target="_blank" rel="noopener noreferrer">
+              <svg class="icon icon-white" width="40" height="40">
+                <use href="/icons.c1b8ed40.svg#icon-youtube"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="http://" target="_blank" rel="noopener noreferrer">
+              <svg class="icon icon-white" width="40" height="40">
+                <use href="/icons.c1b8ed40.svg#icon-tiktok"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__credentials">&#169;2023 Бест Френдз Всі права захищені</p>
+  </div>
+</footer>
+
+</body>
+</html>
