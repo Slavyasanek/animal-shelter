@@ -1,0 +1,32 @@
+.friends {
+  padding-top: 2.5rem;
+  padding-bottom: 9.375rem;
+  &__input {
+    padding: 0.75rem 2.75rem 0.75rem 1.25rem;
+    outline: none;
+    font-weight: 100;
+    font-size: 1.125rem;
+    border-radius: 0.313rem;
+    border: 1px solid $textGrey;
+    color: #818181;
+    &--wrapper {
+      display: flex;
+      justify-content: flex-end;
+      position: relative;
+    }
+    &-btn {
+      position: absolute;
+      top: 0.75rem;
+      right: 1.25rem;
+    }
+  }
+  &--wrapper {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2.08vw;
+    margin-top: 4rem;
+  }
+  &__btn {
+    padding: 1.625rem 6.6vw;
+  }
+}

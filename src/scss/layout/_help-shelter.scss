@@ -28,6 +28,7 @@
     display: flex;
     flex-direction: row-reverse;
     justify-content: start;
+    align-items: center;
     column-gap: 0.625rem;
     width: calc((100% - 2 * 5.72vw) / 3);
   }
@@ -49,30 +50,14 @@
     }
   }
   &__input {
-    margin: 0;
-    appearance: none;
-    border-radius: 50%;
     width: 1.75rem;
     height: 1.75rem;
     border: 2px solid $white;
-    cursor: pointer;
-    position: relative;
-    flex-shrink: 0;
     &::before {
       content: "";
       width: 0.875rem;
       height: 0.875rem;
-      border-radius: 50%;
-      display: block;
-      transition: 120ms transform ease-in-out;
       background-color: $white;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: scale(0) translate(-50%, -50%);
-    }
-    &:checked::before {
-      transform: scale(1) translate(-50%, -50%);
     }
   }
 }

@@ -1,0 +1,36 @@
+.custom-radio {
+  margin: 0;
+  appearance: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  &::before {
+    content: "";
+    border-radius: 50%;
+    display: block;
+    transition: 120ms transform ease-in-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scale(0) translate(-50%, -50%);
+  }
+  &:checked::before {
+    transform: scale(1) translate(-50%, -50%);
+  }
+}
+
+.custom-checkbox {
+  appearance: none;
+  outline: none;
+  &::before {
+    content: "";
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    flex-shrink: 0;
+    margin: 0;
+    display: block;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

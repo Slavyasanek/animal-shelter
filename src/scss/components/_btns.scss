@@ -89,4 +89,9 @@
       background-color: $darkBlueDecorative;
     }
   }
+  &-icon {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
 }
