@@ -1,5 +1,4 @@
 .location {
-    @extend %section;
     &__subtitle {
         @include subtitle($mainText, 4rem);
         text-align: center;

@@ -1,0 +1,66 @@
+.team {
+    &__title {
+        @include subtitle($mainText, 4.5rem);
+        text-align: center;
+        margin-bottom: 1.75rem;
+    }
+    &__description {
+        font-size: 1.125rem;
+        font-weight: 200;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    &__img {
+        height: 100%;
+        object-fit: cover;
+    }
+    .swiper {
+        max-width: 73.95vw;
+    }
+    .swiper-slide {
+        height: 26.875rem;
+        position: relative;
+        border-radius: 1.25rem;
+        overflow: hidden;
+    }
+    &__member {
+        position: absolute;
+        bottom: 1.25rem;
+        left: 1.25rem;
+        right: 1.25rem;
+        background-color: #EEEEEE;
+        border-radius: 0.625rem;
+        padding: 1rem 0.83vw 2.5rem;
+    }
+    &__name {
+        font-size: 1.5rem;
+        font-weight: 300;
+        margin-bottom: 0.25rem;
+    }
+    &__position {
+        font-size: 1.125rem;
+        font-weight: 100;
+    }
+    .swiper-button-prev, .swiper-button-next {
+        position: static;
+        margin-top: 0;
+        color: $mainText;
+        border-radius: 50%;
+        background-color: #EEEEEE;
+        width: 2.5rem;
+        height: 2.5rem;
+        flex-shrink: 0;
+        &::after {
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+    }
+    &__btns {
+        margin-top: 1.5rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        column-gap: 1.25rem;
+    }
+}

@@ -1,12 +1,11 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
-@import '../../node_modules/swiper/swiper.scss';
-@import '../../node_modules/swiper/modules/pagination.scss';
-@import '../../node_modules/swiper/modules/effect-fade.scss';
+@import '../../node_modules/swiper/swiper-bundle.min.css';
 @import './utils/variables';
 @import './utils/mixins';
 @import './base/fonts';
 @import './base/reset';
 @import './base/container';
+@import './components/section';
 @import './components/icons';
 @import './components/btns';
 @import './layout/header';
@@ -20,3 +19,5 @@
 @import './layout/location';
 @import './layout/news';
 @import './layout/slider';
+@import './layout/about-shelter';
+@import './layout/team';
