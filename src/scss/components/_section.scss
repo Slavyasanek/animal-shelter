@@ -1,3 +1,19 @@
 .section {
   padding: 9.375rem 0;
 }
+
+.section--relative {
+  position: relative;
+}
+
+%section--gradient{
+  background-image: radial-gradient(
+    circle at 68% 50%,
+    rgba(4, 57, 123, 0.06) 27rem,
+    rgba(4, 57, 123, 0.04) 27rem,
+    rgba(4, 57, 123, 0.04) 42.625rem,
+    rgba(4, 57, 123, 0.02) 42.625rem,
+    rgba(4, 57, 123, 0.02) 58.93rem,
+    transparent 58.93rem
+  );
+}
