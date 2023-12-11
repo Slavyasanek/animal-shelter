@@ -1,69 +1,94 @@
-<section class="friends">
-    <div class="container">
-       <form class="friends__input--wrapper">
-        <input type="text" name="animal" id="animal" placeholder="Пошук" class="friends__input">
-        <button type="submit" class="btn btn-icon friends__input-btn">
-            <svg width="24" height="24" class="icon-search">
-                <use href="./assets/static/icons.svg#icon-search"></use>
-            </svg>
+<section class="friends section--mt-header">
+  <div class="container">
+    <form class="friends__input--wrapper">
+      <input
+        type="text"
+        name="animal"
+        id="animal"
+        placeholder="Пошук"
+        class="friends__input"
+      />
+      <button type="submit" class="btn btn-reset friends__input-btn">
+        <svg width="24" height="24" class="icon icon-stroke-black">
+          <use href="./assets/static/icons.svg#icon-search"></use>
+        </svg>
+      </button>
+    </form>
+    <div class="friends--wrapper">
+      <include src="assets/partials/filter.html"></include>
+      <div class="friends__list--wrapper">
+        <ul class="friends__list">
+          <li class="friends__card">
+            <picture>
+              <img src="./assets/static/animal1.jpg" alt="animal" width="600" />
+            </picture>
+            <p class="friends__name">Мурка</p>
+            <div class="friends__state">
+              <p>Під опікою</p>
+            </div>
+          </li>
+          <li class="friends__card">
+            <picture>
+              <img src="./assets/static/animal1.jpg" alt="animal" width="600" />
+            </picture>
+            <p class="friends__name">Мурка</p>
+            <div class="friends__state">
+              <p>Під опікою</p>
+            </div>
+          </li>
+          <li class="friends__card">
+            <picture>
+              <img src="./assets/static/animal1.jpg" alt="animal" width="600" />
+            </picture>
+            <p class="friends__name">Мурка</p>
+            <div class="friends__state">
+              <p>Під опікою</p>
+            </div>
+          </li>
+          <li class="friends__card">
+            <picture>
+              <img src="./assets/static/animal1.jpg" alt="animal" width="600" />
+            </picture>
+            <p class="friends__name">Мурка</p>
+            <div class="friends__state">
+              <p>Під опікою</p>
+            </div>
+          </li>
+          <li class="friends__card">
+            <picture>
+              <img src="./assets/static/animal1.jpg" alt="animal" width="600" />
+            </picture>
+            <p class="friends__name">Мурка</p>
+            <div class="friends__state">
+              <p>Під опікою</p>
+            </div>
+          </li>
+          <li class="friends__card">
+            <picture>
+              <img src="./assets/static/animal1.jpg" alt="animal" width="600" />
+            </picture>
+            <p class="friends__name">Мурка</p>
+            <div class="friends__state">
+              <p>Під опікою</p>
+            </div>
+          </li>
+          <li class="friends__card">
+            <picture>
+              <img src="./assets/static/animal1.jpg" alt="animal" width="600" />
+            </picture>
+            <p class="friends__name">Мурка</p>
+            <div class="friends__state">
+              <p>Під опікою</p>
+            </div>
+          </li>
+        </ul>
+        <button
+          type="button"
+          class="btn btn-font--sec btn-dashed btn-dashed--dark friends__btn"
+        >
+          Детальніше
         </button>
-       </form>
-       <div class="friends--wrapper">
-        <include src="assets/partials/filter.html"></include>
-        <div class="friends__list--wrapper">
-            <ul class="friends__list">
-                <li class="friends__card">
-                    <img src="./assets/static/animal1.jpg" alt="" class="friends__img">
-                    <p class="friends__name">Мурка</p>
-                    <div class="friends__state">
-                        <p>Під опікою</p>
-                    </div>
-                </li>
-                <li class="friends__card">
-                    <img src="./assets/static/animal2.jpg" alt="" class="friends__img">
-                                        <p class="friends__name">Мурка</p>
-                    <div class="friends__state">
-                        <p>Під опікою</p>
-                    </div>
-                </li>
-                <li class="friends__card">
-                    <img src="./assets/static/animal1.jpg" alt="" class="friends__img">
-                                        <p class="friends__name">Мурка</p>
-                    <div class="friends__state">
-                        <p>Під опікою</p>
-                    </div>
-                </li>
-                <li class="friends__card">
-                    <img src="./assets/static/animal1.jpg" alt="" class="friends__img">
-                                        <p class="friends__name">Мурка</p>
-                    <div class="friends__state">
-                        <p>Під опікою</p>
-                    </div>
-                </li>
-                <li class="friends__card">
-                    <img src="./assets/static/animal1.jpg" alt="" class="friends__img">
-                                        <p class="friends__name">Мурка</p>
-                    <div class="friends__state">
-                        <p>Під опікою</p>
-                    </div>
-                </li>
-                <li class="friends__card">
-                    <img src="./assets/static/animal2.jpg" alt="" class="friends__img">
-                                        <p class="friends__name">Мурка</p>
-                    <div class="friends__state">
-                        <p>Під опікою</p>
-                    </div>
-                </li>
-                <li class="friends__card">
-                    <img src="./assets/static/animal1.jpg" alt="" class="friends__img">
-                                        <p class="friends__name">Мурка</p>
-                    <div class="friends__state">
-                        <p>Під опікою</p>
-                    </div>
-                </li>
-            </ul>
-            <button type="button" class="btn btn-amatic btn-dashed btn-dashed--dark friends__btn">Детальніше</button>
-        </div>
-       </div>
+      </div>
     </div>
+  </div>
 </section>

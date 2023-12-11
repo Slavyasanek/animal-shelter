@@ -1,7 +1,7 @@
 .help-shelter {
   &--wrapper {
-    color: $white;
-    background-color: $skyBlueBackground;
+    color: var(--white);
+    background-color: var(--sky-blue);
     padding: 8.75rem 10.51vw 8.375rem 6.25vw;
     border-radius: 2.5rem;
     display: flex;
@@ -11,7 +11,7 @@
     background-position: left bottom;
   }
   &__subtitle {
-    @include subtitle($white, 2.25rem);
+    @include subtitle(var(--white), 2.25rem);
     margin-bottom: 1.5rem;
   }
   &__text {
@@ -52,12 +52,12 @@
   &__input {
     width: 1.75rem;
     height: 1.75rem;
-    border: 2px solid $white;
+    border: 2px solid var(--white);
     &::before {
       content: "";
       width: 0.875rem;
       height: 0.875rem;
-      background-color: $white;
+      background-color: var(--white);
     }
   }
 }

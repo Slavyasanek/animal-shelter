@@ -1,9 +1,19 @@
 .section {
-  padding: 9.375rem 0;
+  padding: 9.38rem 0;
 }
 
 .section--relative {
   position: relative;
+}
+
+.section--mt-header {
+  margin-top: 4.25rem;
+  @include media-M {
+    margin-top: 5.75rem;
+  }
+  @include media-L {
+    margin-top: 7.25rem;
+  }
 }
 
 %section--gradient{

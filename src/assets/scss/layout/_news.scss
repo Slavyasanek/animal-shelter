@@ -1,9 +1,9 @@
 .news {
-  background-color: $lightBlueBackgound;
+  background-color:var(--light-blue);
   padding-top: 2.5rem;
   padding-bottom: 6.25rem;
   &__subtitle {
-    @include subtitle($mainText, 4rem);
+    @include subtitle(var(--main-text-color), 4rem);
     text-align: center;
     line-height: 1.23;
     margin-bottom: 4.75rem;

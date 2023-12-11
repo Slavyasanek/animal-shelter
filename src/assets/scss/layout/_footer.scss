@@ -1,6 +1,6 @@
 .footer {
-  background-color: $skyBlueBackground;
-  color: $white;
+  background-color: var(--sky-blue);
+  color: var(--white);
   padding-top: 9.375rem;
   padding-bottom: 1.375rem;
   &--wrapper {
@@ -11,8 +11,9 @@
     font-weight: 200;
     line-height: 1.4;
   }
-  &__logo {
-    fill: $white;
+  &__img-wrapper {
+    width: 8rem;
+    height: 8rem;
   }
   &__links {
     display: flex;

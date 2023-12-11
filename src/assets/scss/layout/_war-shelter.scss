@@ -15,6 +15,6 @@
         background: linear-gradient(270deg, rgba(36, 31, 28, 0.00) 6.77%, rgba(36, 31, 28, 0.92) 38.02%, #241F1C 49.48%, rgba(36, 31, 28, 0.98) 61.98%, rgba(36, 31, 28, 0.00) 94.79%);
     }
     &__title {
-        @include subtitle($white, 4.5rem);
+        @include subtitle(var(--white), 4.5rem);
 ;    }
 }

@@ -4,10 +4,10 @@
     flex-direction: row;
     column-gap: 7.55vw;
     align-items: end;
-    padding-bottom: 9.375rem;
+    padding-bottom: 9.38rem;
   }
   &__title {
-    @include subtitle($mainText, 6.25rem);
+    @include subtitle(var(--main-text-color), 6.25rem);
     margin-bottom: 3rem;
     line-height: 1.23;
     min-width: 31.66vw;
@@ -23,7 +23,7 @@
     width: 11.458vw;
     border-radius: 1.25rem;
     flex-grow: 0;
-    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--transition);
     cursor: pointer;
     overflow: hidden;
     position: relative;
@@ -72,7 +72,7 @@
     transform: rotate(-90deg);
     color: $white;
     right: -1.813rem;
-    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--transition);
     bottom: 4rem;
     z-index: 2;
   }
@@ -84,7 +84,7 @@
   &__card-subtitle {
     font-weight: 100;
     font-size: 1.125rem;
-    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: var(--transition);
     visibility: hidden;
     opacity: 0;
   }
@@ -94,7 +94,7 @@
     height: 100%;
   }
   &__subtitle {
-    @include subtitle($mainText, 4.5rem);
+    @include subtitle(var(--main-text-color), 4.5rem);
     margin-bottom: 0.75rem;
   }
   &__img {
@@ -104,7 +104,7 @@
     &--wrapper {
       width: 100%;
       height: 100%;
-      margin-bottom: 2.625rem;
+      margin-bottom: 2.75rem;
     }
   }
   &__text {
