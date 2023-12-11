@@ -7,12 +7,14 @@
     <title>Про притулок</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header shown" id="header">
   <div class="container header__wrapper">
     <a href="./" class="header__logo">
-      <img src="/logo.7d201db6.png" alt="logo" width="100">
+      <picture>
+        <img src="/logo.7d201db6.png" alt="logo" width="100">
+      </picture>
     </a>
-    <nav class="header__nav">
+    <nav class="header__nav" id="mobile-menu">
       <ul>
         <li>
           <a href="/animals.html">Взяти хвостика</a>
@@ -37,10 +39,15 @@
         </li>
       </ul>
     </nav>
-    <ul class="lang-switch">
+    <ul class="header__lang-switch">
       <li><a href="" class="active">UA</a></li>
       <li><a href="">EN</a></li>
     </ul>
+    <button type="button" class="header__btn btn btn-reset" id="mobile-menu-btn">
+        <span class="header__btn-line"></span>
+        <span class="header__btn-line"></span>
+        <span class="header__btn-line"></span>
+    </button>
   </div>
 </header>
 
@@ -48,13 +55,17 @@
       <section class="section about-shelter">
     <h1 class="about-shelter__title">про притулок</h1>
     <div class="about-shelter__img--wrapper">
-        <img src="/shelter1.f98fae23.jpg" alt="background image" width="1920" class="about-shelter__img">
+        <picture>
+            <img src="/shelter1.f98fae23.jpg" alt="background image" width="1920">
+        </picture>
     </div>
     <div class="container about-shelter--wrapper">
         <p class="about-shelter__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
         <div class="about-shelter__block">
             <div class="about-shelter__img--text-in">
-                <img src="/shelter2.e73a6f10.jpg" alt="ahelter" width="790" class="about-shelter__img">
+                <picture>
+                    <img src="/shelter2.e73a6f10.jpg" alt="shelter" width="790">
+                </picture>
             </div>
             <div>
                 <p class="about-shelter__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </p>
@@ -75,35 +86,45 @@
     <div class="swiper" data-slider="team-slider">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img src="/shelter1.f98fae23.jpg" alt="kaltya" width="340" class="team__img">
+          <picture>
+            <img src="/shelter1.f98fae23.jpg" alt="kaltya" width="340" class="team__img">
+          </picture>
           <div class="team__member">
             <p class="team__name">Катя</p>
             <p class="team__position">Засновник притулку</p>
           </div>
         </div>
         <div class="swiper-slide">
-          <img src="/shelter1.f98fae23.jpg" alt="kaltya" width="340" class="team__img">
+          <picture>
+            <img src="/shelter1.f98fae23.jpg" alt="kaltya" width="340" class="team__img">
+          </picture>
           <div class="team__member">
             <p class="team__name">Катя</p>
             <p class="team__position">Засновник притулку</p>
           </div>
         </div>
         <div class="swiper-slide">
-          <img src="/shelter1.f98fae23.jpg" alt="kaltya" width="340" class="team__img">
+          <picture>
+            <img src="/shelter1.f98fae23.jpg" alt="kaltya" width="340" class="team__img">
+          </picture>
           <div class="team__member">
             <p class="team__name">Катя</p>
             <p class="team__position">Засновник притулку</p>
           </div>
         </div>
         <div class="swiper-slide">
-          <img src="/shelter1.f98fae23.jpg" alt="kaltya" width="340" class="team__img">
+          <picture>
+            <img src="/shelter1.f98fae23.jpg" alt="kaltya" width="340" class="team__img">
+          </picture>
           <div class="team__member">
             <p class="team__name">Катя</p>
             <p class="team__position">Засновник притулку</p>
           </div>
         </div>
         <div class="swiper-slide">
-          <img src="/shelter1.f98fae23.jpg" alt="kaltya" width="340" class="team__img">
+          <picture>
+            <img src="/shelter1.f98fae23.jpg" alt="kaltya" width="340" class="team__img">
+          </picture>
           <div class="team__member">
             <p class="team__name">Катя</p>
             <p class="team__position">Засновник притулку</p>
@@ -117,7 +138,9 @@
           </div>
         </div>
         <div class="swiper-slide">
-          <img src="/shelter1.f98fae23.jpg" alt="kaltya" width="340" class="team__img">
+          <picture>
+            <img src="/shelter1.f98fae23.jpg" alt="kaltya" width="340" class="team__img">
+          </picture>
           <div class="team__member">
             <p class="team__name">Катя</p>
             <p class="team__position">Засновник притулку</p>
@@ -138,7 +161,9 @@
           </div>
         </div>
         <div class="swiper-slide">
-          <img src="/shelter1.f98fae23.jpg" alt="kaltya" width="340" class="team__img">
+          <picture>
+            <img src="/shelter1.f98fae23.jpg" alt="kaltya" width="340" class="team__img">
+          </picture>
           <div class="team__member">
             <p class="team__name">Катя</p>
             <p class="team__position">Засновник притулку</p>
@@ -146,8 +171,8 @@
         </div>
       </div>
       <div class="team__btns">
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <div class="btn swiper-button-prev"></div>
+        <div class="btn swiper-button-next"></div>
       </div>
     </div>
   </div>
@@ -161,11 +186,15 @@
       опікуном.
     </p>
     <div class="care-shelter__btns">
-      <a href="" class="btn btn-yellow btn-amatic btn-yellow--cleaned care-shelter__btn-yellow">обрати хвостика</a>
-      <a href="" class="btn btn-amatic btn-dashed btn-dashed--dark care-shelter__btn-dashed">Детальніше</a>
+      <a href="" class="btn btn-yellow btn-font--sec btn-yellow--cleaned care-shelter__btn-yellow">обрати хвостика</a>
+      <a href="" class="btn btn-font--sec btn-dashed btn-dashed--dark care-shelter__btn-dashed">Детальніше</a>
     </div>
   </div>
-  <img src="/maine-coon.053e1b60.png" width="564" alt="maine coon" class="care-shelter__img">
+  <div class="care-shelter__img-wrapper">
+    <picture>
+      <img src="/maine-coon.053e1b60.png" width="564" alt="maine coon">
+    </picture>
+  </div>
 </div>
 
   </section>
@@ -174,7 +203,7 @@
       <section class="war-shelter">
     <div class="war-shelter__container">
         <h2 class="war-shelter__title">Притулок під час війни в україні</h2>
-        <a class="btn btn-yellow btn-amatic btn-yellow--cleaned">детальніше</a>
+        <a class="btn btn-font--sec btn-yellow btn-amatic btn-yellow--cleaned">детальніше</a>
     </div>
 </section>
       <section class="news">
@@ -187,7 +216,7 @@
             <div class="news__text">
                 <p>Інформація...Lorem ipsum dolor sit amet consectetur. Nec dictumst eu mauris ac purus pharetra viverra. Nullam egestas et nisl id pulvinar enim et. Vestibulum neque in ultrices nunc non. Purus suspendisse praesent urna pulvinar egestas arcu eget suspendisse. Arcu feugiat orci erat feugiat arcu laoreet. Mauris ultrices amet cras eget in magnis mauris nibh. Nisl semper duis gravida purus tellus posuere. Sem arcu vel arcu lorem vel eget a in. Nisi urna quis platea luctus. Інформація...Lorem ipsum dolor sit amet consectetur. Nec dictumst eu mauris ac purus pharetra viverra. Nullam egestas et nisl id pulvinar enim et. Vestibulum neque in ultrices nunc non. 
                 </p>
-                <button class="btn btn-dashed btn-dashed--dark btn-amatic news__button">Детальніше</button>
+                <button class="btn btn-font--sec btn-dashed btn-dashed--dark news__button">Детальніше</button>
             </div>
         </div>
     </div>
@@ -213,8 +242,8 @@
             <p class="location__name">Контакти</p>
             <a href="tel:+380993554433">+38(099)355-44-33</a>
           </div>
-          <a href="http://" target="_blank" rel="noopener noreferrer" class="btn btn-yellow btn-amatic btn-yellow--paw btn-paw location__btn">
-            <svg width="35" height="35" class="dark-paw">
+          <a href="http://" target="_blank" rel="noopener noreferrer" class="btn btn-yellow btn-font--sec btn-yellow--paw btn-paw location__btn">
+            <svg width="35" height="35" class="icon icon-fill-black">
               <use href="/icons.0e14c542.svg#icon-paw"></use>
             </svg>
             Прокласти маршрут</a>
@@ -222,28 +251,28 @@
         <ul class="location__socials">
           <li>
             <a href="http://" target="_blank" rel="noopener noreferrer">
-              <svg width="40" height="40" class="icon icon-white">
+              <svg width="40" height="40" class="icon icon-fill-white icon-trans-scale">
                 <use href="/icons.0e14c542.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
           <li>
             <a href="http://" target="_blank" rel="noopener noreferrer">
-              <svg width="40" height="40" class="icon icon-white">
+              <svg width="40" height="40" class="icon icon-fill-white icon-trans-scale">
                 <use href="/icons.0e14c542.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
           <li>
             <a href="http://" target="_blank" rel="noopener noreferrer">
-              <svg width="40" height="40" class="icon icon-white">
+              <svg width="40" height="40" class="icon icon-fill-white icon-trans-scale">
                 <use href="/icons.0e14c542.svg#icon-telegram"></use>
               </svg>
             </a>
           </li>
           <li>
             <a href="http://" target="_blank" rel="noopener noreferrer">
-              <svg width="40" height="40" class="icon icon-white">
+              <svg width="40" height="40" class="icon icon-fill-white icon-trans-scale">
                 <use href="/icons.0e14c542.svg#icon-youtube"></use>
               </svg>
             </a>
@@ -258,10 +287,10 @@
     <footer class="footer">
   <div class="container">
     <div class="footer--wrapper">
-      <a href="./">
-        <svg width="181" height="136" class="footer__logo">
-          <use href="/icons.0e14c542.svg#icon-logo"></use>
-        </svg>
+      <a href="./" class="footer__img-wrapper">
+        <picture>
+          <img src="/logo.7d201db6.png" alt="footer logo" width="100">
+        </picture>
       </a>
       <div class="footer__links">
         <ul class="footer__list">
@@ -295,35 +324,35 @@
         <ul class="footer__socials-list">
           <li>
             <a href="http://" target="_blank" rel="noopener noreferrer">
-              <svg class="icon icon-white" width="40" height="40">
+              <svg class="icon icon-fill-white icon-trans-scale" width="40" height="40">
                 <use href="/icons.0e14c542.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
           <li>
             <a href="http://" target="_blank" rel="noopener noreferrer">
-              <svg class="icon icon-white" width="40" height="40">
+              <svg class="icon icon-fill-white icon-trans-scale" width="40" height="40">
                 <use href="/icons.0e14c542.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
           <li>
             <a href="http://" target="_blank" rel="noopener noreferrer">
-              <svg class="icon icon-white" width="40" height="40">
+              <svg class="icon icon-fill-white icon-trans-scale" width="40" height="40">
                 <use href="/icons.0e14c542.svg#icon-telegram"></use>
               </svg>
             </a>
           </li>
           <li>
             <a href="http://" target="_blank" rel="noopener noreferrer">
-              <svg class="icon icon-white" width="40" height="40">
+              <svg class="icon icon-fill-white icon-trans-scale" width="40" height="40">
                 <use href="/icons.0e14c542.svg#icon-youtube"></use>
               </svg>
             </a>
           </li>
           <li>
             <a href="http://" target="_blank" rel="noopener noreferrer">
-              <svg class="icon icon-white" width="40" height="40">
+              <svg class="icon icon-fill-white icon-trans-scale" width="40" height="40">
                 <use href="/icons.0e14c542.svg#icon-tiktok"></use>
               </svg>
             </a>

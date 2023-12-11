@@ -7,12 +7,14 @@
     <title>Бест френдз</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header shown" id="header">
   <div class="container header__wrapper">
     <a href="./" class="header__logo">
-      <img src="/logo.7d201db6.png" alt="logo" width="100">
+      <picture>
+        <img src="/logo.7d201db6.png" alt="logo" width="100">
+      </picture>
     </a>
-    <nav class="header__nav">
+    <nav class="header__nav" id="mobile-menu">
       <ul>
         <li>
           <a href="/animals.html">Взяти хвостика</a>
@@ -37,20 +39,25 @@
         </li>
       </ul>
     </nav>
-    <ul class="lang-switch">
+    <ul class="header__lang-switch">
       <li><a href="" class="active">UA</a></li>
       <li><a href="">EN</a></li>
     </ul>
+    <button type="button" class="header__btn btn btn-reset" id="mobile-menu-btn">
+        <span class="header__btn-line"></span>
+        <span class="header__btn-line"></span>
+        <span class="header__btn-line"></span>
+    </button>
   </div>
 </header>
 
     <main>
-      <section class="section main-hero">
+      <section class="section main-hero section--mt-header">
   <div class="container">
     <div class="main-hero__quote">
       <div>
         <p class="main-hero__title">не купуй,<br> візьми з притулку!</p>
-        <a href="/animals.html" class="btn btn-amatic btn-yellow btn-yellow--cleaned">взяти друга</a>
+        <a href="/animals.html" class="btn btn-font--sec btn-yellow btn-yellow--cleaned">взяти друга</a>
       </div>
       <ul class="main-hero__gallery">
         <li class="main-hero__photo-wrapper">
@@ -108,7 +115,7 @@
       <section class="war-shelter">
     <div class="war-shelter__container">
         <h2 class="war-shelter__title">Притулок під час війни в україні</h2>
-        <a class="btn btn-yellow btn-amatic btn-yellow--cleaned">детальніше</a>
+        <a class="btn btn-font--sec btn-yellow btn-amatic btn-yellow--cleaned">детальніше</a>
     </div>
 </section>
       <section class="section help-shelter" id="support">
@@ -130,12 +137,12 @@
         <li class="help-shelter__radio"><label class="help-shelter__label" for="other">Інша сума</label><input class="custom-radio help-shelter__input" type="radio" name="price" id="other" value="other"></li>
       </ul>
       <div class="help-shelter__btns">
-        <a href="" class="btn btn-amatic btn-blue help-shelter__btn-paw btn-paw">
-            <svg width="35" height="35" class="icon-white">
+        <a href="" class="btn btn-font--sec btn-blue help-shelter__btn-paw btn-paw">
+            <svg width="35" height="35" class="icon icon-fill-white">
                 <use href="/icons.0e14c542.svg#icon-paw"></use>
             </svg>
             Сплатити</a>
-        <a href="" class="btn btn-dashed btn-dashed--blue btn-amatic help-shelter__btn-dashed">Усі реквізити</a>
+        <a href="" class="btn btn-dashed btn-dashed--blue btn-font--sec help-shelter__btn-dashed">Усі реквізити</a>
       </div>
     </form>
   </div>
@@ -155,8 +162,8 @@
             <p class="slider__age">1 рік</p>
           </div>
           <div class="slider__btns">
-            <a href="" class="btn btn-yellow btn-yellow--cleaned btn-amatic slider__btn-yellow">познайомитись</a>
-            <a href="" class="btn btn-dashed btn-dashed--dark slider__btn-dashed btn-amatic">Подивитись усіх</a>
+            <a href="" class="btn btn-font--sec btn-yellow btn-yellow--cleaned btn-amatic slider__btn-yellow">познайомитись</a>
+            <a href="" class="btn btn-dashed btn-font--sec btn-dashed--dark slider__btn-dashed btn-amatic">Подивитись усіх</a>
           </div>
         </div>
       </div>
@@ -171,8 +178,8 @@
             <p class="slider__age">2 роки</p>
           </div>
           <div class="slider__btns">
-            <a href="" class="btn btn-yellow btn-yellow--cleaned btn-amatic slider__btn-yellow">познайомитись</a>
-            <a href="" class="btn btn-dashed btn-dashed--dark slider__btn-dashed btn-amatic">Подивитись усіх</a>
+            <a href="" class="btn btn-yellow btn-font--sec btn-yellow--cleaned btn-amatic slider__btn-yellow">познайомитись</a>
+            <a href="" class="btn btn-dashed btn-font--sec btn-dashed--dark slider__btn-dashed btn-amatic">Подивитись усіх</a>
           </div>
         </div>
       </div>
@@ -187,8 +194,8 @@
             <p class="slider__age">1 рік</p>
           </div>
           <div class="slider__btns">
-            <a href="" class="btn btn-yellow btn-yellow--cleaned btn-amatic slider__btn-yellow">познайомитись</a>
-            <a href="" class="btn btn-dashed btn-dashed--dark slider__btn-dashed btn-amatic">Подивитись усіх</a>
+            <a href="" class="btn btn-yellow btn-font--sec btn-yellow--cleaned btn-amatic slider__btn-yellow">познайомитись</a>
+            <a href="" class="btn btn-dashed btn-font--sec btn-dashed--dark slider__btn-dashed btn-amatic">Подивитись усіх</a>
           </div>
         </div>
       </div>
@@ -203,8 +210,8 @@
             <p class="slider__age">1 рік</p>
           </div>
           <div class="slider__btns">
-            <a href="" class="btn btn-yellow btn-yellow--cleaned btn-amatic slider__btn-yellow">познайомитись</a>
-            <a href="" class="btn btn-dashed btn-dashed--dark slider__btn-dashed btn-amatic">Подивитись усіх</a>
+            <a href="" class="btn btn-yellow btn-font--sec btn-yellow--cleaned btn-amatic slider__btn-yellow">познайомитись</a>
+            <a href="" class="btn btn-dashed btn-font--sec btn-dashed--dark slider__btn-dashed btn-amatic">Подивитись усіх</a>
           </div>
         </div>
       </div>
@@ -222,11 +229,15 @@
       опікуном.
     </p>
     <div class="care-shelter__btns">
-      <a href="" class="btn btn-yellow btn-amatic btn-yellow--cleaned care-shelter__btn-yellow">обрати хвостика</a>
-      <a href="" class="btn btn-amatic btn-dashed btn-dashed--dark care-shelter__btn-dashed">Детальніше</a>
+      <a href="" class="btn btn-yellow btn-font--sec btn-yellow--cleaned care-shelter__btn-yellow">обрати хвостика</a>
+      <a href="" class="btn btn-font--sec btn-dashed btn-dashed--dark care-shelter__btn-dashed">Детальніше</a>
     </div>
   </div>
-  <img src="/maine-coon.053e1b60.png" width="564" alt="maine coon" class="care-shelter__img">
+  <div class="care-shelter__img-wrapper">
+    <picture>
+      <img src="/maine-coon.053e1b60.png" width="564" alt="maine coon">
+    </picture>
+  </div>
 </div>
 
       </section>
@@ -237,7 +248,7 @@
     </h2>
     <form action="" class="subscription__form">
         <input type="email" name="email" id="email" class="subscription__input" placeholder="E-mail">
-        <button type="submit" class="btn btn-yellow btn-amatic btn-yellow--cleaned">Підписатися</button>
+        <button type="submit" class="btn btn-font--sec btn-yellow btn-amatic btn-yellow--cleaned">Підписатися</button>
     </form>
 </section>
 
@@ -249,7 +260,7 @@
         <li>
           <button type="button" class="btn btn-skyblue active">
             Матеріальні
-            <svg width="10" height="18" class="icon-arrow">
+            <svg width="10" height="18" class="icon icon-stroke-white">
               <use href="/icons.0e14c542.svg#icon-arrow-small"></use>
             </svg>
           </button>
@@ -257,7 +268,7 @@
         <li>
           <button type="button" class="btn btn-skyblue">
             Фізичні
-            <svg width="10" height="18" class="icon-arrow">
+            <svg width="10" height="18" class="icon icon-stroke-white">
               <use href="/icons.0e14c542.svg#icon-arrow-small"></use>
             </svg>
           </button>
@@ -265,7 +276,7 @@
         <li>
           <button type="button" class="btn btn-skyblue">
             Фінансові
-            <svg width="10" height="18" class="icon-arrow">
+            <svg width="10" height="18" class="icon icon-stroke-white">
               <use href="/icons.0e14c542.svg#icon-arrow-small"></use>
             </svg>
           </button>
@@ -273,7 +284,7 @@
         <li>
           <button type="button" class="btn btn-skyblue">
             Шукаємо спонсорів
-            <svg width="10" height="18" class="icon-arrow">
+            <svg width="10" height="18" class="icon icon-stroke-white">
               <use href="/icons.0e14c542.svg#icon-arrow-small"></use>
             </svg>
           </button>
@@ -309,8 +320,8 @@
       </div>
       <div class="demands__help">
         <div>
-          <button class="btn btn-yellow btn-yellow--paw btn-paw btn-amatic demands__help-btn">
-            <svg width="35" height="35" class="black-paw">
+          <button class="btn btn-font--sec btn-yellow btn-yellow--paw btn-paw demands__help-btn">
+            <svg width="35" height="35" class="icon icon-fill-black">
               <use href="/icons.0e14c542.svg#icon-paw"></use>
             </svg>
             Допомогти
@@ -352,7 +363,7 @@
             <div class="news__text">
                 <p>Інформація...Lorem ipsum dolor sit amet consectetur. Nec dictumst eu mauris ac purus pharetra viverra. Nullam egestas et nisl id pulvinar enim et. Vestibulum neque in ultrices nunc non. Purus suspendisse praesent urna pulvinar egestas arcu eget suspendisse. Arcu feugiat orci erat feugiat arcu laoreet. Mauris ultrices amet cras eget in magnis mauris nibh. Nisl semper duis gravida purus tellus posuere. Sem arcu vel arcu lorem vel eget a in. Nisi urna quis platea luctus. Інформація...Lorem ipsum dolor sit amet consectetur. Nec dictumst eu mauris ac purus pharetra viverra. Nullam egestas et nisl id pulvinar enim et. Vestibulum neque in ultrices nunc non. 
                 </p>
-                <button class="btn btn-dashed btn-dashed--dark btn-amatic news__button">Детальніше</button>
+                <button class="btn btn-font--sec btn-dashed btn-dashed--dark news__button">Детальніше</button>
             </div>
         </div>
     </div>
@@ -378,8 +389,8 @@
             <p class="location__name">Контакти</p>
             <a href="tel:+380993554433">+38(099)355-44-33</a>
           </div>
-          <a href="http://" target="_blank" rel="noopener noreferrer" class="btn btn-yellow btn-amatic btn-yellow--paw btn-paw location__btn">
-            <svg width="35" height="35" class="dark-paw">
+          <a href="http://" target="_blank" rel="noopener noreferrer" class="btn btn-yellow btn-font--sec btn-yellow--paw btn-paw location__btn">
+            <svg width="35" height="35" class="icon icon-fill-black">
               <use href="/icons.0e14c542.svg#icon-paw"></use>
             </svg>
             Прокласти маршрут</a>
@@ -387,28 +398,28 @@
         <ul class="location__socials">
           <li>
             <a href="http://" target="_blank" rel="noopener noreferrer">
-              <svg width="40" height="40" class="icon icon-white">
+              <svg width="40" height="40" class="icon icon-fill-white icon-trans-scale">
                 <use href="/icons.0e14c542.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
           <li>
             <a href="http://" target="_blank" rel="noopener noreferrer">
-              <svg width="40" height="40" class="icon icon-white">
+              <svg width="40" height="40" class="icon icon-fill-white icon-trans-scale">
                 <use href="/icons.0e14c542.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
           <li>
             <a href="http://" target="_blank" rel="noopener noreferrer">
-              <svg width="40" height="40" class="icon icon-white">
+              <svg width="40" height="40" class="icon icon-fill-white icon-trans-scale">
                 <use href="/icons.0e14c542.svg#icon-telegram"></use>
               </svg>
             </a>
           </li>
           <li>
             <a href="http://" target="_blank" rel="noopener noreferrer">
-              <svg width="40" height="40" class="icon icon-white">
+              <svg width="40" height="40" class="icon icon-fill-white icon-trans-scale">
                 <use href="/icons.0e14c542.svg#icon-youtube"></use>
               </svg>
             </a>
@@ -423,10 +434,10 @@
     <footer class="footer">
   <div class="container">
     <div class="footer--wrapper">
-      <a href="./">
-        <svg width="181" height="136" class="footer__logo">
-          <use href="/icons.0e14c542.svg#icon-logo"></use>
-        </svg>
+      <a href="./" class="footer__img-wrapper">
+        <picture>
+          <img src="/logo.7d201db6.png" alt="footer logo" width="100">
+        </picture>
       </a>
       <div class="footer__links">
         <ul class="footer__list">
@@ -460,35 +471,35 @@
         <ul class="footer__socials-list">
           <li>
             <a href="http://" target="_blank" rel="noopener noreferrer">
-              <svg class="icon icon-white" width="40" height="40">
+              <svg class="icon icon-fill-white icon-trans-scale" width="40" height="40">
                 <use href="/icons.0e14c542.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
           <li>
             <a href="http://" target="_blank" rel="noopener noreferrer">
-              <svg class="icon icon-white" width="40" height="40">
+              <svg class="icon icon-fill-white icon-trans-scale" width="40" height="40">
                 <use href="/icons.0e14c542.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
           <li>
             <a href="http://" target="_blank" rel="noopener noreferrer">
-              <svg class="icon icon-white" width="40" height="40">
+              <svg class="icon icon-fill-white icon-trans-scale" width="40" height="40">
                 <use href="/icons.0e14c542.svg#icon-telegram"></use>
               </svg>
             </a>
           </li>
           <li>
             <a href="http://" target="_blank" rel="noopener noreferrer">
-              <svg class="icon icon-white" width="40" height="40">
+              <svg class="icon icon-fill-white icon-trans-scale" width="40" height="40">
                 <use href="/icons.0e14c542.svg#icon-youtube"></use>
               </svg>
             </a>
           </li>
           <li>
             <a href="http://" target="_blank" rel="noopener noreferrer">
-              <svg class="icon icon-white" width="40" height="40">
+              <svg class="icon icon-fill-white icon-trans-scale" width="40" height="40">
                 <use href="/icons.0e14c542.svg#icon-tiktok"></use>
               </svg>
             </a>
