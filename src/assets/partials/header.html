@@ -1,9 +1,11 @@
-<header class="header">
+<header class="header shown" id="header">
   <div class="container header__wrapper">
     <a href="./" class="header__logo">
-      <img src="./assets/static/logo.png" alt="logo" width="100">
+      <picture>
+        <img src="./assets/static/logo.png" alt="logo" width="100"/>
+      </picture>
     </a>
-    <nav class="header__nav">
+    <nav class="header__nav" id="mobile-menu">
       <ul>
         <li>
           <a href="./animals.html">Взяти хвостика</a>
@@ -28,9 +30,14 @@
         </li>
       </ul>
     </nav>
-    <ul class="lang-switch">
+    <ul class="header__lang-switch">
       <li><a href="" class="active">UA</a></li>
       <li><a href="">EN</a></li>
     </ul>
+    <button type="button" class="header__btn btn btn-reset" id="mobile-menu-btn">
+        <span class="header__btn-line"></span>
+        <span class="header__btn-line"></span>
+        <span class="header__btn-line"></span>
+    </button>
   </div>
 </header>

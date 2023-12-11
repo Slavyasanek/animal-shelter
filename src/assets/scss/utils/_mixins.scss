@@ -1,16 +1,15 @@
 @mixin subtitle($color, $size) {
-  font-family: "Amatic SC", sans-serif;
+  font-family: var(--secondary-font);
   font-size: $size;
   font-weight: 700;
   text-transform: uppercase;
   color: $color;
 }
 
-@mixin push-full {
+@mixin push-full-w {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
 }
 
 @mixin el-hide {
@@ -23,23 +22,29 @@
   visibility: visible;
 }
 
-@mixin media-M() {
+@mixin media-S() {
   @media screen and (min-width: 425px) {
     @content;
   }
 }
 
-@mixin media-L() {
+@mixin media-M() {
   @media screen and (min-width: 768px) {
     @content;
   }
 }
 
-// @mixin media-XL() {
-//   @media screen and (min-width: 1200px) {
-//     @content;
-//   }
-// }
+@mixin media-maxL {
+  @media screen and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin media-L() {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
 
 @mixin media-XL() {
   @media screen and (min-width: 1440px) {

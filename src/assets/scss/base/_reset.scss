@@ -6,6 +6,9 @@ body {
     background-color: $white;
     font-family: 'e-Ukraine', sans-serif;
     color: $mainText;
+    &.lock {
+        overflow: hidden;
+    }
 }
 
 ul, ol {

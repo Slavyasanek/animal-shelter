@@ -1,28 +1,28 @@
 :root {
     // fonts
-    --main-font: 'Amatic SC', sans-serif;
-    --secondary-font: 'e-Ukraine', sans-serif;
+    --main-font: 'e-Ukraine', sans-serif;
+    --secondary-font: 'Amatic SC', sans-serif;
     --odd-font: 'Nunito', sans-serif;
 
     --transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     // text + bg
-    --main-text-color: '',
-    --white: '';
-    --black: '';
+    --main-text-color: #020202;
+    --white: #FFFFFF;
+    --black: #000000;
 
     // decorative
-    --light-blue: '';
-    --sky-blue: '';
-    --dark-blue: '';
-    --dark-blue-hover: '';
-    --transparent-blue: '';
+    --light-blue: #D5E1E5;
+    --sky-blue: #669AD3;
+    --dark-blue: #04397B;
+    --dark-blue-hover: #03336E;
+    --transparent-blue: rgba(164, 200, 244, 0.40);
 
-    --yellow: '';
-    --yellow-hover: '';
+    --yellow: #EDDB51;
+    --yellow-hover: #D5C548;
 
-    --input-grey: '';
-    --text-grey: '';
+    --input-grey: #DBDBDB;
+    --text-grey: #9F9F9F;
 }
 
 $white: #FFFFFF;
