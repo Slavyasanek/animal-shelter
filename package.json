@@ -9,6 +9,7 @@
   "author": "Polishchuk Olexandra <sasha03092003@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "lodash.throttle": "^4.1.1",
     "modern-normalize": "^2.0.0",
     "swiper": "^11.0.5"
   },
