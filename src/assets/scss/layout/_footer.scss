@@ -1,0 +1,46 @@
+.footer {
+  background-color: $skyBlueBackground;
+  color: $white;
+  padding-top: 9.375rem;
+  padding-bottom: 1.375rem;
+  &--wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 6.25rem;
+    font-size: 1rem;
+    font-weight: 200;
+    line-height: 1.4;
+  }
+  &__logo {
+    fill: $white;
+  }
+  &__links {
+    display: flex;
+    flex-direction: row;
+    column-gap: 4.68vw;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.625rem;
+    &:last-of-type {
+        row-gap: 2.375rem;
+    }
+  }
+  &__socials {
+    text-align: end;
+    &-list {
+      display: flex;
+      column-gap: 0.83vw;
+      margin-top: 1.313rem;
+    }
+  }
+  &__address p {
+    margin-bottom: 0.625rem;
+  }
+  &__credentials {
+    font-family: var(--odd-font);
+    font-weight: 400;
+    text-align: center;
+  }
+}

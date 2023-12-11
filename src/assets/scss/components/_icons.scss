@@ -1,0 +1,43 @@
+.icon {
+  cursor: pointer;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
+}
+
+.icon-white {
+  fill: $white;
+}
+
+.black-paw {
+  fill: $black;
+}
+
+.icon-arrow {
+  stroke: $white;
+}
+
+.icon-facebook {
+  fill: $darkBlueDecorative;
+}
+
+.icon-telegram {
+  fill: $skyBlueBackground;
+}
+
+.icon-search {
+  stroke: black;
+}
+
+.icon-arrow-black {
+  stroke: $black;
+  transform: rotate(-90deg);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filter-icon {
+  fill: $black;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

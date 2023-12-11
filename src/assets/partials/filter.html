@@ -1,0 +1,122 @@
+<div class="filter">
+    <p class="filter__title">Фільтр</p>
+    <ul class="filter__options">
+        <li class="filter__block">
+            <p class="filter__subtitle">Тваринки</p>
+            <ul class="filter__btns">
+                <li>
+                    <button type="button" class="btn filter__btn active">
+                        <svg width="35" height="35" class="filter-icon">
+                            <use href="./assets/static/icons.svg#icon-paw"></use>
+                        </svg>
+                        <p class="filter__btn-title">Всі</p>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="btn filter__btn">
+                        <svg width="35" height="35" class="filter-icon">
+                            <use href="./assets/static/icons.svg#icon-dog"></use>
+                        </svg>
+                        <p class="filter__btn-title">Песики</p>
+                    </button>
+                </li>
+                <li>
+                    <button type="button" class="btn filter__btn">
+                        <svg width="35" height="35" class="filter-icon">
+                            <use href="./assets/static/icons.svg#icon-cat"></use>
+                        </svg>
+                        <p class="filter__btn-title">Котики</p>
+                    </button>
+                </li>
+            </ul>
+        </li>
+        <li class="filter__block">
+            <ul class="filter__list">
+                <li class="filter__item"><input type="radio" name="priority" id="all-priority" class="custom-radio filter__radio" value="all-priority" checked><label for="all-priority">Всі</label></li>
+                <li class="filter__item"><input type="radio" name="priority" id="caretaker" class="custom-radio filter__radio" value="caretaker"><label for="caretaker">Стати опікуном</label></li>
+            </ul>
+        </li>
+        <li class="filter__block">
+            <button class="btn btn-icon filter__expand">
+                <svg height="20" width="18" class="icon-arrow-black">
+                    <use href="./assets/static/icons.svg#icon-arrow-small"></use>
+                </svg>
+            </button>
+            <p class="filter__subtitle">Стать</p>
+            <ul class="js-expand-list">
+                <li class="filter__item"><input type="radio" name="gender" id="all" value="all" class="custom-radio filter__radio" checked><label for="all">Всі</label></li>
+                <li class="filter__item"><input type="radio" name="gender" id="girls" value="girls" class="custom-radio filter__radio"><label for="girls">Дівчинка</label></li>
+                <li class="filter__item"><input type="radio" name="gender" id="boys" value="boys" class="custom-radio filter__radio"><label for="boys">Хлопчик</label></li>
+            </ul>
+        </li>
+        <li class="filter__block">
+            <button class="btn btn-icon filter__expand">
+                <svg height="20" width="18" class="icon-arrow-black">
+                    <use href="./assets/static/icons.svg#icon-arrow-small"></use>
+                </svg>
+            </button>
+            <p class="filter__subtitle">Вік</p>
+            <ul class="js-expand-list">
+                <li class="filter__item"><input type="checkbox" name="age" id="all-age" class=" custom-checkbox filter__checkbox"><label for="all-age">Всі</label></li>
+                <li class="filter__item"><input type="checkbox" name="age" id="up-to-one" class=" custom-checkbox filter__checkbox"><label for="up-to-one">до 1р.</label></li>
+                <li class="filter__item"><input type="checkbox" name="age" id="one-two" class=" custom-checkbox filter__checkbox"><label for="one-two">1-2р.</label></li>
+                <li class="filter__item"><input type="checkbox" name="age" id="two-five" class=" custom-checkbox filter__checkbox"><label for="two-five">2-5р.</label></li>
+                <li class="filter__item"><input type="checkbox" name="age" id="up-five" class=" custom-checkbox filter__checkbox"><label for="up-five">більше 5р.</label></li>
+            </ul>
+        </li>
+        <li class="filter__block">
+            <button class="btn btn-icon filter__expand">
+                <svg height="20" width="18" class="icon-arrow-black">
+                    <use href="./assets/static/icons.svg#icon-arrow-small"></use>
+                </svg>
+            </button>
+            <p class="filter__subtitle">Розмір</p>
+            <ul class="js-expand-list">
+                <li class="filter__item"><input class=" custom-checkbox filter__checkbox" type="checkbox" name="size" value="all-size" id="all-size"><label for="all-size">Усі</label></li>
+                <li class="filter__item"><input class=" custom-checkbox filter__checkbox" type="checkbox" name="size" value="big" id="big"><label for="big">Великі</label></li>
+                <li class="filter__item"><input class=" custom-checkbox filter__checkbox" type="checkbox" name="size" value="medium" id="medium"><label for="medium">Середні</label></li>
+                <li class="filter__item"><input class=" custom-checkbox filter__checkbox" type="checkbox" name="size" value="small" id="small"><label for="small">Маленькі</label></li>
+            </ul>
+        </li>
+        <li class="filter__block">
+            <button class="btn btn-icon filter__expand">
+                <svg height="20" width="18" class="icon-arrow-black">
+                    <use href="./assets/static/icons.svg#icon-arrow-small"></use>
+                </svg>
+            </button>
+            <p class="filter__subtitle">Стерилізація</p>
+            <ul class="js-expand-list">
+                <li class="filter__item"><input type="radio" name="sterilization" id="all-sterilization" value="all-sterilization" class="custom-radio filter__radio" checked><label for="all-sterilization">Всі</label></li>
+                <li class="filter__item"><input type="radio" name="sterilization" id="sterilized" value="sterilized" class="custom-radio filter__radio"><label for="sterilized">Зроблена</label></li>
+                <li class="filter__item"><input type="radio" name="sterilization" id="without" value="without" class="custom-radio filter__radio"><label for="without">Немає</label></li>
+            </ul>
+        </li>
+        <li class="filter__block">
+            <button class="btn btn-icon filter__expand">
+                <svg height="20" width="18" class="icon-arrow-black">
+                    <use href="./assets/static/icons.svg#icon-arrow-small"></use>
+                </svg>
+            </button>
+            <p class="filter__subtitle">Шерсть</p>
+            <ul class="js-expand-list">
+                <li class="filter__item"><input type="checkbox" name="fur" value="all-fur" id="all-fur" class=" custom-checkbox filter__checkbox"><label for="all-fur">Всі</label></li>
+                <li class="filter__item"><input type="checkbox" name="fur" value="short" id="short" class=" custom-checkbox filter__checkbox"><label for="short">Коротка</label></li>
+                <li class="filter__item"><input type="checkbox" name="fur" value="average" id="average" class=" custom-checkbox filter__checkbox"><label for="average">Середня</label></li>
+                <li class="filter__item"><input type="checkbox" name="fur" value="long" id="long" class=" custom-checkbox filter__checkbox"><label for="long">Довга</label></li>
+            </ul>
+        </li>
+        <li class="filter__block">
+            <button class="btn btn-icon filter__expand">
+                <svg height="20" width="18" class="icon-arrow-black">
+                    <use href="./assets/static/icons.svg#icon-arrow-small"></use>
+                </svg>
+            </button>
+            <p class="filter__subtitle">Характер</p>
+            <ul class="js-expand-list">
+                <li class="filter__item"><input type="radio" name="personality" value="all-personality" id="all-personality" class="custom-radio filter__radio" checked><label for="all-personality">Всі</label></li>
+                <li class="filter__item"><input type="radio" name="personality" value="calm" id="calm" class="custom-radio filter__radio"><label for="calm">Спокійний</label></li>
+                <li class="filter__item"><input type="radio" name="personality" value="active" id="active" class="custom-radio filter__radio"><label for="active">Активний</label></li>
+            </ul>
+        </li>
+    </ul>
+</div>
