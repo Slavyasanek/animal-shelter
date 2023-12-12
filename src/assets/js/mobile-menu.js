@@ -1,11 +1,12 @@
-const mobileMenuBtn = document.querySelector('#mobile-menu-btn');
-const mobileMenu = document.querySelector('#mobile-menu');
-const body = document.body;
+import { refs } from "./refs";
+
+const { mobileMenu, mobileMenuBtn, body, header } = refs;
 
 const hideMenu = () => {
     body.classList.remove('lock');
     mobileMenuBtn.classList.remove('close');
     mobileMenu.classList.remove('shown');
+    // header.classList.remove('header--white-back');
 }
 
 const toggleMenu = () => {
@@ -14,6 +15,7 @@ const toggleMenu = () => {
         body.classList.add('lock');
         mobileMenuBtn.classList.add('close');
         mobileMenu.classList.add('shown');
+        header.classList.add('header--white-back');
     } else if (isMenuOpen) {
         hideMenu()
     }

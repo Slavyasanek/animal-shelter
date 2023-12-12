@@ -349,6 +349,23 @@ summary {
   }
 }
 
+.swiper-fade.swiper-free-mode .swiper-slide {
+  transition-timing-function: ease-out;
+}
+
+.swiper-fade .swiper-slide {
+  pointer-events: none;
+  transition-property: opacity;
+}
+
+.swiper-fade .swiper-slide .swiper-slide {
+  pointer-events: none;
+}
+
+.swiper-fade .swiper-slide-active, .swiper-fade .swiper-slide-active .swiper-slide-active {
+  pointer-events: auto;
+}
+
 :root {
   --swiper-navigation-size: 44px;
 }
@@ -591,23 +608,6 @@ button.swiper-pagination-bullet {
   display: none;
 }
 
-.swiper-fade.swiper-free-mode .swiper-slide {
-  transition-timing-function: ease-out;
-}
-
-.swiper-fade .swiper-slide {
-  pointer-events: none;
-  transition-property: opacity;
-}
-
-.swiper-fade .swiper-slide .swiper-slide {
-  pointer-events: none;
-}
-
-.swiper-fade .swiper-slide-active, .swiper-fade .swiper-slide-active .swiper-slide-active {
-  pointer-events: auto;
-}
-
 :root {
   --main-font: "e-Ukraine", sans-serif;
   --secondary-font: "Amatic SC", sans-serif;
@@ -744,7 +744,7 @@ address {
   }
 }
 
-.team__gradient, .care-shelter {
+.team__gradient, .care-shelter, .main-hero__gradient:before {
   background-image: radial-gradient(circle at 68%, #04397b0f 27rem, #04397b0a 27rem 42.625rem, #04397b05 42.625rem 58.93rem, #0000 58.93rem);
 }
 
@@ -1104,8 +1104,11 @@ address {
 }
 
 .header.shown {
-  background-color: var(--white);
   transform: translateY(0);
+}
+
+.header--white-back {
+  background-color: var(--white);
 }
 
 .header__wrapper {
@@ -1185,6 +1188,10 @@ address {
   }
 }
 
+.header__nav ul:hover > li:not(:hover) {
+  color: var(--yellow);
+}
+
 .header__nav ul > li {
   color: var(--dark-blue);
   text-transform: uppercase;
@@ -1206,12 +1213,8 @@ address {
   }
 }
 
-.header__nav ul > li:hover .header__nav ul > li:not(:hover) {
-  color: #0ff;
-}
-
-.header__nav:hover ul > li:not(:hover) {
-  color: var(--yellow);
+.header__nav ul > li.current-menu-item {
+  color: var(--dark-blue-hover);
 }
 
 .header__btn {
@@ -1380,6 +1383,15 @@ address {
   column-gap: 20px;
   width: 100%;
   display: flex;
+}
+
+.main-hero__gradient:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .main-hero__photo-wrapper {

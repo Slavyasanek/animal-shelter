@@ -1,4 +1,6 @@
-const optionsRef = document.querySelector('.filter__options');
+import { refs } from "./refs";
+
+const optionsRef = refs.filter;
 
 const toggleOptions = e => {
     const btn = e.target;

@@ -6,9 +6,13 @@
   transition: var(--transition);
   transform: translateY(-100%);
   z-index: 99;
+  background-color: transparent;
   &.shown {
     transform: translateY(0);
+  }
+  &--white-back {
     background-color: var(--white);
+
   }
   &__wrapper {
     display: flex;
@@ -60,6 +64,9 @@
       @include media-XL {
         column-gap: 2.5vw;
       }
+      &:hover > li:not(:hover) {
+        color: var(--yellow);
+      }
       & > li {
         color: var(--dark-blue);
         text-transform: uppercase;
@@ -73,13 +80,10 @@
         @include media-XL {
           font-size: 0.875rem;
         }
-        &:hover &:not(:hover) {
-          color: aqua;
+        &.current-menu-item {
+          color: var(--dark-blue-hover);
         }
       }
-    }
-    &:hover ul > li:not(:hover) {
-      color: var(--yellow);
     }
   }
   &__btn {
