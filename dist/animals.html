@@ -97,8 +97,20 @@
         </li>
         <li class="filter__block">
             <ul class="filter__list">
-                <li class="filter__item"><input type="radio" name="priority" id="all-priority" class="custom-radio filter__radio" value="all-priority" checked=""><label for="all-priority">Всі</label></li>
-                <li class="filter__item"><input type="radio" name="priority" id="caretaker" class="custom-radio filter__radio" value="caretaker"><label for="caretaker">Стати опікуном</label></li>
+                <li class="filter__item">
+                    <div class="custom-input__wrapper filter-radio__wrapper">
+                        <input type="radio" name="priority" id="all-priority" class="custom-input" value="all-priority" checked="">
+                        <div class="custom-radio filter-radio"></div>
+                    </div>
+                    <label for="all-priority">Всі</label>
+                </li>
+                <li class="filter__item">
+                    <div class="custom-input__wrapper filter-radio__wrapper">
+                        <input type="radio" name="priority" id="caretaker" class="custom-input" value="caretaker">
+                        <div class="custom-radio filter-radio"></div>
+                    </div>
+                    <label for="caretaker">Стати опікуном</label>
+                </li>
             </ul>
         </li>
         <li class="filter__block">
@@ -109,9 +121,23 @@
             </button>
             <p class="filter__subtitle">Стать</p>
             <ul class="js-expand-list">
-                <li class="filter__item"><input type="radio" name="gender" id="all" value="all" class="custom-radio filter__radio" checked=""><label for="all">Всі</label></li>
-                <li class="filter__item"><input type="radio" name="gender" id="girls" value="girls" class="custom-radio filter__radio"><label for="girls">Дівчинка</label></li>
-                <li class="filter__item"><input type="radio" name="gender" id="boys" value="boys" class="custom-radio filter__radio"><label for="boys">Хлопчик</label></li>
+                <li class="filter__item">
+                    <div class="custom-input__wrapper filter-radio__wrapper">
+                        <input type="radio" name="gender" id="all-gender" value="all-gender" class="custom-input" checked="">
+                        <div class="custom-radio filter-radio"></div>
+                    </div>
+                    <label for="all-gender">Всі</label></li>
+                <li class="filter__item">
+                    <div class="custom-input__wrapper filter-radio__wrapper">
+                        <input type="radio" name="gender" id="girls" value="girls" class="custom-input">
+                        <div class="custom-radio filter-radio"></div>
+                    </div>
+                    <label for="girls">Дівчинка</label></li>
+                <li class="filter__item">
+                    <div class="custom-input__wrapper filter-radio__wrapper">
+                        <input type="radio" name="gender" id="boys" value="boys" class="custom-input">
+                        <div class="custom-radio filter-radio"></div>
+                    </div><label for="boys">Хлопчик</label></li>
             </ul>
         </li>
         <li class="filter__block">
@@ -122,11 +148,36 @@
             </button>
             <p class="filter__subtitle">Вік</p>
             <ul class="js-expand-list">
-                <li class="filter__item"><input type="checkbox" name="age" id="all-age" class=" custom-checkbox filter__checkbox"><label for="all-age">Всі</label></li>
-                <li class="filter__item"><input type="checkbox" name="age" id="up-to-one" class=" custom-checkbox filter__checkbox"><label for="up-to-one">до 1р.</label></li>
-                <li class="filter__item"><input type="checkbox" name="age" id="one-two" class=" custom-checkbox filter__checkbox"><label for="one-two">1-2р.</label></li>
-                <li class="filter__item"><input type="checkbox" name="age" id="two-five" class=" custom-checkbox filter__checkbox"><label for="two-five">2-5р.</label></li>
-                <li class="filter__item"><input type="checkbox" name="age" id="up-five" class=" custom-checkbox filter__checkbox"><label for="up-five">більше 5р.</label></li>
+                <li class="filter__item">
+                    <div class="custom-input__wrapper filter-checkbox__wrapper">
+                        <input type="checkbox" name="age" id="all-age" class="custom-input" checked="">
+                        <div class="custom-checkbox filter-checkbox"></div>
+                    </div>
+                    <label for="all-age">Всі</label></li>
+                <li class="filter__item">
+                    <div class="custom-input__wrapper filter-checkbox__wrapper">
+                        <input type="checkbox" name="age" id="up-to-one" class="custom-input">
+                        <div class="custom-checkbox filter-checkbox"></div>
+                    </div>
+                    <label for="up-to-one">до 1р.</label></li>
+                <li class="filter__item">
+                    <div class="custom-input__wrapper filter-checkbox__wrapper">
+                        <input type="checkbox" name="age" id="one-two" class="custom-input">
+                        <div class="custom-checkbox filter-checkbox"></div>
+                    </div>
+                    <label for="one-two">1-2р.</label></li>
+                <li class="filter__item">
+                                        <div class="custom-input__wrapper filter-checkbox__wrapper">
+                        <input type="checkbox" name="age" id="two-five" class="custom-input">
+                        <div class="custom-checkbox filter-checkbox"></div>
+                    </div>
+                    <label for="two-five">2-5р.</label></li>
+                <li class="filter__item">
+                    <div class="custom-input__wrapper filter-checkbox__wrapper">
+                        <input type="checkbox" name="age" id="up-five" class="custom-input">
+                        <div class="custom-checkbox filter-checkbox"></div>
+                    </div>
+                    <label for="up-five">більше 5р.</label></li>
             </ul>
         </li>
         <li class="filter__block">
@@ -137,10 +188,30 @@
             </button>
             <p class="filter__subtitle">Розмір</p>
             <ul class="js-expand-list">
-                <li class="filter__item"><input class=" custom-checkbox filter__checkbox" type="checkbox" name="size" value="all-size" id="all-size"><label for="all-size">Усі</label></li>
-                <li class="filter__item"><input class=" custom-checkbox filter__checkbox" type="checkbox" name="size" value="big" id="big"><label for="big">Великі</label></li>
-                <li class="filter__item"><input class=" custom-checkbox filter__checkbox" type="checkbox" name="size" value="medium" id="medium"><label for="medium">Середні</label></li>
-                <li class="filter__item"><input class=" custom-checkbox filter__checkbox" type="checkbox" name="size" value="small" id="small"><label for="small">Маленькі</label></li>
+                <li class="filter__item">
+                    <div class="custom-input__wrapper filter-checkbox__wrapper">
+                        <input class="custom-input" type="checkbox" name="size" value="all-size" id="all-size" checked="">
+                        <div class="custom-checkbox filter-checkbox"></div>
+                    </div>
+                   <label for="all-size">Усі</label></li>
+                <li class="filter__item">
+                    <div class="custom-input__wrapper filter-checkbox__wrapper">
+                        <input class="custom-input" type="checkbox" name="size" value="big" id="big">
+                        <div class="custom-checkbox filter-checkbox"></div>
+                    </div>
+                   <label for="big">Великі</label></li>
+                <li class="filter__item">
+                    <div class="custom-input__wrapper filter-checkbox__wrapper">
+                        <input class="custom-input" type="checkbox" name="size" value="medium" id="medium">
+                        <div class="custom-checkbox filter-checkbox"></div>
+                    </div>
+                    <label for="medium">Середні</label></li>
+                <li class="filter__item">
+                    <div class="custom-input__wrapper filter-checkbox__wrapper">
+                        <input class="custom-input" type="checkbox" name="size" value="small" id="small">
+                        <div class="custom-checkbox filter-checkbox"></div>
+                    </div>
+                   <label for="small">Маленькі</label></li>
             </ul>
         </li>
         <li class="filter__block">
@@ -151,9 +222,24 @@
             </button>
             <p class="filter__subtitle">Стерилізація</p>
             <ul class="js-expand-list">
-                <li class="filter__item"><input type="radio" name="sterilization" id="all-sterilization" value="all-sterilization" class="custom-radio filter__radio" checked=""><label for="all-sterilization">Всі</label></li>
-                <li class="filter__item"><input type="radio" name="sterilization" id="sterilized" value="sterilized" class="custom-radio filter__radio"><label for="sterilized">Зроблена</label></li>
-                <li class="filter__item"><input type="radio" name="sterilization" id="without" value="without" class="custom-radio filter__radio"><label for="without">Немає</label></li>
+                <li class="filter__item">
+                    <div class="custom-input__wrapper filter-radio__wrapper">
+                        <input type="radio" name="sterilization" id="all-sterilization" value="all-sterilization" class="custom-input" checked="">
+                        <div class="custom-radio filter-radio"></div>
+                    </div>
+                    <label for="all-sterilization">Всі</label></li>
+                <li class="filter__item">
+                    <div class="custom-input__wrapper filter-radio__wrapper">
+                        <input type="radio" name="sterilization" id="sterilized" value="sterilized" class="custom-input">
+                        <div class="custom-radio filter-radio"></div>
+                    </div>
+                    <label for="sterilized">Зроблена</label></li>
+                <li class="filter__item">
+                    <div class="custom-input__wrapper filter-radio__wrapper">
+                        <input type="radio" name="sterilization" id="without" value="without" class="custom-input">
+                        <div class="custom-radio filter-radio"></div>
+                    </div>
+                    <label for="without">Немає</label></li>
             </ul>
         </li>
         <li class="filter__block">
@@ -164,10 +250,30 @@
             </button>
             <p class="filter__subtitle">Шерсть</p>
             <ul class="js-expand-list">
-                <li class="filter__item"><input type="checkbox" name="fur" value="all-fur" id="all-fur" class=" custom-checkbox filter__checkbox"><label for="all-fur">Всі</label></li>
-                <li class="filter__item"><input type="checkbox" name="fur" value="short" id="short" class=" custom-checkbox filter__checkbox"><label for="short">Коротка</label></li>
-                <li class="filter__item"><input type="checkbox" name="fur" value="average" id="average" class=" custom-checkbox filter__checkbox"><label for="average">Середня</label></li>
-                <li class="filter__item"><input type="checkbox" name="fur" value="long" id="long" class=" custom-checkbox filter__checkbox"><label for="long">Довга</label></li>
+                <li class="filter__item">
+                    <div class="custom-input__wrapper filter-checkbox__wrapper">
+                        <input type="checkbox" name="fur" value="all-fur" id="all-fur" class="custom-input" checked="">
+                        <div class="custom-checkbox filter-checkbox"></div>
+                    </div>
+                    <label for="all-fur">Всі</label></li>
+                <li class="filter__item">
+                    <div class="custom-input__wrapper filter-checkbox__wrapper">
+                        <input type="checkbox" name="fur" value="short" id="short" class="custom-input">
+                        <div class="custom-checkbox filter-checkbox"></div>
+                    </div>
+                    <label for="short">Коротка</label></li>
+                <li class="filter__item">
+                    <div class="custom-input__wrapper filter-checkbox__wrapper">
+                        <input type="checkbox" name="fur" value="average" id="average" class="custom-input">
+                        <div class="custom-checkbox filter-checkbox"></div>
+                    </div>
+                   <label for="average">Середня</label></li>
+                <li class="filter__item">
+                    <div class="custom-input__wrapper filter-checkbox__wrapper">
+                        <input type="checkbox" name="fur" value="long" id="long" class="custom-input">
+                        <div class="custom-checkbox filter-checkbox"></div>
+                    </div>                  
+                    <label for="long">Довга</label></li>
             </ul>
         </li>
         <li class="filter__block">
@@ -178,9 +284,24 @@
             </button>
             <p class="filter__subtitle">Характер</p>
             <ul class="js-expand-list">
-                <li class="filter__item"><input type="radio" name="personality" value="all-personality" id="all-personality" class="custom-radio filter__radio" checked=""><label for="all-personality">Всі</label></li>
-                <li class="filter__item"><input type="radio" name="personality" value="calm" id="calm" class="custom-radio filter__radio"><label for="calm">Спокійний</label></li>
-                <li class="filter__item"><input type="radio" name="personality" value="active" id="active" class="custom-radio filter__radio"><label for="active">Активний</label></li>
+                <li class="filter__item">
+                    <div class="custom-input__wrapper filter-radio__wrapper">
+                        <input type="radio" name="personality" value="all-personality" id="all-personality" class="custom-input" checked="">
+                        <div class="custom-radio filter-radio"></div>
+                    </div>
+                    <label for="all-personality">Всі</label></li>
+                <li class="filter__item">
+                    <div class="custom-input__wrapper filter-radio__wrapper">
+                        <input type="radio" name="personality" value="calm" id="calm" class="custom-input">
+                        <div class="custom-radio filter-radio"></div>
+                    </div>
+                   <label for="calm">Спокійний</label></li>
+                <li class="filter__item">
+                    <div class="custom-input__wrapper filter-radio__wrapper">
+                        <input type="radio" name="personality" value="active" id="active" class="custom-input">
+                        <div class="custom-radio filter-radio"></div>
+                    </div>
+                   <label for="active">Активний</label></li>
             </ul>
         </li>
     </ul>
@@ -270,19 +391,51 @@
     </div>
     <form>
       <ul class="help-shelter__radio-list">
-        <li class="help-shelter__radio"><label class="help-shelter__label" for="25">25 грн</label><input class="custom-radio help-shelter__input" type="radio" name="price" id="25" value="25"></li>
-        <li class="help-shelter__radio"><label class="help-shelter__label" for="50">50 грн</label><input class="custom-radio help-shelter__input" type="radio" name="price" id="50" value="50"></li>
-        <li class="help-shelter__radio"><label class="help-shelter__label" for="100">100 грн</label><input class="custom-radio help-shelter__input" type="radio" name="price" id="100" value="100"></li>
-        <li class="help-shelter__radio"><label class="help-shelter__label" for="200">200 грн</label><input class="custom-radio help-shelter__input" type="radio" name="price" id="200" value="200"></li>
-        <li class="help-shelter__radio"><label class="help-shelter__label" for="500">500 грн</label><input class="custom-radio help-shelter__input" type="radio" name="price" id="500" value="500"></li>
-        <li class="help-shelter__radio"><label class="help-shelter__label" for="other">Інша сума</label><input class="custom-radio help-shelter__input" type="radio" name="price" id="other" value="other"></li>
+        <li class="help-shelter__radio">
+          <label class="help-shelter__label" for="25">25 грн</label>
+          <div class="custom-radio__wrapper help-shelter__input-wr">
+            <input class="custom-radio--reset" type="radio" name="price" id="25" value="25">
+            <div class="custom-radio help-shelter__input-radio"></div>
+          </div>
+        </li>
+        <li class="help-shelter__radio">
+          <label class="help-shelter__label" for="50">50 грн</label>
+          <div class="custom-radio__wrapper help-shelter__input-wr">
+            <input class="custom-radio--reset" type="radio" name="price" id="50" value="50">
+            <div class="custom-radio help-shelter__input-radio"></div>
+          </div>
+        </li>
+        <li class="help-shelter__radio">
+          <label class="help-shelter__label" for="100">100 грн</label>
+          <div class="custom-radio__wrapper help-shelter__input-wr">
+            <input class="custom-radio--reset" type="radio" name="price" id="100" value="100">
+            <div class="custom-radio help-shelter__input-radio"></div>
+        </div></li>
+        <li class="help-shelter__radio">
+          <label class="help-shelter__label" for="200">200 грн</label>
+          <div class="custom-radio__wrapper help-shelter__input-wr">
+            <input class="custom-radio--reset" type="radio" name="price" id="200" value="200">
+            <div class="custom-radio help-shelter__input-radio"></div>
+        </div></li>
+        <li class="help-shelter__radio">
+          <label class="help-shelter__label" for="500">500 грн</label>
+          <div class="custom-radio__wrapper help-shelter__input-wr">
+            <input class="custom-radio--reset" type="radio" name="price" id="500" value="500">
+            <div class="custom-radio help-shelter__input-radio"></div>
+        </div></li>
+        <li class="help-shelter__radio">
+          <label class="help-shelter__label" for="other">Інша сума</label>
+          <div class="custom-radio__wrapper help-shelter__input-wr">
+            <input class="custom-radio--reset" type="radio" name="price" id="other" value="other">
+            <div class="custom-radio help-shelter__input-radio"></div>
+        </div></li>
       </ul>
       <div class="help-shelter__btns">
         <a href="" class="btn btn-font--sec btn-blue help-shelter__btn-paw btn-paw">
-            <svg width="35" height="35" class="icon icon-fill-white">
-                <use href="/icons.0e14c542.svg#icon-paw"></use>
-            </svg>
-            Сплатити</a>
+          <svg width="35" height="35" class="icon icon-fill-white">
+            <use href="/icons.0e14c542.svg#icon-paw"></use>
+          </svg>
+          Сплатити</a>
         <a href="" class="btn btn-dashed btn-dashed--blue btn-font--sec help-shelter__btn-dashed">Усі реквізити</a>
       </div>
     </form>

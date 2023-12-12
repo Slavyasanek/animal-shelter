@@ -47,6 +47,10 @@
       border-radius: 3.125rem;
       color: var(--dark-blue);
       border-color: var(--dark-blue);
+      &:hover, &:focus {
+        border-color: var(--light-blue);
+        color: var(--light-blue);
+      }
     }
   }
   &-blue {
