@@ -1172,12 +1172,12 @@ address {
 @media screen and (width <= 1199px) {
   .header__nav {
     background-color: var(--white);
+    transition: var(--transition);
     opacity: 0;
     visibility: hidden;
     width: 100%;
     height: 100vh;
     padding: 2rem;
-    transition: all 1s cubic-bezier(.4, 0, .2, 1);
     position: fixed;
     top: 5.75rem;
     left: 0;
@@ -1216,7 +1216,7 @@ address {
 }
 
 .header__nav ul:hover > li:not(:hover) {
-  color: var(--yellow);
+  color: #eddb5180;
 }
 
 .header__nav ul > li {
@@ -1302,13 +1302,14 @@ address {
 }
 
 .header__lang-switch {
-  column-gap: .83vw;
+  column-gap: 2.2vw;
   font-size: 1rem;
   display: inline-flex;
 }
 
 @media screen and (width >= 1200px) {
   .header__lang-switch {
+    column-gap: 1vw;
     font-size: .75rem;
   }
 }
@@ -1322,7 +1323,7 @@ address {
 .header__lang-switch > li {
   color: var(--transparent-blue);
   cursor: pointer;
-  transition: color .25s cubic-bezier(.4, 0, .2, 1);
+  transition: var(--transition);
 }
 
 .header__lang-switch > li > a.active, .header__lang-switch > li:hover, .header__lang-switch > li:focus, .header__lang-switch > li:active {

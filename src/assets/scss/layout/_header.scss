@@ -7,6 +7,7 @@
   transform: translateY(-100%);
   z-index: 99;
   background-color: transparent;
+  // header styles for scrolling features
   &.shown {
     transform: translateY(0);
   }
@@ -21,6 +22,7 @@
     align-items: center;
     padding: 0.5rem 0;
   }
+  // logo
   &__logo {
     width: 3.25rem;
     @include media-M {
@@ -34,6 +36,7 @@
       @include cover-image;
     }
   }
+  //  navigation + mobile menu
   &__nav {
     @include media-maxL {
       position: fixed;
@@ -43,7 +46,7 @@
       height: 100vh;
       background-color: var(--white);
       padding: 2rem;
-      transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: var(--transition);
       @include el-hide;
       transform: translateX(100%);
       &.shown {
@@ -65,7 +68,7 @@
         column-gap: 2.5vw;
       }
       &:hover > li:not(:hover) {
-        color: var(--yellow);
+        color: rgba(#EDDB51, 0.5);
       }
       & > li {
         color: var(--dark-blue);
@@ -86,6 +89,7 @@
       }
     }
   }
+  //  mobile menu btn
   &__btn {
     position: relative;
     height: 1.5rem;
@@ -137,11 +141,13 @@
       }
     }
   }
+  // language switcher
   &__lang-switch {
     display: inline-flex;
-    column-gap: 0.83vw;
+    column-gap: 2.2vw;
     font-size: 1rem;
     @include media-L {
+      column-gap: 1vw;
       font-size: 0.75rem;
     }
     @include media-XL {
@@ -150,7 +156,7 @@
     & > li {
       color: var(--transparent-blue);
       cursor: pointer;
-      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      transition: var(--transition);
       & > a.active {
         color: var(--dark-blue);
       }

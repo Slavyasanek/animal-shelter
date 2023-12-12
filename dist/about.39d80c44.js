@@ -8620,13 +8620,12 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _lodashThrottle = require("lodash.throttle");
 var _lodashThrottleDefault = parcelHelpers.interopDefault(_lodashThrottle);
 var _refs = require("./refs");
-const header = (0, _refs.refs).header;
-const headerHeight = header.getBoundingClientRect().height;
+const { header } = (0, _refs.refs);
 let scrollPosition = window.scrollY;
 const showHeader = ()=>{
     if (header) {
         const newScrollPosition = window.scrollY;
-        if (newScrollPosition > headerHeight) header.classList.add("header--white-back");
+        if (newScrollPosition > 0) header.classList.add("header--white-back");
         else header.classList.remove("header--white-back");
         if (newScrollPosition < scrollPosition || scrollPosition === 0) header.classList.add("shown");
         else header.classList.remove("shown");

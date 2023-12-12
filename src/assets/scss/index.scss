@@ -1,11 +1,14 @@
+// utils
 @import './utils/variables';
 @import './utils/mixins';
 
+// page common style, reset default styles
 @import './base/common';
 @import './base/fonts';
 @import './base/reset';
 @import './base/container';
 
+// components ot common styles, resets
 @import './components/section';
 @import './components/icons';
 @import './components/btns';
@@ -13,6 +16,7 @@
 @import './components/breadscrumbs';
 @import './components/filter';
 
+// sections specific styles
 @import './layout/header';
 @import './layout/footer';
 @import './layout/main-hero';
