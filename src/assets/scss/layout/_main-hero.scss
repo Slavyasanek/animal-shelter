@@ -1,23 +1,56 @@
 .main-hero {
+  // hero wrapper
   &__quote {
     display: flex;
-    flex-direction: row;
-    column-gap: 7.55vw;
-    align-items: end;
-    padding-bottom: 9.38rem;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding-bottom: 5rem;
+    @include media-L {
+      flex-direction: row;
+      column-gap: 7.55vw;
+      align-items: end;
+      padding-bottom: 9.38rem;
+    }
   }
+  // * big page title
   &__title {
-    @include subtitle(var(--main-text-color), 6.25rem);
-    margin-bottom: 3rem;
+    @include subtitle(var(--main-text-color), 4.5rem);
+    margin-bottom: 1rem;
     line-height: 1.23;
     min-width: 31.66vw;
+    @include media-L {
+      font-size: 6.25rem;
+      margin-bottom: 3rem;
+    }
   }
+  // * scaling images gallery
   &__gallery {
     display: flex;
-    flex-direction: row;
-    column-gap: 20px;
+    flex-direction: column;
     width: 100%;
+    row-gap: 0.75rem;
+    @include media-M {
+      flex-direction: row;
+      column-gap: 1.25rem;
+    }
+    // * scaling down
+    &:hover > li:not(:hover) {
+      @include media-L {
+        flex-grow: 0;
+        .main-hero__card-text {
+          &.right {
+            transform: rotate(180deg);
+            @include el-show;
+          }
+          &.bottom {
+            transform: translateY(-100%);
+            @include el-hide;
+          }
+        }
+      }
+    }
   }
+  // * gradient background
   &__gradient {
     &::before {
       content: "";
@@ -30,76 +63,119 @@
       z-index: -1;
     }
   }
-  &__photo-wrapper {
-    height: 30rem;
-    width: 11.458vw;
+  // * gallery single item
+  &__card {
+    width: 100%;
+    height: 18rem;
     border-radius: 1.25rem;
     flex-grow: 0;
     transition: var(--transition);
     cursor: pointer;
     overflow: hidden;
     position: relative;
-    &:first-child {
-      flex-grow: 1;
-      .main-hero__gallery-text {
-        transform: rotate(0);
-        bottom: 1.563rem;
-        left: 1.688rem;
-      }
-      .main-hero__card-subtitle {
-        visibility: visible;
-        opacity: 1;
+    @include media-L {
+      height: 30rem;
+      width: 11.45vw;
+    }
+    // * link and photo
+    & > a {
+      position: relative;
+      z-index: 1;
+      & > picture,
+      img {
+        @include cover-image;
+        object-position: center;
       }
     }
-    &:hover,
-    &:focus {
-      flex-grow: 10;
-      .main-hero__gallery-text {
-        transform: rotate(0);
-        bottom: 1.563rem;
-        left: 1.688rem;
+    // *default for first child
+    &:first-child {
+      flex-grow: 1;
+      .main-hero__card-text {
+        &.right {
+          transform: translate(100%) rotate(180deg);
+          @include el-hide;
+        }
+        &.bottom {
+          transform: translateY(0);
+          @include el-show;
+        }
       }
-      .main-hero__card-subtitle {
-        visibility: visible;
-        opacity: 1;
+    }
+    @include media-L {
+      &:hover,
+      &:focus {
+        flex-grow: 1;
+        .main-hero__card-text {
+          &.right {
+            transform: translate(100%) rotate(180deg);
+            @include el-hide;
+          }
+          &.bottom {
+            transform: translateY(0);
+            @include el-show;
+          }
+        }
       }
     }
   }
+  // * block of card text
+  &__card-text {
+    position: absolute;
+    color: var(--white);
+    transition: var(--transition);
+    z-index: 2;
+    bottom: 1.5rem;
+    &.right {
+      @include media-maxL {
+        @include el-hide;
+      }
+      right: 1.56vw;
+      writing-mode: vertical-lr;
+      text-align: left;
+      transform: rotate(180deg);
+      @include el-show;
+    }
+    &.bottom {
+      @include media-maxL {
+        @include el-show;
+        transform: translate(0%);
+      }
+      left: 2vw;
+      transform: translateY(100%);
+      @include el-hide;
+    }
+  }
+  &__card-title {
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    white-space: nowrap;
+    @include media-L {
+      font-size: 1.5rem;
+    }
+  }
+  // subtitle which is hidden at first
+  &__card-subtitle {
+    font-weight: 100;
+    font-size: 0.875rem;
+    transition: var(--transition);
+    @include media-L {
+      font-size: 1.125rem;
+    }
+  }
+  // darkening images
   &__photo-overlay {
     position: absolute;
+    pointer-events: none;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     background-color: rgba(27, 27, 27, 0.4);
   }
-  &__gallery-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-  &__gallery-text {
-    position: absolute;
-    transform: rotate(-90deg);
-    color: $white;
-    right: -1.813rem;
-    transition: var(--transition);
-    bottom: 4rem;
-    z-index: 2;
-  }
-  &__card-title {
-    font-weight: 300;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-  &__card-subtitle {
-    font-weight: 100;
-    font-size: 1.125rem;
-    transition: var(--transition);
-    visibility: hidden;
-    opacity: 0;
-  }
+  // ! another block
+
+  // about shelter block
   &__description {
     display: flex;
     column-gap: 8.38vw;

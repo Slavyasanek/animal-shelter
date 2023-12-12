@@ -1,5 +1,8 @@
 .section {
-  padding: 9.38rem 0;
+  padding: 5rem 0;
+  @include media-L {
+    padding: 9.38rem 0;
+  }
 }
 
 .section--relative {
