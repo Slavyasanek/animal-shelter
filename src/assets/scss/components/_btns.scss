@@ -25,7 +25,10 @@
     &--cleaned {
       display: block;
       min-width: 17.2vw;
-      font-size: 1.5rem;
+      font-size: 1.75rem;
+      @include media-L {
+        font-size: 1.5rem;
+      }
       padding: 1.625rem 14.2vw;
       @include media-L {
         padding: 1.625rem 6.6vw;

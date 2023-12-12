@@ -48,6 +48,12 @@
   }
 }
 
+@mixin media-maxM {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
 @mixin media-M() {
   @media screen and (min-width: 768px) {
     @content;

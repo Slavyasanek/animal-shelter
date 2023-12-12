@@ -1,4 +1,4 @@
-.main-hero {
+.hero {
   // hero wrapper
   &__quote {
     display: flex;
@@ -37,16 +37,19 @@
     &:hover > li:not(:hover) {
       @include media-L {
         flex-grow: 0;
-        .main-hero__card-text {
+        .hero__card-text {
           &.right {
             transform: rotate(180deg);
             @include el-show;
           }
           &.bottom {
-            transform: translateY(-100%);
+            transform: translateY(100%);
             @include el-hide;
           }
         }
+      }
+      .hero__card-btn {
+        @include el-hide;
       }
     }
   }
@@ -90,7 +93,7 @@
     // *default for first child
     &:first-child {
       flex-grow: 1;
-      .main-hero__card-text {
+      .hero__card-text {
         &.right {
           transform: translate(100%) rotate(180deg);
           @include el-hide;
@@ -100,20 +103,26 @@
           @include el-show;
         }
       }
+      .hero__card-btn {
+        @include el-show;
+      }
     }
     @include media-L {
       &:hover,
       &:focus {
         flex-grow: 1;
-        .main-hero__card-text {
+        .hero__card-text {
           &.right {
-            transform: translate(100%) rotate(180deg);
+            transform: translateX(100%) rotate(180deg);
             @include el-hide;
           }
           &.bottom {
             transform: translateY(0);
             @include el-show;
           }
+        }
+        .hero__card-btn {
+          @include el-show;
         }
       }
     }
@@ -138,7 +147,7 @@
     &.bottom {
       @include media-maxL {
         @include el-show;
-        transform: translate(0%);
+        transform: translateY(0%);
       }
       left: 2vw;
       transform: translateY(100%);
@@ -154,7 +163,7 @@
       font-size: 1.5rem;
     }
   }
-  // subtitle which is hidden at first
+  // * subtitle which is hidden at first
   &__card-subtitle {
     font-weight: 100;
     font-size: 0.875rem;
@@ -163,7 +172,30 @@
       font-size: 1.125rem;
     }
   }
-  // darkening images
+  &__card-btn {
+    position: absolute;
+    background-color: transparent;
+    right: 1.5rem;
+    bottom: 1rem;
+    z-index: 1;
+    transition: var(--transition);
+    @include media-maxL {
+      @include el-show;
+    }
+    @include el-hide;
+    @include media-M {
+      bottom: 3rem;
+    }
+  }
+  &__card-paw {
+    transform: rotate(45deg);
+  }
+  &__card-arrow {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 0;
+  }
+  // * darkening images
   &__photo-overlay {
     position: absolute;
     pointer-events: none;
@@ -174,25 +206,34 @@
     background-color: rgba(27, 27, 27, 0.4);
   }
   // ! another block
-
-  // about shelter block
+  // * about shelter wrapper
   &__description {
-    display: flex;
-    column-gap: 8.38vw;
     height: 100%;
+    @include media-M {
+      display: flex;
+      flex-direction: row;
+      column-gap: 4.2vw;
+    }
+    @include media-L {
+      column-gap: 8.38vw;
+    }
   }
+  // * subtitle
   &__subtitle {
     @include subtitle(var(--main-text-color), 4.5rem);
     margin-bottom: 0.75rem;
   }
-  &__img {
-    border-radius: 1.25rem;
+  // * image wrap
+  &__img-wrapper {
+    width: 100%;
     height: 100%;
-    object-fit: cover;
-    &--wrapper {
-      width: 100%;
-      height: 100%;
-      margin-bottom: 2.75rem;
+    &.right {
+      margin-bottom: 2.75rem; 
+    }
+    border-radius: 1.25rem;
+    overflow: hidden;
+    &  img, picture {
+      @include cover-image;
     }
   }
   &__text {
@@ -201,11 +242,18 @@
     font-weight: 300;
     margin-bottom: 1rem;
   }
+  // * left and right blocks of text+image
   &__paragraph {
-    width: calc((100% - 10rem) / 2);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    &:first-child {
+      @include media-maxM {
+        margin-bottom: 2rem;
+      }
+    }
+    @include media-L {
+      width: calc((100% - 10rem) / 2);
+    }
     &:nth-child(2) {
       flex-grow: 2;
     }
