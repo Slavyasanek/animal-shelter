@@ -52,6 +52,9 @@
     }
   }
   &__btn {
-    width: 17.1vw;
+    width: 28vw;
+    @include media-M {
+      width: 17.1vw;
+    }
   }
 }
