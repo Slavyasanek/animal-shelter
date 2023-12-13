@@ -44,6 +44,7 @@
     border-width: 0.125rem;
     border-style: dashed;
     font-size: 1.5rem;
+    text-align: center;
     &--dark {
       border-radius: 2.5rem;
       border-color: $black;
@@ -72,6 +73,7 @@
   &-paw {
     display: flex;
     align-items: center;
+    justify-content: center;
     column-gap: 0.375em;
   }
   &-transparent {
