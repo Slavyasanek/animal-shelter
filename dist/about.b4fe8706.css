@@ -1990,7 +1990,7 @@ address {
   background-position: 0 100%;
   background-repeat: no-repeat;
   border-radius: 2.5rem;
-  padding: 5rem 6vw;
+  padding: 3.5rem 6vw;
 }
 
 @media screen and (min-width: 768px) {
@@ -2067,15 +2067,9 @@ address {
   }
 }
 
-.help-shelter__btns {
-  column-gap: 5.83vw;
-  margin-top: 2.813rem;
-  display: flex;
-}
-
 .help-shelter__label {
   white-space: nowrap;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 300;
 }
 
@@ -2091,42 +2085,39 @@ address {
   }
 }
 
-.help-shelter__btn-paw {
-  padding: 1rem;
+.help-shelter__btns {
+  column-gap: 5.83vw;
+  margin-top: 2.813rem;
+  display: flex;
 }
 
-@media screen and (max-width: 767px) {
-  .help-shelter__btn-paw {
-    width: 50%;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .help-shelter__btn-paw {
-    padding: .625rem 3.33vw;
-  }
-}
-
-.help-shelter__btn-dashed {
-  padding: 1rem;
-}
-
-@media screen and (max-width: 767px) {
-  .help-shelter__btn-dashed {
-    width: 50%;
-  }
+.help-shelter__btn {
+  width: 50%;
 }
 
 @media screen and (min-width: 768px) {
-  .help-shelter__btn-dashed {
-    padding: 1rem 3.125vw;
+  .help-shelter__btn {
+    width: 17vw;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .help-shelter__btn {
+    width: 12.1vw;
   }
 }
 
 .help-shelter__input-wr {
   cursor: pointer;
-  width: 1.75rem;
-  height: 1.75rem;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+@media screen and (min-width: 768px) {
+  .help-shelter__input-wr {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
 }
 
 .help-shelter__input-radio {
@@ -2136,8 +2127,15 @@ address {
 .help-shelter__input-radio:before {
   content: "";
   background-color: var(--white);
-  width: .875rem;
-  height: .875rem;
+  width: .5rem;
+  height: .5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .help-shelter__input-radio:before {
+    width: .875rem;
+    height: .875rem;
+  }
 }
 
 .demands--wrapper {
