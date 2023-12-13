@@ -42,6 +42,16 @@
   content: "";
 }
 
+@mixin p-y($value) {
+  padding-top: $value;
+  padding-bottom: $value;
+}
+
+@mixin p-x($value) {
+  padding-right: $value;
+  padding-left: $value;
+}
+
 @mixin media-S() {
   @media screen and (min-width: 425px) {
     @content;
