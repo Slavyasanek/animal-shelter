@@ -58,7 +58,7 @@
   }
 }
 
-@mixin media-maxM {
+@mixin media-maxM() {
   @media screen and (max-width: 767px) {
     @content;
   }
@@ -70,7 +70,7 @@
   }
 }
 
-@mixin media-maxL {
+@mixin media-maxL() {
   @media screen and (max-width: 1199px) {
     @content;
   }

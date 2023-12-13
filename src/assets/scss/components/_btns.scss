@@ -24,9 +24,12 @@
     }
     &--cleaned {
       display: block;
-      font-size: 1.75rem;
       @include p-y(1.625rem);
       text-align: center;
+      font-size: 1.25rem;
+      @include media-M {
+        font-size: 1.75rem;
+      }
       @include media-L {
         font-size: 1.5rem;
       }
@@ -44,7 +47,10 @@
     @include p-y(1.625rem);
     display: inline-block;
     &--big {
-      font-size: 1.75rem;
+      font-size: 1.25rem;
+      @include media-M {
+        font-size: 1.75rem;
+      }
       @include media-L {
         font-size: 1.5rem;
       }
