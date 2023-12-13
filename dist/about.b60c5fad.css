@@ -817,7 +817,6 @@ address {
 
 .btn-yellow--cleaned {
   text-align: center;
-  min-width: 17.2vw;
   padding-top: 1.625rem;
   padding-bottom: 1.625rem;
   font-size: 1.75rem;
@@ -1490,6 +1489,22 @@ address {
   visibility: hidden;
 }
 
+.hero__btn {
+  width: 40vw;
+}
+
+@media screen and (width >= 768px) {
+  .hero__btn {
+    width: 35vw;
+  }
+}
+
+@media screen and (width >= 1200px) {
+  .hero__btn {
+    width: 17.5vw;
+  }
+}
+
 .hero__gradient:before {
   content: "";
   z-index: -1;
@@ -1794,6 +1809,22 @@ address {
 @media screen and (width >= 768px) {
   .war-shelter__title {
     font-size: 4.5rem;
+  }
+}
+
+.war-shelter__btn {
+  width: 40vw;
+}
+
+@media screen and (width >= 768px) {
+  .war-shelter__btn {
+    width: 35vw;
+  }
+}
+
+@media screen and (width >= 1200px) {
+  .war-shelter__btn {
+    width: 17.5vw;
   }
 }
 

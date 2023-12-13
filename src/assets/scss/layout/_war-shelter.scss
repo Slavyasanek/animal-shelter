@@ -38,4 +38,13 @@
       font-size: 4.5rem;
     }
   }
+  &__btn {
+    width: 40vw;
+    @include media-M {
+      width: 35vw;
+    }
+    @include media-L {
+      width: 17.5vw;
+    }
+  }
 }
