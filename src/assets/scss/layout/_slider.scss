@@ -1,32 +1,41 @@
 .slider {
   .swiper-slide {
-    padding-top: 4.25rem;
-    padding-bottom: 13rem;
     position: relative;
     width: 100%;
     z-index: 100;
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+    @include media-L {
+      padding-top: 4.25rem;
+      padding-bottom: 13rem;
+    }
     &::after {
-      content: "";
+      @include pseudo;
       position: absolute;
       display: block;
       top: 0;
       left: 0;
       bottom: 0;
       right: 0;
-      width: 100%;
-      height: 100%;
+      @include full-wh;
       background: rgba(0, 0, 0, 0.2);
       z-index: -1;
     }
   }
   &__title {
-    @include subtitle(var(--white), 4.5rem);
-    margin-bottom: 10.5rem;
+    @include subtitle(var(--white), 3.75rem);
+    margin-bottom: 5rem;
+    @include media-L {
+      font-size: 4.5rem;
+      margin-bottom: 10.5rem;
+    }
   }
   &__btn {
+    width: 40vw;
+    @include media-M {
+      width: 19vw;
+    }
     &-dashed {
-      padding: 1.625rem 6.6vw;
-      display: inline-block;
       background-color: var(--white);
     }
     &-yellow {
@@ -34,27 +43,33 @@
     }
   }
   &__info {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 400;
     text-transform: uppercase;
     color: var(--white);
     margin-bottom: 3rem;
+    @include media-L {
+      font-size: 2rem;
+    }
   }
   &__name {
-    margin-bottom: 2rem;
+    margin-bottom: 0.75rem;
+    @include media-L {
+      margin-bottom: 2rem;
+    }
   }
-  &__img {
-    object-fit: cover;
+  &__img-wr {
+    position: absolute;
+    z-index: -2;
+    width: 100%;
     height: 100%;
-    &--wrapper {
-      position: absolute;
-      z-index: -2;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    & picture,
+    img {
+      @include cover-image;
     }
   }
   .swiper-pagination {
@@ -67,7 +82,8 @@
       background-color: var(--yellow);
       opacity: 1;
       position: relative;
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         background-color: var(--yellow-hover);
       }
       &::before {
