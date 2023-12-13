@@ -26,12 +26,10 @@
       display: block;
       min-width: 17.2vw;
       font-size: 1.75rem;
+      @include p-y(1.625rem);
+      text-align: center;
       @include media-L {
         font-size: 1.5rem;
-      }
-      padding: 1.625rem 14.2vw;
-      @include media-L {
-        padding: 1.625rem 6.6vw;
       }
     }
     &--paw {
@@ -43,8 +41,18 @@
     background-color: transparent;
     border-width: 0.125rem;
     border-style: dashed;
-    font-size: 1.5rem;
     text-align: center;
+    @include p-y(1.625rem);
+    display: inline-block;
+    &--big {
+      font-size: 1.75rem;
+      @include media-L {
+        font-size: 1.5rem;
+      }
+    }
+    &--small {
+      font-size: 1.125rem;
+    }
     &--dark {
       border-radius: 2.5rem;
       border-color: $black;
@@ -54,7 +62,8 @@
       border-radius: 3.125rem;
       color: var(--dark-blue);
       border-color: var(--dark-blue);
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         border-color: var(--light-blue);
         color: var(--light-blue);
       }
