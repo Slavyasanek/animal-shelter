@@ -1223,7 +1223,7 @@ address {
     height: 100vh;
     padding: 2rem;
     position: fixed;
-    top: 5.75rem;
+    top: 4.25rem;
     left: 0;
     transform: translateX(100%);
   }
@@ -1938,15 +1938,20 @@ address {
 
 .subscription {
   background-image: linear-gradient(0deg, #252525cc 0% 100%), url("cat-in-cage.aa0f9529.jpg");
-  background-position: 0, 0 -16rem;
   background-repeat: no-repeat;
   background-size: cover;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 4.375rem 0;
+  padding: 4.38rem 0;
   display: flex;
+}
+
+@media screen and (min-width: 1200px) {
+  .subscription {
+    background-position: 0, 0 -16rem;
+  }
 }
 
 .subscription__title {
@@ -1954,16 +1959,29 @@ address {
   text-transform: uppercase;
   color: var(--white);
   text-align: center;
-  max-width: 49rem;
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .subscription__title {
+    max-width: 50rem;
+    font-size: 2.25rem;
+  }
 }
 
 .subscription__form {
   flex-direction: row;
-  column-gap: 5rem;
-  margin-top: 4rem;
+  column-gap: 2vw;
+  margin-top: 2rem;
   display: flex;
+}
+
+@media screen and (min-width: 768px) {
+  .subscription__form {
+    column-gap: 4.16vw;
+    margin-top: 4rem;
+  }
 }
 
 .subscription__input {
@@ -1971,8 +1989,15 @@ address {
   border: none;
   border-radius: 2.5rem;
   outline: none;
-  min-width: 37.5vw;
-  padding: 1.625rem 2.5rem;
+  min-width: 50vw;
+  padding: .5rem 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .subscription__input {
+    min-width: 37.5vw;
+    padding: 1.625rem 2.5rem;
+  }
 }
 
 .subscription__input, .subscription__input::placeholder {
@@ -1981,6 +2006,10 @@ address {
   color: var(--text-grey);
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+.subscription__btn {
+  width: 17.1vw;
 }
 
 .help-shelter__wrapper {
@@ -1995,7 +2024,6 @@ address {
 
 @media screen and (min-width: 768px) {
   .help-shelter__wrapper {
-    align-items: center;
     column-gap: 4vw;
     padding: 8.75rem 10.51vw 8.375rem 6.25vw;
     display: flex;
