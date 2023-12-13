@@ -581,7 +581,49 @@ var _filter = require("./filter");
 var _header = require("./header");
 var _mobileMenu = require("./mobile-menu");
 
-},{"./swiper":"evkzr","./filter":"c6gqC","./header":"7HwTx","./mobile-menu":"2dqwL","./refs":"e2yXP"}],"evkzr":[function(require,module,exports) {
+},{"./refs":"e2yXP","./swiper":"evkzr","./filter":"c6gqC","./header":"7HwTx","./mobile-menu":"2dqwL"}],"e2yXP":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "refs", ()=>refs);
+const refs = {
+    header: document.querySelector("#header"),
+    filter: document.querySelector(".filter__options"),
+    mobileMenuBtn: document.querySelector("#mobile-menu-btn"),
+    mobileMenu: document.querySelector("#mobile-menu"),
+    body: document.body
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"evkzr":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _swiper = require("swiper");
 var _swiperDefault = parcelHelpers.interopDefault(_swiper);
@@ -3777,37 +3819,7 @@ function getWindow() {
     return win;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"9mU7V":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9mU7V":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "a", ()=>elementParents);
@@ -8603,19 +8615,7 @@ const toggleOptions = (e)=>{
 };
 if (optionsRef) optionsRef.addEventListener("click", toggleOptions);
 
-},{"./refs":"e2yXP"}],"e2yXP":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "refs", ()=>refs);
-const refs = {
-    header: document.querySelector("#header"),
-    filter: document.querySelector(".filter__options"),
-    mobileMenuBtn: document.querySelector("#mobile-menu-btn"),
-    mobileMenu: document.querySelector("#mobile-menu"),
-    body: document.body
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7HwTx":[function(require,module,exports) {
+},{"./refs":"e2yXP"}],"7HwTx":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _lodashThrottle = require("lodash.throttle");
 var _lodashThrottleDefault = parcelHelpers.interopDefault(_lodashThrottle);
@@ -8634,7 +8634,7 @@ const showHeader = ()=>{
 };
 window.addEventListener("scroll", (0, _lodashThrottleDefault.default)(()=>showHeader(), 300));
 
-},{"lodash.throttle":"bGJVT","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./refs":"e2yXP"}],"bGJVT":[function(require,module,exports) {
+},{"lodash.throttle":"bGJVT","./refs":"e2yXP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bGJVT":[function(require,module,exports) {
 /**
  * lodash (Custom Build) <https://lodash.com/>
  * Build: `lodash modularize exports="npm" -o ./`
