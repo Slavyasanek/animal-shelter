@@ -39,17 +39,14 @@
     }
   }
   &__links {
-    display: flex;
-    flex-direction: row;
-    @include media-maxM {
-      flex-wrap: wrap;
-      row-gap: 2rem;
-      justify-content: center;
-    }
     @include media-maxL {
       width: 100%;
       margin-bottom: 1rem;
       justify-content: space-around;
+    }
+    @include media-M {
+      display: flex;
+      flex-direction: row;
     }
     @include media-L {
       column-gap: 2vw;
@@ -63,7 +60,8 @@
     flex-direction: column;
     row-gap: 0.625rem;
     @include media-maxM {
-      width: calc((100% - 25vw) / 2);
+      margin-bottom: 2rem;
+      text-align: center;
     }
     @include media-M {
       &:last-of-type {

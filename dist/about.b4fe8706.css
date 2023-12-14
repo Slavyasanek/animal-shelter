@@ -1472,24 +1472,18 @@ address {
   height: 100%;
 }
 
-.footer__links {
-  flex-direction: row;
-  display: flex;
-}
-
-@media screen and (max-width: 767px) {
-  .footer__links {
-    flex-wrap: wrap;
-    justify-content: center;
-    row-gap: 2rem;
-  }
-}
-
 @media screen and (max-width: 1199px) {
   .footer__links {
     justify-content: space-around;
     width: 100%;
     margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__links {
+    flex-direction: row;
+    display: flex;
   }
 }
 
@@ -1513,7 +1507,8 @@ address {
 
 @media screen and (max-width: 767px) {
   .footer__list {
-    width: calc(50% - 12.5vw);
+    text-align: center;
+    margin-bottom: 2rem;
   }
 }
 
