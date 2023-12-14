@@ -1,39 +1,43 @@
 .war-shelter {
-  // *background with 2 images
   width: 100%;
-  background-repeat: no-repeat;
-  background-image: url("../static/pictures/cat-bg.png");
-  background-position: center;
-  background-size: cover;
-//   background-size: 100% 100%;
-  @include media-XL {
-    background-size: auto, auto;
-    background-position: left, right;
-    background-image: url("../static/pictures/cat-bg.png"),
-    url("../static/pictures/dog-bg.png");
+  position: relative;
+  // * positioned covered background
+  &__bg-wr {
+    @include pseudo;
+    position: absolute;
+    @include full-wh;
+    @include inset;
+    z-index: -1;
+    & img,
+    picture {
+      @include cover-image;
+    }
   }
-  &__container {
+  // * overlay for background gradient and black transparented clr
+  &__overlay {
     padding-top: 3.75rem;
     padding-bottom: 5.125rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(
+      270deg,
+      rgba(36, 31, 28, 0) 6.77%,
+      rgba(36, 31, 28, 0.92) 38.02%,
+      #241f1c 49.48%,
+      rgba(36, 31, 28, 0.98) 61.98%,
+      rgba(36, 31, 28, 0) 94.79%
+    );
+  }
+  &__container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    row-gap: 2rem;
-    background-color: rgba(36, 31, 28, 0.6);
+    row-gap: 0.75rem;
     @include media-M {
       row-gap: 3.25rem;
-      background: linear-gradient(
-        270deg,
-        rgba(36, 31, 28, 0) 6.77%,
-        rgba(36, 31, 28, 0.92) 38.02%,
-        #241f1c 49.48%,
-        rgba(36, 31, 28, 0.98) 61.98%,
-        rgba(36, 31, 28, 0) 94.79%
-      );
     }
   }
-  // *title
+  // * big section title
   &__title {
     @include subtitle(var(--white), 3rem);
     text-align: center;
@@ -41,8 +45,9 @@
       font-size: 4.5rem;
     }
   }
+  // * more info btn
   &__btn {
-    width: 40vw;
+    width: 100%;
     @include media-M {
       width: 35vw;
     }
