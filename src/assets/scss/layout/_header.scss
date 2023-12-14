@@ -70,7 +70,7 @@
       @include media-XL {
         column-gap: 2.5vw;
       }
-      &:hover > li:not(:hover) {
+      &:has(:hover) li:not(:hover) {
         color: rgba(#EDDB51, 0.5);
       }
       & > li {

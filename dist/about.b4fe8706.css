@@ -1278,7 +1278,7 @@ address {
   }
 }
 
-.header__nav ul:hover > li:not(:hover) {
+.header__nav ul:has(:hover) li:not(:hover) {
   color: #eddb5180;
 }
 
