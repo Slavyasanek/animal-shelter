@@ -39,7 +39,7 @@
   //  navigation + mobile menu
   &__nav {
     top: 4.25rem;
-    @include media-L {
+    @include media-M {
       top: 5.75rem;
     }
     @include media-maxL {

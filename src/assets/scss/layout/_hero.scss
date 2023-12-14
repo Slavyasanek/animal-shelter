@@ -1,11 +1,12 @@
 .hero {
-  // hero wrapper
+  @extend .section;
+  @include media-maxM {
+    padding-top: 2rem;
+  }
   &__quote {
-    display: flex;
-    flex-direction: column;
-    row-gap: 2rem;
     padding-bottom: 5rem;
     @include media-L {
+      display: flex;
       flex-direction: row;
       column-gap: 7.55vw;
       align-items: end;
@@ -14,13 +15,28 @@
   }
   // * big page title
   &__title {
-    @include subtitle(var(--main-text-color), 4.5rem);
+    @include subtitle(var(--main-text-color), 4rem);
     margin-bottom: 1rem;
     line-height: 1.23;
     min-width: 31.66vw;
+    text-align: center;
     @include media-L {
       font-size: 6.25rem;
       margin-bottom: 3rem;
+      text-align: left;
+    }
+    &-wr {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 3rem;
+      @include media-M {
+        margin-bottom: 2rem;
+      }
+      @include media-L {
+        margin-bottom: 0;
+        justify-content: flex-start;
+      }
     }
   }
   // * scaling images gallery
@@ -34,7 +50,7 @@
       column-gap: 1.25rem;
     }
     // * scaling down
-    &:hover > li:not(:hover) {
+    &:has(:hover) li:not(:hover) {
       @include media-L {
         flex-grow: 0;
         .hero__card-text {
@@ -48,18 +64,23 @@
           }
         }
       }
-      .hero__card-btn {
-        @include el-hide;
+      @include media-L {
+        .hero__card-btn {
+          @include el-hide;
+        }
       }
     }
   }
+  // * top btn take friend
   &__btn {
-    width: 40vw;
+    width: 100%;
     @include media-M {
       width: 35vw;
+      align-self: center;
     }
     @include media-L {
       width: 17.5vw;
+      align-self: start;
     }
   }
   // * gradient background
@@ -78,7 +99,7 @@
   // * gallery single item
   &__card {
     width: 100%;
-    height: 18rem;
+    height: 40vw;
     border-radius: 1.25rem;
     flex-grow: 0;
     transition: var(--transition);
@@ -147,7 +168,7 @@
       @include media-maxL {
         @include el-hide;
       }
-      right: 1.56vw;
+      right: 1vw;
       writing-mode: vertical-lr;
       text-align: left;
       transform: rotate(180deg);
@@ -165,9 +186,12 @@
   }
   &__card-title {
     font-weight: 300;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 0.5rem;
     white-space: nowrap;
+    @include media-M {
+      font-size: 1.125rem;
+    }
     @include media-L {
       font-size: 1.5rem;
     }
@@ -185,7 +209,7 @@
   &__card-btn {
     position: absolute;
     background-color: transparent;
-    right: 1.5rem;
+    right: 0.5rem;
     bottom: 1rem;
     z-index: 1;
     transition: var(--transition);
@@ -195,6 +219,10 @@
     @include el-hide;
     @include media-M {
       bottom: 3rem;
+      right: 0rem;
+    }
+    @include media-L {
+      right: 1.5rem;
     }
   }
   &__card-paw {
@@ -238,11 +266,12 @@
     width: 100%;
     height: 100%;
     &.right {
-      margin-bottom: 2.75rem; 
+      margin-bottom: 2.75rem;
     }
     border-radius: 1.25rem;
     overflow: hidden;
-    &  img, picture {
+    & img,
+    picture {
       @include cover-image;
     }
   }

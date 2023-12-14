@@ -721,12 +721,12 @@ address {
   margin-inline: auto;
 }
 
-.section {
+.section, .hero {
   padding: 5rem 0;
 }
 
 @media screen and (min-width: 1200px) {
-  .section {
+  .section, .hero {
     padding: 9.38rem 0;
   }
 }
@@ -1228,7 +1228,7 @@ address {
   top: 4.25rem;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .header__nav {
     top: 5.75rem;
   }
@@ -1540,11 +1540,14 @@ address {
   font-weight: 400;
 }
 
+@media screen and (max-width: 767px) {
+  .hero {
+    padding-top: 2rem;
+  }
+}
+
 .hero__quote {
-  flex-direction: column;
-  row-gap: 2rem;
   padding-bottom: 5rem;
-  display: flex;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1553,6 +1556,7 @@ address {
     align-items: end;
     column-gap: 7.55vw;
     padding-bottom: 9.38rem;
+    display: flex;
   }
 }
 
@@ -1560,17 +1564,39 @@ address {
   font-family: var(--secondary-font);
   text-transform: uppercase;
   color: var(--main-text-color);
+  text-align: center;
   min-width: 31.66vw;
   margin-bottom: 1rem;
-  font-size: 4.5rem;
+  font-size: 4rem;
   font-weight: 700;
   line-height: 1.23;
 }
 
 @media screen and (min-width: 1200px) {
   .hero__title {
+    text-align: left;
     margin-bottom: 3rem;
     font-size: 6.25rem;
+  }
+}
+
+.hero__title-wr {
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 3rem;
+  display: flex;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__title-wr {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__title-wr {
+    justify-content: flex-start;
+    margin-bottom: 0;
   }
 }
 
@@ -1589,40 +1615,42 @@ address {
 }
 
 @media screen and (min-width: 1200px) {
-  .hero__gallery:hover > li:not(:hover) {
+  .hero__gallery:has(:hover) li:not(:hover) {
     flex-grow: 0;
   }
 
-  .hero__gallery:hover > li:not(:hover) .hero__card-text.right {
+  .hero__gallery:has(:hover) li:not(:hover) .hero__card-text.right {
     opacity: 1;
     visibility: visible;
     transform: rotate(180deg);
   }
 
-  .hero__gallery:hover > li:not(:hover) .hero__card-text.bottom {
+  .hero__gallery:has(:hover) li:not(:hover) .hero__card-text.bottom {
     opacity: 0;
     visibility: hidden;
     transform: translateY(100%);
   }
-}
 
-.hero__gallery:hover > li:not(:hover) .hero__card-btn {
-  opacity: 0;
-  visibility: hidden;
+  .hero__gallery:has(:hover) li:not(:hover) .hero__card-btn {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 .hero__btn {
-  width: 40vw;
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
   .hero__btn {
+    align-self: center;
     width: 35vw;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .hero__btn {
+    align-self: start;
     width: 17.5vw;
   }
 }
@@ -1643,7 +1671,7 @@ address {
   border-radius: 1.25rem;
   flex-grow: 0;
   width: 100%;
-  height: 18rem;
+  height: 40vw;
   position: relative;
   overflow: hidden;
 }
@@ -1724,7 +1752,7 @@ address {
   text-align: left;
   opacity: 1;
   visibility: visible;
-  right: 1.56vw;
+  right: 1vw;
   transform: rotate(180deg);
 }
 
@@ -1753,8 +1781,14 @@ address {
 .hero__card-title {
   white-space: nowrap;
   margin-bottom: .5rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 300;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__card-title {
+    font-size: 1.125rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1783,7 +1817,7 @@ address {
   background-color: #0000;
   position: absolute;
   bottom: 1rem;
-  right: 1.5rem;
+  right: .5rem;
 }
 
 @media screen and (max-width: 1199px) {
@@ -1796,6 +1830,13 @@ address {
 @media screen and (min-width: 768px) {
   .hero__card-btn {
     bottom: 3rem;
+    right: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__card-btn {
+    right: 1.5rem;
   }
 }
 
