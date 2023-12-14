@@ -1,5 +1,5 @@
 .news {
-  background-color:var(--light-blue);
+  background-color: var(--light-blue);
   padding-top: 2.5rem;
   padding-bottom: 4rem;
   @include media-M {
@@ -24,7 +24,8 @@
     @include media-L {
       max-width: 41.9vw;
     }
-    & img, picture {
+    & img,
+    picture {
       @include cover-image;
     }
   }
@@ -43,13 +44,18 @@
     display: flex;
     flex-direction: column;
     row-gap: 1.5rem;
+    & > p {
+      @include media-maxM {
+        @include text-wrap(5);
+      }
+    }
     @include media-L {
       font-size: 1.5rem;
     }
   }
   &__button {
     align-self: flex-end;
-    min-width: 40vw;
+    min-width: 100%;
     @include media-M {
       min-width: 30vw;
     }

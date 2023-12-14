@@ -65,6 +65,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 3.22vw;
+    row-gap: 0.5rem;
     @include media-L {
       margin-bottom: 4rem;
     }

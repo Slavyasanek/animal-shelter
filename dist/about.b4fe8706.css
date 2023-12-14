@@ -2512,7 +2512,7 @@ address {
 
 .demands__subcategories {
   flex-flow: wrap;
-  column-gap: 3.22vw;
+  gap: .5rem 3.22vw;
   margin-bottom: 2rem;
   display: flex;
 }
@@ -2799,6 +2799,17 @@ address {
   display: flex;
 }
 
+@media screen and (max-width: 767px) {
+  .news__text > p {
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .news__text {
     font-size: 1.5rem;
@@ -2807,7 +2818,7 @@ address {
 
 .news__button {
   align-self: flex-end;
-  min-width: 40vw;
+  min-width: 100%;
 }
 
 @media screen and (min-width: 768px) {
