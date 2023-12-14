@@ -3,9 +3,10 @@
   width: 100%;
   background-repeat: no-repeat;
   background-image: url("../static/pictures/cat-bg.png");
-  background-position: left;
+  background-position: center;
+  background-size: cover;
 //   background-size: 100% 100%;
-  @include media-L {
+  @include media-XL {
     background-size: auto, auto;
     background-position: left, right;
     background-image: url("../static/pictures/cat-bg.png"),
@@ -18,9 +19,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    row-gap: 3.25rem;
+    row-gap: 2rem;
     background-color: rgba(36, 31, 28, 0.6);
     @include media-M {
+      row-gap: 3.25rem;
       background: linear-gradient(
         270deg,
         rgba(36, 31, 28, 0) 6.77%,
@@ -34,6 +36,7 @@
   // *title
   &__title {
     @include subtitle(var(--white), 3rem);
+    text-align: center;
     @include media-M {
       font-size: 4.5rem;
     }

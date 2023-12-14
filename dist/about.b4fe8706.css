@@ -912,6 +912,7 @@ address {
 }
 
 .btn-transparent {
+  color: var(--main-text-color);
   background-color: #0000;
   border: 1px dashed #0000;
   border-radius: 3.125rem;
@@ -1889,12 +1890,13 @@ address {
 
 .war-shelter {
   background-image: url("cat-bg.5abb831d.png");
-  background-position: 0;
+  background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1440px) {
   .war-shelter {
     background-image: url("cat-bg.5abb831d.png"), url("dog-bg.d1858001.png");
     background-position: 0, 100%;
@@ -1907,7 +1909,7 @@ address {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 3.25rem;
+  row-gap: 2rem;
   padding-top: 3.75rem;
   padding-bottom: 5.125rem;
   display: flex;
@@ -1916,6 +1918,7 @@ address {
 @media screen and (min-width: 768px) {
   .war-shelter__container {
     background: linear-gradient(270deg, #241f1c00 6.77%, #241f1ceb 38.02%, #241f1c 49.48%, #241f1cfa 61.98%, #241f1c00 94.79%);
+    row-gap: 3.25rem;
   }
 }
 
@@ -1923,6 +1926,7 @@ address {
   font-family: var(--secondary-font);
   text-transform: uppercase;
   color: var(--white);
+  text-align: center;
   font-size: 3rem;
   font-weight: 700;
 }
