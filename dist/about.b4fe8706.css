@@ -1892,7 +1892,13 @@ address {
 }
 
 .hero__img-wrapper.right {
-  margin-bottom: 2.75rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__img-wrapper.right {
+    margin-bottom: 2.75rem;
+  }
 }
 
 .hero__img-wrapper img, .hero__img-wrapper picture {
@@ -1930,35 +1936,42 @@ address {
 }
 
 .war-shelter {
-  background-image: url("cat-bg.5abb831d.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   width: 100%;
+  position: relative;
 }
 
-@media screen and (min-width: 1440px) {
-  .war-shelter {
-    background-image: url("cat-bg.5abb831d.png"), url("dog-bg.d1858001.png");
-    background-position: 0, 100%;
-    background-size: auto, auto;
-  }
+.war-shelter__bg-wr {
+  content: "";
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+
+.war-shelter__bg-wr img, .war-shelter__bg-wr picture {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.war-shelter__overlay {
+  background-color: #0003;
+  background-image: linear-gradient(270deg, #241f1c00 6.77%, #241f1ceb 38.02%, #241f1c 49.48%, #241f1cfa 61.98%, #241f1c00 94.79%);
+  padding-top: 3.75rem;
+  padding-bottom: 5.125rem;
 }
 
 .war-shelter__container {
-  background-color: #241f1c99;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 2rem;
-  padding-top: 3.75rem;
-  padding-bottom: 5.125rem;
+  row-gap: .75rem;
   display: flex;
 }
 
 @media screen and (min-width: 768px) {
   .war-shelter__container {
-    background: linear-gradient(270deg, #241f1c00 6.77%, #241f1ceb 38.02%, #241f1c 49.48%, #241f1cfa 61.98%, #241f1c00 94.79%);
     row-gap: 3.25rem;
   }
 }
@@ -1979,7 +1992,7 @@ address {
 }
 
 .war-shelter__btn {
-  width: 40vw;
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
