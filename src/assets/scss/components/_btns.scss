@@ -61,8 +61,8 @@
     }
     &--dark {
       border-radius: 2.5rem;
-      border-color: $black;
-      color: $mainText;
+      border-color: var(--black);
+      color: var(--main-text-color);
     }
     &--blue {
       border-radius: 3.125rem;
@@ -79,7 +79,7 @@
     background-color: var(--dark-blue);
     border-radius: 3.125rem;
     font-size: 1.5rem;
-    color: $white;
+    color: var(--white);
     &:hover,
     &:focus {
       background-color: var(--dark-blue-hover);

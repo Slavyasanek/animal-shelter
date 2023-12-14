@@ -1,4 +1,8 @@
 .help-shelter {
+  @include media-maxM {
+    background-color: var(--sky-blue);
+    padding: 0;
+  }
   &__wrapper {
     color: var(--white);
     background-color: var(--sky-blue);
@@ -25,8 +29,10 @@
   }
   &__text {
     font-weight: 200;
+    line-height: 1.25;
     @include media-maxM {
       margin-bottom: 2rem;
+      text-align: center;
     }
     @include media-M {
       max-width: 25vw;
@@ -39,7 +45,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     column-gap: 3.4vw;
-    row-gap: 1.75rem;
+    row-gap: 1.25rem;
     @include media-M {
       column-gap: 5.72vw;
       row-gap: 2.5rem;
@@ -69,14 +75,27 @@
   }
   // * btns
   &__btns {
-    display: flex;
     margin-top: 2.813rem;
-    column-gap: 5.83vw;
+    @include media-M {
+      display: flex;
+      flex-direction: row;
+      column-gap: 2vw;
+    }
+    @include media-L {
+      column-gap: 5.83vw;
+    }
   }
   &__btn {
-      width: 50%;
+    width: 100%;
+    font-size: 1.5rem;
+    @include p-y(0.75rem);
+    @include media-maxM {
+      &:first-of-type {
+        margin-bottom: 1rem;
+      }
+    }
     @include media-M {
-      width: 17vw;
+      width: 20vw;
     }
     @include media-L {
       width: 12.1vw;

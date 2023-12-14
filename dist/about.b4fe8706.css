@@ -877,8 +877,8 @@ address {
 }
 
 .btn-dashed--dark {
-  color: #020202;
-  border-color: #000;
+  border-color: var(--black);
+  color: var(--main-text-color);
   border-radius: 2.5rem;
 }
 
@@ -895,7 +895,7 @@ address {
 
 .btn-blue {
   background-color: var(--dark-blue);
-  color: #fff;
+  color: var(--white);
   border-radius: 3.125rem;
   font-size: 1.5rem;
 }
@@ -2184,6 +2184,13 @@ address {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .help-shelter {
+    background-color: var(--sky-blue);
+    padding: 0;
+  }
+}
+
 .help-shelter__wrapper {
   color: var(--white);
   background-color: var(--sky-blue);
@@ -2225,10 +2232,12 @@ address {
 
 .help-shelter__text {
   font-weight: 200;
+  line-height: 1.25;
 }
 
 @media screen and (max-width: 767px) {
   .help-shelter__text {
+    text-align: center;
     margin-bottom: 2rem;
   }
 }
@@ -2242,7 +2251,7 @@ address {
 .help-shelter__radio-list {
   flex-flow: wrap;
   justify-content: space-between;
-  gap: 1.75rem 3.4vw;
+  gap: 1.25rem 3.4vw;
   display: flex;
 }
 
@@ -2286,18 +2295,39 @@ address {
 }
 
 .help-shelter__btns {
-  column-gap: 5.83vw;
   margin-top: 2.813rem;
-  display: flex;
+}
+
+@media screen and (min-width: 768px) {
+  .help-shelter__btns {
+    flex-direction: row;
+    column-gap: 2vw;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .help-shelter__btns {
+    column-gap: 5.83vw;
+  }
 }
 
 .help-shelter__btn {
-  width: 50%;
+  width: 100%;
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .help-shelter__btn:first-of-type {
+    margin-bottom: 1rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .help-shelter__btn {
-    width: 17vw;
+    width: 20vw;
   }
 }
 
