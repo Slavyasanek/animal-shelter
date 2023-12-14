@@ -63,6 +63,10 @@
       border-radius: 2.5rem;
       border-color: var(--black);
       color: var(--main-text-color);
+      &:hover, &:focus {
+        border-color: var(--dark-blue);
+        color: var(--dark-blue);
+      }
     }
     &--blue {
       border-radius: 3.125rem;

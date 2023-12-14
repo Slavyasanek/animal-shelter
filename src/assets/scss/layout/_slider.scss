@@ -3,11 +3,16 @@
     position: relative;
     width: 100%;
     z-index: 100;
-    padding-top: 2rem;
-    padding-bottom: 6rem;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+    height: 85vh;
+    @include media-M {
+      padding-bottom: 13rem;
+    }
     @include media-L {
       padding-top: 4.25rem;
       padding-bottom: 13rem;
+      height: 54.5rem;
     }
     &::after {
       @include pseudo;
@@ -22,17 +27,13 @@
       z-index: -1;
     }
   }
-  &__title {
-    @include subtitle(var(--white), 3.75rem);
-    margin-bottom: 5rem;
-    @include media-L {
-      font-size: 4.5rem;
-      margin-bottom: 10.5rem;
-    }
-  }
+  // * slider btn
   &__btn {
-    width: 40vw;
+    width: 100%;
     @include media-M {
+      width: 25vw;
+    }
+    @include media-L {
       width: 19vw;
     }
     &-dashed {
@@ -42,14 +43,22 @@
       margin-bottom: 1.25rem;
     }
   }
+  // * text info about animal
   &__info {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 400;
     text-transform: uppercase;
     color: var(--white);
-    margin-bottom: 3rem;
+    margin-bottom: 14rem;
+    @include media-maxM {
+      text-align: center;
+    }
+    @include media-M {
+      margin-bottom: 7rem;
+    }
     @include media-L {
       font-size: 2rem;
+      margin-bottom: 14rem;
     }
   }
   &__name {
@@ -58,6 +67,7 @@
       margin-bottom: 2rem;
     }
   }
+  //  * image for slider
   &__img-wr {
     position: absolute;
     z-index: -2;
@@ -72,13 +82,19 @@
       @include cover-image;
     }
   }
+  // * pagination bullets
   .swiper-pagination {
     bottom: 1.5rem;
     .swiper-pagination-bullet {
       transition: var(--transition);
-      width: 0.75rem;
-      height: 0.75rem;
-      margin: 0 0.7rem;
+      width: 0.5rem;
+      height: 0.5rem;
+      margin: 0 0.3rem;
+      @include media-M {
+        width: 0.75rem;
+        height: 0.75rem;
+        margin: 0 0.7rem;
+      }
       background-color: var(--yellow);
       opacity: 1;
       position: relative;
@@ -102,8 +118,10 @@
     .swiper-pagination-bullet-active {
       transform: scale(2);
       &.swiper-pagination-bullet {
-        &::before {
-          border-color: var(--yellow);
+        @include media-M {
+          &::before {
+            border-color: var(--yellow);
+          }
         }
       }
     }

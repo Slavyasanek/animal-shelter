@@ -882,6 +882,11 @@ address {
   border-radius: 2.5rem;
 }
 
+.btn-dashed--dark:hover, .btn-dashed--dark:focus {
+  border-color: var(--dark-blue);
+  color: var(--dark-blue);
+}
+
 .btn-dashed--blue {
   color: var(--dark-blue);
   border-color: var(--dark-blue);
@@ -2746,13 +2751,21 @@ address {
 .slider .swiper-slide {
   z-index: 100;
   width: 100%;
-  padding-top: 2rem;
-  padding-bottom: 6rem;
+  height: 85vh;
+  padding-top: 20vh;
+  padding-bottom: 20vh;
   position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .slider .swiper-slide {
+    padding-bottom: 13rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .slider .swiper-slide {
+    height: 54.5rem;
     padding-top: 4.25rem;
     padding-bottom: 13rem;
   }
@@ -2769,27 +2782,17 @@ address {
   inset: 0;
 }
 
-.slider__title {
-  font-family: var(--secondary-font);
-  text-transform: uppercase;
-  color: var(--white);
-  margin-bottom: 5rem;
-  font-size: 3.75rem;
-  font-weight: 700;
-}
-
-@media screen and (min-width: 1200px) {
-  .slider__title {
-    margin-bottom: 10.5rem;
-    font-size: 4.5rem;
-  }
-}
-
 .slider__btn {
-  width: 40vw;
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
+  .slider__btn {
+    width: 25vw;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .slider__btn {
     width: 19vw;
   }
@@ -2806,13 +2809,26 @@ address {
 .slider__info {
   text-transform: uppercase;
   color: var(--white);
-  margin-bottom: 3rem;
-  font-size: 1.5rem;
+  margin-bottom: 14rem;
+  font-size: 1.75rem;
   font-weight: 400;
+}
+
+@media screen and (max-width: 767px) {
+  .slider__info {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .slider__info {
+    margin-bottom: 7rem;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .slider__info {
+    margin-bottom: 14rem;
     font-size: 2rem;
   }
 }
@@ -2849,10 +2865,18 @@ address {
   transition: var(--transition);
   background-color: var(--yellow);
   opacity: 1;
-  width: .75rem;
-  height: .75rem;
-  margin: 0 .7rem;
+  width: .5rem;
+  height: .5rem;
+  margin: 0 .3rem;
   position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .slider .swiper-pagination .swiper-pagination-bullet {
+    width: .75rem;
+    height: .75rem;
+    margin: 0 .7rem;
+  }
 }
 
 .slider .swiper-pagination .swiper-pagination-bullet:hover, .slider .swiper-pagination .swiper-pagination-bullet:focus {
@@ -2871,8 +2895,10 @@ address {
   transform: scale(2);
 }
 
-.slider .swiper-pagination .swiper-pagination-bullet-active.swiper-pagination-bullet:before {
-  border-color: var(--yellow);
+@media screen and (min-width: 768px) {
+  .slider .swiper-pagination .swiper-pagination-bullet-active.swiper-pagination-bullet:before {
+    border-color: var(--yellow);
+  }
 }
 
 .about-shelter__title {
