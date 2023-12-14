@@ -2012,6 +2012,10 @@ address {
   }
 }
 
+.care-shelter {
+  overflow: hidden;
+}
+
 .care-shelter__wrapper {
   flex-direction: row;
   justify-content: space-between;
@@ -2118,21 +2122,28 @@ address {
 }
 
 .subscription {
-  background-image: linear-gradient(0deg, #252525cc 0% 100%), url("cat-in-cage.aa0f9529.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #00000080;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding: 4.38rem 0;
   display: flex;
+  position: relative;
 }
 
-@media screen and (min-width: 1200px) {
-  .subscription {
-    background-position: 0, 0 -16rem;
-  }
+.subscription__bg-wr {
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+
+.subscription__bg-wr img, .subscription__bg-wr picture {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .subscription__title {
@@ -2152,16 +2163,17 @@ address {
 }
 
 .subscription__form {
-  flex-direction: row;
-  column-gap: 2vw;
+  width: 100%;
   margin-top: 2rem;
-  display: flex;
 }
 
 @media screen and (min-width: 768px) {
   .subscription__form {
+    flex-direction: row;
+    justify-content: center;
     column-gap: 4.16vw;
     margin-top: 4rem;
+    display: flex;
   }
 }
 
@@ -2170,14 +2182,20 @@ address {
   border: none;
   border-radius: 2.5rem;
   outline: none;
-  min-width: 50vw;
-  padding: .5rem 1rem;
+  min-width: 100%;
+  padding: 1rem;
 }
 
 @media screen and (min-width: 768px) {
   .subscription__input {
     min-width: 37.5vw;
     padding: 1.625rem 2.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .subscription__input {
+    margin-bottom: 1rem;
   }
 }
 
@@ -2189,8 +2207,14 @@ address {
   font-weight: 700;
 }
 
+@media screen and (max-width: 767px) {
+  .subscription__input, .subscription__input::placeholder {
+    text-align: center;
+  }
+}
+
 .subscription__btn {
-  width: 30vw;
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {

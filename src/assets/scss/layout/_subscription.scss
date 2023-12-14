@@ -1,21 +1,21 @@
 .subscription {
   width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: linear-gradient(
-      0deg,
-      rgba(37, 37, 37, 0.8) 0%,
-      rgba(37, 37, 37, 0.8) 100%
-    ),
-    url("../static/cat-in-cage.jpg");
-
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 4.38rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @include media-L {
-    background-position: 0, 0 -16rem;
+  // * background
+  &__bg-wr {
+    position: absolute;
+    @include inset;
+    @include full-wh;
+    z-index: -1;
+    & img, picture {
+      @include cover-image;
+    }
   }
   &__title {
     @include subtitle(var(--white), 1.75rem);
@@ -26,33 +26,40 @@
     }
   }
   &__form {
-    display: flex;
-    flex-direction: row;
-    column-gap: 2vw;
     margin-top: 2rem;
+    width: 100%;
     @include media-M {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
       margin-top: 4rem;
       column-gap: 4.16vw;
     }
   }
   &__input {
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
     border-radius: 2.5rem;
     outline: none;
     border: none;
     background-color: var(--input-grey);
-    min-width: 50vw;
+    min-width: 100%;
     @include media-M {
       padding: 1.625rem 2.5rem;
       min-width: 37.5vw;
     }
+    @include media-maxM {
+      margin-bottom: 1rem;
+    }
     &,
     &::placeholder {
+      @include media-maxM {
+        text-align: center
+      }
       @include subtitle(var(--text-grey), 1.5rem);
     }
   }
   &__btn {
-    width: 30vw;
+    width: 100%;
     @include media-M {
       width: 17.1vw;
     }
