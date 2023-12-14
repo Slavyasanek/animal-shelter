@@ -106,20 +106,22 @@
     }
   }
   &-skyblue {
-    font-size: 1.5rem;
+    font-size: 0.625rem;
     font-weight: 300;
     text-transform: uppercase;
     color: var(--white);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.625rem 2.6vw;
     border-radius: 1.25rem;
     background-color: var(--sky-blue);
     border: none;
     width: 100%;
     transition: var(--transition);
     cursor: pointer;
+    @include media-L {
+      font-size: 1.5rem;
+    }
     &:hover,
     &:focus,
     &.active {

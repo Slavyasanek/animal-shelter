@@ -1,50 +1,115 @@
 .demands {
-    &--wrapper {
-        display: flex;
-        justify-content: space-between;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    @include media-L {
+      flex-direction: row;
     }
-    &__subtitle {
-        @include subtitle(var(--main-text-color), 4rem);
-        line-height: 1.23;
-        margin-bottom: 1.5rem;
-        text-align: center;
-        text-transform: none;
+  }
+  &__subtitle {
+    @include subtitle(var(--main-text-color), 4rem);
+    line-height: 1.23;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-transform: none;
+  }
+  &__btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    & > li {
+      width: calc((100% - 2vw) / 2);
+      @include media-M {
+        width: calc((100% - 3 * 2vw) / 4);
+      }
+      @include media-L {
+        width: 30.1vw;
+      }
     }
-    &__btns {
-        display: flex;
-        flex-direction: column;
-        row-gap: 1.875rem;
-        margin-right: 4.06vw;
-        min-width: 30vw;
+    @include media-maxL {
+      margin-bottom: 1.5rem;
     }
-    &__subcategories {
-        margin-bottom: 4rem;
-        display: flex;
-        flex-direction: row;
-        column-gap: 3.22vw;
+    @include media-L {
+      flex-direction: column;
+      row-gap: 1.875rem;
+      margin-right: 4.06vw;
+      min-width: 30vw;
     }
-    &__content {
-        list-style: disc;
-        font-size: 1rem;
-        line-height: 1.4;
-        font-weight: 200;
+  }
+  &__btn {
+    @include p-y(1rem);
+    @include p-x(2vw);
+    width: 100%;
+    @include media-L {
+      @include p-y(1.625rem);
     }
-    &__help {
-        text-align: end;
-        font-size: 1rem;
-        font-weight: 200;
-        line-height: 1.4;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        &-btn {
-            margin-bottom: 1rem;
-        }
+    // padding: 1.625rem 2.6vw;
+  }
+  &__subcategories {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 3.22vw;
+    @include media-L {
+      margin-bottom: 4rem;
     }
-    &__icons {
-        display: flex;
-        column-gap: 1.25rem;
-        justify-content: flex-end;
-        margin-top: 1.25rem;
+  }
+  &__list {
+    list-style: disc;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    font-weight: 200;
+    padding-left: 2rem;
+    @include media-M {
+      font-size: 1rem;
     }
+  }
+  &__help {
+    font-size: 0.875rem;
+    font-weight: 200;
+    line-height: 1.4;
+    @include media-M {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+    @include media-maxL {
+      margin-top: 1.25rem;
+    }
+    @include media-M {
+      text-align: end;
+    }
+    @include media-L {
+      font-size: 1rem;
+      flex-direction: column;
+    }
+    &-btn {
+      margin-bottom: 1rem;
+      width: 40vw;
+      align-self: center;
+      @include media-M {
+        width: 24vw;
+      }
+      @include media-L {
+        width: 14.9vw;
+      }
+    }
+  }
+  &__contacts {
+    @include media-maxL {
+      margin-top: 1.25rem;
+    }
+  }
+  &__icons {
+    display: flex;
+    column-gap: 0.875rem;
+    margin-top: 0.875rem;
+    @include media-M {
+      column-gap: 1.25rem;
+      margin-top: 1.25rem;
+      justify-content: flex-end;
+    }
+  }
 }
