@@ -35,8 +35,8 @@
       }
     }
     &--paw {
+      @include p-y(0.625rem);
       font-size: 1.125rem;
-      padding: 0.625rem 4.68vw;
     }
   }
   &-dashed {

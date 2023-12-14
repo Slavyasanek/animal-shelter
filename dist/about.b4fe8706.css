@@ -837,7 +837,8 @@ address {
 }
 
 .btn-yellow--paw {
-  padding: .625rem 4.68vw;
+  padding-top: .625rem;
+  padding-bottom: .625rem;
   font-size: 1.125rem;
 }
 
@@ -1491,7 +1492,7 @@ address {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .footer__list:last-of-type {
     row-gap: 2.375rem;
   }
@@ -2342,29 +2343,54 @@ address {
   font-weight: 700;
 }
 
-.location--wrapper {
-  flex-direction: row;
+.location__wrapper {
+  flex-direction: column;
   width: 100%;
   display: flex;
 }
 
+@media screen and (min-width: 768px) {
+  .location__wrapper {
+    flex-direction: row;
+  }
+}
+
+.location__map {
+  width: 100%;
+  height: 20rem;
+}
+
+@media screen and (min-width: 768px) {
+  .location__map {
+    min-width: 41.6vw;
+    height: auto;
+  }
+}
+
 .location__block {
   background-color: var(--dark-blue);
-  color: #fff;
-  border-top-right-radius: 1.25rem;
+  color: var(--white);
   border-bottom-right-radius: 1.25rem;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 4.6rem 5.2vw 4.25rem 3.64vw;
+  padding: 2.6rem 5.2vw 2.25rem 3.64vw;
   font-weight: 300;
   display: flex;
 }
 
-.location__map {
-  min-width: 41.6vw;
-  height: auto;
+@media screen and (max-width: 767px) {
+  .location__block {
+    border-bottom-left-radius: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .location__block {
+    border-top-right-radius: 1.25rem;
+    padding: 4.6rem 5.2vw 4.25rem 3.64vw;
+  }
 }
 
 .location__socials {
@@ -2374,17 +2400,47 @@ address {
 }
 
 .location__name {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
+  margin-bottom: .5rem;
+  font-size: 1rem;
 }
 
-.location__text-block:not(:last-of-type) {
-  margin-bottom: 1.25rem;
+@media screen and (min-width: 768px) {
+  .location__name {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+.location__text-block {
+  font-size: .875rem;
   line-height: 1.4;
 }
 
+@media screen and (min-width: 768px) {
+  .location__text-block {
+    font-size: 1.125rem;
+  }
+}
+
+.location__text-block:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
 .location__btn {
+  width: 40vw;
   margin-top: 1.75rem;
+}
+
+@media screen and (min-width: 768px) {
+  .location__btn {
+    width: 24vw;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .location__btn {
+    width: 14.9vw;
+  }
 }
 
 .news {

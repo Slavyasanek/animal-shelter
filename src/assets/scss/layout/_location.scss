@@ -1,45 +1,75 @@
 .location {
-    &__subtitle {
-        @include subtitle(var(--main-text-color), 4rem);
-        text-align: center;
-        margin-bottom: 2.5rem;
+  &__subtitle {
+    @include subtitle(var(--main-text-color), 4rem);
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    @include media-M {
+      flex-direction: row;
     }
-    &--wrapper {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
+  }
+  &__map {
+    height: 20rem;
+    width: 100%;
+    @include media-M {
+      height: auto;
+      min-width: 41.6vw;
     }
-    &__block {
-        background-color: var(--dark-blue);
-        border-top-right-radius: 1.25rem;
-        border-bottom-right-radius: 1.25rem;
-        padding: 4.6rem 5.2vw 4.25rem 3.64vw;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        color: $white;
-        font-weight: 300;
+  }
+  &__block {
+    background-color: var(--dark-blue);
+    border-bottom-right-radius: 1.25rem;
+    padding: 2.6rem 5.2vw 2.25rem 3.64vw;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white);
+    font-weight: 300;
+    @include media-maxM {
+      border-bottom-left-radius: 1.25rem;
     }
-    &__map {
-        height: auto;
-        min-width: 41.6vw;
+    @include media-M {
+      border-top-right-radius: 1.25rem;
+      padding: 4.6rem 5.2vw 4.25rem 3.64vw;
     }
-    &__socials {
-        display: flex;
-        flex-direction: column;
-        row-gap: 1rem;
+  }
+  &__socials {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  &__name {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    @include media-M {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
     }
-    &__name {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
+  }
+  &__text-block {
+    font-size: 0.875rem;
+    line-height: 1.4;
+    @include media-M {
+      font-size: 1.125rem;
     }
-    &__text-block:not(:last-of-type) {
-        margin-bottom: 1.25rem;
-        line-height: 1.4;
+  }
+  &__text-block:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
+  &__btn {
+    margin-top: 1.75rem;
+    width: 40vw;
+    @include media-M {
+        width: 24vw;
     }
-    &__btn {
-        margin-top: 1.75rem;
+    @include media-L {
+      width: 14.9vw;
     }
+  }
 }
