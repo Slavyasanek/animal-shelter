@@ -2,6 +2,7 @@
   transition: var(--transition);
   cursor: pointer;
   white-space: nowrap;
+  text-align: center;
   &-font {
     &--sec {
       font-family: var(--secondary-font);
@@ -16,19 +17,18 @@
     background-color: var(--yellow);
     border: none;
     border-radius: 2.5rem;
-    width: max-content;
-    color: $mainText;
+    color: var(--main-text-color);
     &:hover,
     &:focus {
       background-color: var(--yellow-hover);
     }
     &--cleaned {
       display: block;
-      @include p-y(1.625rem);
-      text-align: center;
+      @include p-y(1rem);
       font-size: 1.25rem;
       @include media-M {
         font-size: 1.75rem;
+        @include p-y(1.625rem);
       }
       @include media-L {
         font-size: 1.5rem;
@@ -43,13 +43,13 @@
     background-color: transparent;
     border-width: 0.125rem;
     border-style: dashed;
-    text-align: center;
     display: inline-block;
     &--big {
-      @include p-y(1.625rem);
+      @include p-y(1rem);
       font-size: 1.25rem;
       @include media-M {
         font-size: 1.75rem;
+        @include p-y(1.625rem);
       }
       @include media-L {
         font-size: 1.5rem;

@@ -792,6 +792,7 @@ address {
   transition: var(--transition);
   cursor: pointer;
   white-space: nowrap;
+  text-align: center;
 }
 
 .btn-font--sec {
@@ -806,10 +807,9 @@ address {
 
 .btn-yellow {
   background-color: var(--yellow);
-  color: #020202;
+  color: var(--main-text-color);
   border: none;
   border-radius: 2.5rem;
-  width: max-content;
 }
 
 .btn-yellow:hover, .btn-yellow:focus {
@@ -817,15 +817,16 @@ address {
 }
 
 .btn-yellow--cleaned {
-  text-align: center;
-  padding-top: 1.625rem;
-  padding-bottom: 1.625rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   font-size: 1.25rem;
   display: block;
 }
 
 @media screen and (min-width: 768px) {
   .btn-yellow--cleaned {
+    padding-top: 1.625rem;
+    padding-bottom: 1.625rem;
     font-size: 1.75rem;
   }
 }
@@ -843,7 +844,6 @@ address {
 }
 
 .btn-dashed {
-  text-align: center;
   background-color: #0000;
   border-style: dashed;
   border-width: .125rem;
@@ -851,13 +851,15 @@ address {
 }
 
 .btn-dashed--big {
-  padding-top: 1.625rem;
-  padding-bottom: 1.625rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   font-size: 1.25rem;
 }
 
 @media screen and (min-width: 768px) {
   .btn-dashed--big {
+    padding-top: 1.625rem;
+    padding-bottom: 1.625rem;
     font-size: 1.75rem;
   }
 }
@@ -2115,7 +2117,7 @@ address {
 }
 
 .subscription__btn {
-  width: 28vw;
+  width: 30vw;
 }
 
 @media screen and (min-width: 768px) {
