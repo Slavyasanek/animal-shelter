@@ -919,7 +919,7 @@ address {
 .btn-transparent {
   color: var(--main-text-color);
   background-color: #0000;
-  border: 1px dashed #0000;
+  border: 1px dashed #0003;
   border-radius: 3.125rem;
   padding: .625rem 1.05vw;
   font-size: 1rem;
@@ -941,9 +941,21 @@ address {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  font-size: .625rem;
+  font-size: 1rem;
   font-weight: 300;
   display: flex;
+}
+
+@media screen and (min-width: 768px) {
+  .btn-skyblue {
+    font-size: .675rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .btn-skyblue {
+    justify-content: center;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -2432,13 +2444,26 @@ address {
 }
 
 .demands__btns {
-  flex-wrap: wrap;
-  gap: 2vw;
+  flex-direction: column;
+  row-gap: 1rem;
   display: flex;
 }
 
+@media screen and (min-width: 500px) {
+  .demands__btns {
+    flex-flow: wrap;
+    gap: 2vw;
+  }
+}
+
 .demands__btns > li {
-  width: calc(50% - 1vw);
+  width: 100%;
+}
+
+@media screen and (min-width: 500px) {
+  .demands__btns > li {
+    width: calc(50% - 1vw);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -2473,10 +2498,15 @@ address {
   padding: 1rem 2vw;
 }
 
+@media screen and (max-width: 767px) {
+  .demands__btn > svg {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .demands__btn {
-    padding-top: 1.625rem;
-    padding-bottom: 1.625rem;
+    padding: 1.625rem 2.5vw;
   }
 }
 
@@ -2507,29 +2537,37 @@ address {
   }
 }
 
-.demands__help {
-  font-size: .875rem;
-  font-weight: 200;
-  line-height: 1.4;
-}
-
-@media screen and (min-width: 768px) {
-  .demands__help {
-    flex-direction: row;
-    justify-content: space-between;
+@media screen and (max-width: 767px) {
+  .demands__connect {
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     display: flex;
   }
 }
 
+.demands__help {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: .875rem;
+  font-weight: 200;
+  line-height: 1.4;
+  display: flex;
+}
+
 @media screen and (max-width: 1199px) {
   .demands__help {
-    margin-top: 1.25rem;
+    margin-top: 3rem;
   }
 }
 
 @media screen and (min-width: 768px) {
   .demands__help {
     text-align: end;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -2542,7 +2580,7 @@ address {
 
 .demands__help-btn {
   align-self: center;
-  width: 40vw;
+  width: 100%;
   margin-bottom: 1rem;
 }
 
@@ -2558,13 +2596,15 @@ address {
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
   .demands__contacts {
+    text-align: center;
     margin-top: 1.25rem;
   }
 }
 
 .demands__icons {
+  justify-content: center;
   column-gap: .875rem;
   margin-top: .875rem;
   display: flex;

@@ -98,7 +98,7 @@
   &-transparent {
     font-size: 1rem;
     font-weight: 200;
-    border: 1px dashed transparent;
+    border: 1px dashed rgba(0, 0, 0, 0.2);
     padding: 0.625rem 1.05vw;
     border-radius: 3.125rem;
     color: var(--main-text-color);
@@ -111,7 +111,7 @@
     }
   }
   &-skyblue {
-    font-size: 0.625rem;
+    font-size: 1rem;
     font-weight: 300;
     text-transform: uppercase;
     color: var(--white);
@@ -124,6 +124,12 @@
     width: 100%;
     transition: var(--transition);
     cursor: pointer;
+    @include media-M {
+      font-size: 0.675rem;
+    }
+    @include media-maxM {
+      justify-content: center;
+    }
     @include media-L {
       font-size: 1.5rem;
     }

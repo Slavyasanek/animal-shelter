@@ -16,10 +16,18 @@
   }
   &__btns {
     display: flex;
-    flex-wrap: wrap;
-    gap: 2vw;
+    flex-direction: column;
+    row-gap: 1rem;
+    @media screen and (min-width: 500px ){
+      flex-direction: row;
+      flex-wrap: wrap; 
+      gap: 2vw;
+    }
     & > li {
-      width: calc((100% - 2vw) / 2);
+      width: 100%;
+      @media screen and (min-width: 500px ){
+        width: calc((100% - 2vw) / 2);
+      }
       @include media-M {
         width: calc((100% - 3 * 2vw) / 4);
       }
@@ -38,13 +46,18 @@
     }
   }
   &__btn {
+    & > svg {
+      @include media-maxM {
+        display: none;
+      }
+    }
     @include p-y(1rem);
     @include p-x(2vw);
     width: 100%;
     @include media-L {
       @include p-y(1.625rem);
+      @include p-x(2.5vw);
     }
-    // padding: 1.625rem 2.6vw;
   }
   &__subcategories {
     margin-bottom: 2rem;
@@ -66,20 +79,30 @@
       font-size: 1rem;
     }
   }
+  &__connect {
+    @include media-maxM {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
   &__help {
     font-size: 0.875rem;
     font-weight: 200;
     line-height: 1.4;
-    @include media-M {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: row;
-    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     @include media-maxL {
-      margin-top: 1.25rem;
+      margin-top: 3rem;
     }
     @include media-M {
       text-align: end;
+      justify-content: space-between;
+      flex-direction: row;
     }
     @include media-L {
       font-size: 1rem;
@@ -87,7 +110,7 @@
     }
     &-btn {
       margin-bottom: 1rem;
-      width: 40vw;
+      width: 100%;
       align-self: center;
       @include media-M {
         width: 24vw;
@@ -98,14 +121,16 @@
     }
   }
   &__contacts {
-    @include media-maxL {
+    @include media-maxM {
       margin-top: 1.25rem;
+      text-align: center;
     }
   }
   &__icons {
     display: flex;
     column-gap: 0.875rem;
     margin-top: 0.875rem;
+    justify-content: center;
     @include media-M {
       column-gap: 1.25rem;
       margin-top: 1.25rem;
