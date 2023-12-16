@@ -68,10 +68,10 @@
     &:focus {
       background-color: var(--sky-blue);
       & > .filter__btn-title {
-        color: $white;
+        color: var(--white);
       }
       & > svg {
-        fill: $white;
+        fill: var(--white);
       }
     }
   }

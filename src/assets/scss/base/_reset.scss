@@ -3,9 +3,9 @@ html {
 }
 
 body {
-    background-color: $white;
-    font-family: 'e-Ukraine', sans-serif;
-    color: $mainText;
+    background-color: var(--white);
+    font-family: var(--main-font);
+    color: var(--main-text-color);
     &.lock {
         overflow: hidden;
     }

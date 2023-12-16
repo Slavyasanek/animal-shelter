@@ -57,7 +57,7 @@
   .swiper-button-next {
     position: static;
     margin-top: 0;
-    color: $mainText;
+    color: var(--main-text-color);
     border-radius: 50%;
     background-color: var(--overlay-light-color);
     width: 2.5rem;
