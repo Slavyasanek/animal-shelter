@@ -1,7 +1,14 @@
 .section {
-  padding: 5rem 0;
+  @include p-y(5rem);
   @include media-L {
-    padding: 9.38rem 0;
+    @include p-y(9.38rem);
+  }
+}
+
+.section-top {
+  padding-top: 5rem;
+  @include media-L {
+    margin-top: 9.38rem;
   }
 }
 

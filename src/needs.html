@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/scss/index.scss" />
     <title>Потреби притулку</title>
-</head>
-<body>
+  </head>
+  <body>
     <include src="./assets/partials/header.html"></include>
     <main>
+      <include
+        src="./assets/partials/breadcrumbs.html"
+        locals='{"title": "Потреби притулку", 
+        "currentPage": "Потреби притулку",
+      "currentPageLink": "needs.html"}'
+      ></include>
       <include src="./assets/partials/all-demands.html"></include>
       <include src="./assets/partials/war-shelter.html"></include>
-      <include src="./assets/partials/slider.html"></include>
+      <div class="section-top">
+        <include src="./assets/partials/slider.html"></include>
+      </div>
       <include src="./assets/partials/partners.html"></include>
     </main>
     <include src="./assets/partials/footer.html"></include>
     <script type="module" src="./assets/js/index.js"></script>
   </body>
-</body>
 </html>

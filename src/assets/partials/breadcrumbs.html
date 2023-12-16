@@ -1,1 +1,11 @@
-<div class="breadcrumbs"></div>
+<div class="breadcrumbs section--mt-header">
+  <div class="container breadcrumbs__wrapper">
+    <h1 class="breadcrumbs__title">{{ title }}</h1>
+    <ul class="breadcrumbs__list">
+      <li class="breadcrumbs__item"><a href="index.html">Головна</a></li>
+      <li class="breadcrumbs__item">
+        <a href="{{ currentPageLink }}">{{currentPage}}</a>
+      </li>
+    </ul>
+  </div>
+</div>
