@@ -3300,6 +3300,8 @@ address {
 
 .tails__item:nth-child(5) {
   grid-area: 2 / 5 / 3 / 6;
+  margin-top: -24px;
+  margin-bottom: -24px;
 }
 
 .tails__item:nth-child(6) {
@@ -3308,6 +3310,7 @@ address {
 
 .tails__item:nth-child(7) {
   grid-area: 3 / 4 / 5 / 6;
+  margin-top: 24px;
 }
 
 .tails__item:nth-child(8) {
