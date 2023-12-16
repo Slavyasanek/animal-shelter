@@ -2237,6 +2237,8 @@ address {
 @media screen and (min-width: 768px) {
   .subscription__title {
     max-width: 50rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     font-size: 2.25rem;
   }
 }
@@ -3183,9 +3185,8 @@ address {
 .slider .swiper-slide {
   z-index: 100;
   width: 100%;
-  height: 85vh;
-  padding-top: 20vh;
-  padding-bottom: 20vh;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   position: relative;
 }
 
@@ -3197,8 +3198,7 @@ address {
 
 @media screen and (min-width: 1200px) {
   .slider .swiper-slide {
-    height: 54.5rem;
-    padding-top: 4.25rem;
+    padding-top: 10rem;
     padding-bottom: 13rem;
   }
 }

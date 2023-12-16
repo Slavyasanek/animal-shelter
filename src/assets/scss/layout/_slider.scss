@@ -3,16 +3,16 @@
     position: relative;
     width: 100%;
     z-index: 100;
-    padding-top: 20vh;
-    padding-bottom: 20vh;
-    height: 85vh;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    // height: 85vh;
     @include media-M {
       padding-bottom: 13rem;
     }
     @include media-L {
-      padding-top: 4.25rem;
+      padding-top: 10rem;
       padding-bottom: 13rem;
-      height: 54.5rem;
+      // height: 54.5rem;
     }
     &::after {
       @include pseudo;
