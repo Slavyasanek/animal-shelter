@@ -813,7 +813,7 @@ address {
   }
 }
 
-.team__gradient, .about-shelter, .care-shelter, .hero__gradient:before {
+.not-found:after, .team__gradient, .about-shelter, .care-shelter, .hero__gradient:before {
   background-image: radial-gradient(circle at 68%, #04397b0f 27rem, #04397b0a 27rem 42.625rem, #04397b05 42.625rem 58.93rem, #0000 58.93rem);
 }
 
@@ -838,11 +838,11 @@ address {
   stroke: var(--black);
 }
 
-.icon-facebook {
+.icon-dark-blue {
   fill: var(--dark-blue);
 }
 
-.icon-telegram {
+.icon-sky-blue {
   fill: var(--sky-blue);
 }
 
@@ -3714,6 +3714,98 @@ address {
 .partners__slider .swiper-scrollbar .swiper-scrollbar-drag {
   background-color: var(--dark-blue);
   border-radius: 0%;
+}
+
+.not-found {
+  position: relative;
+  overflow: hidden;
+}
+
+.not-found:after {
+  content: "";
+  z-index: -1;
+  width: 150%;
+  height: 230%;
+  position: absolute;
+  top: 0;
+  right: 0%;
+}
+
+.not-found__wrapper {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.not-found__title {
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+}
+
+.not-found__four {
+  font-family: var(--secondary-font);
+  text-transform: uppercase;
+  color: var(--yellow);
+  letter-spacing: -1rem;
+  font-size: 14.75rem;
+  font-weight: 700;
+  line-height: 1.23;
+}
+
+.not-found__four:last-of-type {
+  transform: translateX(-1rem);
+}
+
+@media screen and (min-width: 768px) {
+  .not-found__four {
+    font-size: 18.75rem;
+  }
+}
+
+.not-found__icon {
+  width: 7.5rem;
+  height: 7.5rem;
+  transform: rotate(45deg);
+}
+
+@media screen and (min-width: 1200px) {
+  .not-found__icon {
+    width: 9.38vw;
+    height: 9.38vw;
+  }
+}
+
+.not-found__subtitle {
+  font-family: var(--secondary-font);
+  text-transform: uppercase;
+  color: var(--dark-blue);
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .not-found__subtitle {
+    font-size: 4rem;
+  }
+}
+
+.not-found__btn {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .not-found__btn {
+    width: 50vw;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .not-found__btn {
+    width: 17vw;
+  }
 }
 
 /*# sourceMappingURL=about.b4fe8706.css.map */
