@@ -3716,6 +3716,124 @@ address {
   border-radius: 0%;
 }
 
+.assortment {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .assortment {
+    padding-bottom: 9.75rem;
+  }
+}
+
+.assortment__list {
+  grid-gap: 1rem;
+  grid-template-rows: repeat(5, 16.5em);
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 16.5rem;
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .assortment__list {
+    grid-template-rows: 10rem 7.5rem 10rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .assortment__list {
+    grid-gap: 1.25rem;
+    grid-template-rows: 21.5rem 7.5rem 21.5rem;
+  }
+}
+
+.assortment__item {
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 767px) {
+  .assortment__item:nth-child(3n+1) {
+    grid-column: 1 / 3;
+  }
+
+  .assortment__item:last-child {
+    grid-column: span 2;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .assortment__item:nth-child(2) {
+    grid-area: 1 / 2 / 3 / 3;
+  }
+
+  .assortment__item:nth-child(4) {
+    grid-area: 1 / 4 / 3 / 5;
+  }
+
+  .assortment__item:nth-child(6), .assortment__item:nth-child(8) {
+    grid-row: 2 / 4;
+  }
+}
+
+.assortment__item picture, .assortment__item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.assortment__subtitle {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+@media screen and (min-width: 1200px) {
+  .assortment__subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+.assortment__text {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: .875rem;
+  font-weight: 200;
+}
+
+@media screen and (min-width: 1200px) {
+  .assortment__text {
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    font-size: 1.125rem;
+  }
+}
+
+.assortment__more {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+  margin-top: 4rem;
+  display: flex;
+}
+
+@media screen and (min-width: 768px) {
+  .assortment__more {
+    flex-direction: row;
+    column-gap: 1.5rem;
+  }
+}
+
+.assortment__socials {
+  flex-direction: row;
+  column-gap: 1.5rem;
+  display: flex;
+}
+
 .not-found {
   position: relative;
   overflow: hidden;
