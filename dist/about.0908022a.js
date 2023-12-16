@@ -631,6 +631,7 @@ var _modules = require("swiper/modules");
 function swiperSlider() {
     const bigSlider = document.querySelector('[data-slider="big-slider"]');
     const teamSlider = document.querySelector('[data-slider="team-slider"]');
+    const partnersSlider = document.querySelector('[data-slider="partners-slider"]');
     if (bigSlider) {
         const slider = new (0, _swiperDefault.default)('[data-slider="big-slider"]', {
             modules: [
@@ -669,6 +670,26 @@ function swiperSlider() {
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev"
+            }
+        });
+    }
+    if (partnersSlider) {
+        const slider = new (0, _swiperDefault.default)('[data-slider="partners-slider"]', {
+            modules: [
+                (0, _modules.Scrollbar)
+            ],
+            slidesPerView: 2,
+            spaceBetween: 16,
+            speed: 1000,
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                dragSize: 80
+            },
+            breakpoints: {
+                1200: {
+                    slidesPerView: 4,
+                    spaceBetween: 24
+                }
             }
         });
     }

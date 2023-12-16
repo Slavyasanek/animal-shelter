@@ -1,0 +1,45 @@
+.partners {
+  &__title {
+    @include subtitle(var(--main-text), 3rem);
+    text-align: center;
+    margin-bottom: 2rem;
+    @include media-M {
+      font-size: 4rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+  &__slider {
+    padding-bottom: 2rem;
+    cursor: pointer;
+    @include media-L {
+        padding-bottom: 2.5rem;
+    }
+    .swiper-slide {
+      height: 13.75rem;
+      @include media-M {
+        height: 25rem;
+      }
+      & picture,
+      img {
+        @include cover-image;
+      }
+    }
+    .swiper-scrollbar {
+        height: 0.5rem;
+        border-radius: 0%;
+        background-color: var(--yellow);
+        width: 50%;
+        transform: translateX(50%);
+        bottom: 0;
+        @include media-L {
+            width: 15rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .swiper-scrollbar-drag {
+            border-radius: 0%;
+            background-color: var(--dark-blue);
+        }
+    }
+  }
+}
