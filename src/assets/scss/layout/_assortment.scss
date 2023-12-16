@@ -10,7 +10,7 @@
     grid-auto-rows: 16.5rem;
     grid-gap: 1rem;
     @include media-M {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: 1.15fr 0.95fr 1.03fr 0.95fr;
       grid-template-rows: 10rem 7.5rem 10rem;
     }
     @include media-L {
