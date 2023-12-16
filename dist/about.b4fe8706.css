@@ -676,6 +676,7 @@ button.swiper-pagination-bullet {
   --input-grey: #dbdbdb;
   --text-grey: #9f9f9f;
   --overlay-light-color: #eee;
+  --inactive-link: #c8c8c8;
 }
 
 @font-face {
@@ -731,9 +732,9 @@ html {
 }
 
 body {
-  color: #020202;
-  background-color: #fff;
-  font-family: e-Ukraine, sans-serif;
+  background-color: var(--white);
+  font-family: var(--main-font);
+  color: var(--main-text-color);
 }
 
 body.lock {
@@ -771,12 +772,24 @@ address {
 }
 
 .section, .hero {
-  padding: 5rem 0;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 @media screen and (min-width: 1200px) {
   .section, .hero {
-    padding: 9.38rem 0;
+    padding-top: 9.38rem;
+    padding-bottom: 9.38rem;
+  }
+}
+
+.section-top {
+  padding-top: 5rem;
+}
+
+@media screen and (min-width: 1200px) {
+  .section-top {
+    margin-top: 9.38rem;
   }
 }
 
@@ -1103,6 +1116,61 @@ address {
   display: block;
 }
 
+.breadcrumbs {
+  background-color: var(--sky-blue);
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.breadcrumbs__title {
+  font-family: var(--secondary-font);
+  text-transform: uppercase;
+  color: var(--white);
+  text-align: center;
+  text-transform: none;
+  margin-bottom: 1rem;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.23;
+}
+
+.breadcrumbs__list {
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 1.25rem;
+  display: flex;
+}
+
+.breadcrumbs__item {
+  color: var(--inactive-link);
+  font-size: 1rem;
+  font-weight: 100;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .breadcrumbs__item {
+    font-size: 1.125rem;
+  }
+}
+
+.breadcrumbs__item:last-of-type {
+  color: var(--white);
+}
+
+.breadcrumbs__item:not(:last-of-type):after {
+  content: "";
+  border-right: 1px solid var(--white);
+  border-bottom: 1px solid var(--white);
+  width: .5rem;
+  height: .5rem;
+  display: block;
+  position: absolute;
+  top: .5rem;
+  right: -12px;
+  transform: rotate(-45deg);
+}
+
 .filter {
   border: 1px solid var(--text-grey);
   border-radius: 1.25rem;
@@ -1185,11 +1253,11 @@ address {
 }
 
 .filter__btn.active > .filter__btn-title, .filter__btn:hover > .filter__btn-title, .filter__btn:focus > .filter__btn-title {
-  color: #fff;
+  color: var(--white);
 }
 
 .filter__btn.active > svg, .filter__btn:hover > svg, .filter__btn:focus > svg {
-  fill: #fff;
+  fill: var(--white);
 }
 
 .filter-radio {
@@ -3458,7 +3526,7 @@ address {
 }
 
 .team .swiper-button-prev, .team .swiper-button-next {
-  color: #020202;
+  color: var(--main-text-color);
   background-color: var(--overlay-light-color);
   border-radius: 50%;
   flex-shrink: 0;
