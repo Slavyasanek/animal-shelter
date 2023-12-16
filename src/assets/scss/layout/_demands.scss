@@ -18,14 +18,14 @@
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
-    @media screen and (min-width: 500px ){
+    @media screen and (min-width: 500px) {
       flex-direction: row;
-      flex-wrap: wrap; 
+      flex-wrap: wrap;
       gap: 2vw;
     }
     & > li {
       width: 100%;
-      @media screen and (min-width: 500px ){
+      @media screen and (min-width: 500px) {
         width: calc((100% - 2vw) / 2);
       }
       @include media-M {
@@ -41,7 +41,6 @@
     @include media-L {
       flex-direction: column;
       row-gap: 1.875rem;
-      margin-right: 4.06vw;
       min-width: 30vw;
     }
   }
@@ -68,6 +67,7 @@
     row-gap: 0.5rem;
     @include media-L {
       margin-bottom: 4rem;
+      column-gap: 1.25vw;
     }
   }
   &__list {
@@ -80,15 +80,24 @@
       font-size: 1rem;
     }
   }
+  // * block for btn and "fill out form"
   &__connect {
+    display: flex;
+    flex-direction: column;
     @include media-maxM {
-      display: flex;
       justify-content: center;
-      flex-direction: column;
       align-items: center;
+    }
+    @include media-maxL {
       text-align: center;
     }
+    @include media-M {
+      & > p {
+        max-width: 17.5rem;
+      }
+    }
   }
+  // * common block for btn + number to help and connect
   &__help {
     font-size: 0.875rem;
     font-weight: 200;
@@ -108,16 +117,20 @@
     @include media-L {
       font-size: 1rem;
       flex-direction: column;
+      align-items: end;
     }
     &-btn {
       margin-bottom: 1rem;
       width: 100%;
-      align-self: center;
+      @include media-maxM {
+        align-self: center;
+      }
       @include media-M {
         width: 24vw;
       }
       @include media-L {
         width: 14.9vw;
+        align-self: flex-end;
       }
     }
   }
@@ -137,5 +150,196 @@
       margin-top: 1.25rem;
       justify-content: flex-end;
     }
+  }
+  // * another page styles.
+  // * Styles spicific for "shelter needs" page
+  // * Transform left btns into one category title (named group)
+  &__group {
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 300;
+    @include media-M {
+      font-size: 1.5rem;
+    }
+    &-wr {
+      height: auto;
+      background-color: var(--dark-blue);
+      border-radius: 1.25rem;
+      width: 100%;
+      @include p-y(1.25rem);
+      text-align: center;
+      flex-shrink: 0;
+      @include media-maxL {
+        margin-bottom: 2rem;
+      }
+      @include media-L {
+        width: 13.75vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 22rem;
+        @include p-y(2vw);
+      }
+    }
+  }
+  //* wrapper for group and main content of category
+  &__options {
+    @include media-L {
+      display: flex;
+      flex-direction: row;
+      column-gap: 5.2vw;
+    }
+  }
+  // * a list for all categories
+  &__categories {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+    @include media-L {
+      row-gap: 6.25rem;
+    }
+  }
+  // * just text
+  &__text {
+    font-family: var(--odd-font);
+    font-weight: 400;
+    font-size: 1rem;
+  }
+  // * block of radio input for sponsorship 
+  &__input {
+    &-wr {
+      width: 1.25rem;
+      height: 1.25rem;
+      cursor: pointer;
+      @include media-M {
+        width: 1.75rem;
+        height: 1.75rem;
+      }
+    }
+    &-radio {
+      border: 2px solid var(--main-text-color);
+      &::before {
+        content: "";
+        width: 0.5rem;
+        height: 0.5rem;
+        @include media-M {
+          width: 0.875rem;
+          height: 0.875rem;
+        }
+        background-color: var(--main-text-color);
+      }
+    }
+  }
+  &__label {
+    font-family: var(--odd-font);
+    font-size: 1.25rem;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  &__radio {
+    column-gap: 0.625rem;
+    width: calc((100% - 3.4vw) / 2);
+    @include media-M {
+      width: calc((100% - 2 * 5.72vw) / 3);
+    }
+  }
+  &__radio-list {
+    column-gap: 3.4vw;
+    row-gap: 1.25rem;
+    margin-bottom: 3rem;
+    @include media-M {
+      column-gap: 5.72vw;
+      row-gap: 2.5rem;
+    }
+    @include media-L {
+      margin-bottom: 6rem;
+      column-gap: 4.6vw;
+      max-width: 31.25vw;
+    }
+  }
+  // *big wrapper for radios+btns
+  &__form {
+    @include media-L {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+  }
+  &__form-btns {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    @include media-M {
+      flex-direction: row;
+      column-gap: 1.7vw;
+    }
+  }
+  &__form-btn {
+    width: 100%;
+    @include media-M {
+      width: 30vw;
+    }
+    @include media-L {
+      width: 11.9vw;
+    }
+  }
+  // * thanks for donation
+  &__thanks {
+    width: 100%;
+    border-radius: 1.25rem;
+    border-color: var(--black);
+    background-color: transparent;
+    border-width: 0.125rem;
+    border-style: dashed;
+    display: inline-block;
+    @include subtitle(var(--main-text-color), 2rem);
+    text-align: center;
+    @include media-M {
+      font-size: 2.25rem;
+    }
+    @include media-maxL {
+      @include p-y(3rem);
+      margin-top: 2rem;
+    }
+    @include media-L {
+      width: 13.75vw;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include p-y(2vw);
+    }
+  }
+  // * about sponsors 
+  &__sponsor-list {
+    display: flex;
+    flex-direction: row;
+    column-gap: 3vw;
+    @include media-L {
+      column-gap: 1rem;
+    }
+  }
+  &__sponsor-block {
+    @include media-L {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 22rem;
+    }
+  }
+  &__sponsor {
+    height: 6.875rem;
+    & picture, img {
+      object-fit: contain;
+      height: 100%;
+    }
+  }
+  &__sponsor-title {
+    font-family: var(--odd-font);
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
   }
 }

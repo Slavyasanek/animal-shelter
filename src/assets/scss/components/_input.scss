@@ -13,6 +13,20 @@
   }
 }
 
+.radio-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.radio-list-item {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  align-items: center;
+}
+
 .custom-radio {
   border-radius: 50%;
   width: 100%;

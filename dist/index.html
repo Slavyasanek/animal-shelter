@@ -203,45 +203,49 @@
     </div>
     <!-- form of custom radio + btns  -->
     <form>
-      <ul class="help-shelter__radio-list">
-        <li class="help-shelter__radio">
+      <ul class="help-shelter__radio-list radio-list">
+        <li class="help-shelter__radio radio-list-item">
           <label class="help-shelter__label" for="25">25 грн</label>
           <div class="custom-input__wrapper help-shelter__input-wr">
             <input class="custom-input" type="radio" name="price" id="25" value="25">
             <div class="custom-radio help-shelter__input-radio"></div>
           </div>
         </li>
-        <li class="help-shelter__radio">
+        <li class="help-shelter__radio radio-list-item">
           <label class="help-shelter__label" for="50">50 грн</label>
           <div class="custom-input__wrapper help-shelter__input-wr">
             <input class="custom-input" type="radio" name="price" id="50" value="50">
             <div class="custom-radio help-shelter__input-radio"></div>
           </div>
         </li>
-        <li class="help-shelter__radio">
+        <li class="help-shelter__radio radio-list-item">
           <label class="help-shelter__label" for="100">100 грн</label>
           <div class="custom-input__wrapper help-shelter__input-wr">
             <input class="custom-input" type="radio" name="price" id="100" value="100">
             <div class="custom-radio help-shelter__input-radio"></div>
-        </div></li>
-        <li class="help-shelter__radio">
+            </div>
+        </li>
+        <li class="help-shelter__radio radio-list-item">
           <label class="help-shelter__label" for="200">200 грн</label>
           <div class="custom-input__wrapper help-shelter__input-wr">
             <input class="custom-input" type="radio" name="price" id="200" value="200">
             <div class="custom-radio help-shelter__input-radio"></div>
-        </div></li>
-        <li class="help-shelter__radio">
+          </div>
+        </li>
+        <li class="help-shelter__radio radio-list-item">
           <label class="help-shelter__label" for="500">500 грн</label>
           <div class="custom-input__wrapper help-shelter__input-wr">
             <input class="custom-input" type="radio" name="price" id="500" value="500">
             <div class="custom-radio help-shelter__input-radio"></div>
-        </div></li>
-        <li class="help-shelter__radio">
+          </div>
+        </li>
+        <li class="help-shelter__radio radio-list-item">
           <label class="help-shelter__label" for="other">Інша сума</label>
           <div class="custom-input__wrapper help-shelter__input-wr">
             <input class="custom-input" type="radio" name="price" id="other" value="other">
             <div class="custom-radio help-shelter__input-radio"></div>
-        </div></li>
+          </div>
+        </li>
       </ul>
       <div class="help-shelter__btns">
         <a href="" class="help-shelter__btn btn btn-font--sec btn-blue btn-paw">
@@ -382,7 +386,8 @@
   <div class="container">
     <h2 class="demands__subtitle">Потреби притулку</h2>
     <div class="demands__wrapper">
-      <!-- left btns categories switchers -->
+      <div class="demands__options">
+              <!-- left btns categories switchers -->
       <ul class="demands__btns">
         <li>
           <a class="btn btn-skyblue demands__btn active" href="#subcategories">
@@ -418,7 +423,7 @@
         </li>
       </ul>
       <!-- main text of category demands and subcategories btns -->
-      <div class="demands__options">
+      <div>
         <!-- subcategories btns list -->
         <ul class="demands__subcategories" id="subcategories">
           <li><button class="btn btn-transparent active">Їжа</button></li>
@@ -449,6 +454,7 @@
             <li>Крупы крупного помола</li>
           </ul>
         </div>
+      </div>
       </div>
       <!-- btn, socials to provide help etc.-->
       <div class="demands__help">

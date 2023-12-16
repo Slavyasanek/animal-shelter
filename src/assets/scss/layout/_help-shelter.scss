@@ -40,10 +40,6 @@
   }
   // * radio list
   &__radio-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
     column-gap: 3.4vw;
     row-gap: 1.25rem;
     @include media-M {
@@ -52,10 +48,6 @@
     }
   }
   &__radio {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: start;
-    align-items: center;
     column-gap: 0.625rem;
     width: calc((100% - 3.4vw) / 2);
     @include media-M {
