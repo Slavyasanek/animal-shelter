@@ -10,18 +10,25 @@
   }
   &__slider {
     padding-bottom: 2rem;
+    padding-top: 2rem;
     cursor: pointer;
     @include media-L {
         padding-bottom: 2.5rem;
     }
     .swiper-slide {
       height: 13.75rem;
+      transition: var(--transition);
       @include media-M {
         height: 25rem;
       }
       & picture,
       img {
         @include cover-image;
+      }
+    }
+    a.swiper-slide {
+      &:hover, &:focus {
+        transform: scale(1.05);
       }
     }
     .swiper-scrollbar {

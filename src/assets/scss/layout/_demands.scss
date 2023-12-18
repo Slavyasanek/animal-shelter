@@ -58,6 +58,12 @@
       @include p-x(2.5vw);
     }
   }
+  &__phone {
+    transition: var(--transition);
+    &:hover, &:focus {
+      color: var(--sky-blue);
+    }
+  }
   &__subcategories {
     margin-bottom: 2rem;
     display: flex;
