@@ -35,12 +35,20 @@ function swiperSlider() {
     if (teamSlider) {
         const slider = new Swiper('[data-slider="team-slider"]', {
             modules: [Navigation],
-            slidesPerView: 4,
+            slidesPerView: 2,
             spaceBetween: 20,
             speed: 1000,
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev'
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 3
+                },
+                1440: {
+                    slidesPerView: 4
+                }
             }
         });
     }

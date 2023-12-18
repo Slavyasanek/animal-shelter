@@ -1,26 +1,43 @@
 .team {
-  &--wrapper {
-    padding-bottom: 5.25rem;
+  &__wrapper {
+    @include media-L {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center
+    }
   }
   &__title {
-    @include subtitle(var(--main-text-color), 4.5rem);
+    @include subtitle(var(--main-text-color), 3rem);
     text-align: center;
     margin-bottom: 1.75rem;
+    @include media-M {
+      font-size: 4.5rem;
+    }
   }
   &__description {
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: 200;
     margin-bottom: 2rem;
     text-align: center;
+    @include media-L {
+      max-width: 46rem;
+      font-size: 1.125rem;
+    }
   }
   .swiper {
-    max-width: 73.95vw;
+    @include media-L {
+      max-width: 73.95vw;
+    }
   }
   .swiper-slide {
-    height: 26.875rem;
+    height: 24rem;
     position: relative;
     border-radius: 1.25rem;
     overflow: hidden;
+    @include media-M {
+      height: 27rem;
+    }
     & picture, img {
       @include cover-image;
     }
@@ -35,13 +52,19 @@
     padding: 1rem 0.83vw 2.5rem;
   }
   &__name {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 300;
     margin-bottom: 0.25rem;
+    @include media-L {
+      font-size: 1.5rem;
+    }
   }
   &__position {
-    font-size: 1.125rem;
+    font-size: 0.875rem;
     font-weight: 100;
+    @include media-M {
+      font-size: 1.125rem;
+    }
   }
   .swiper-button-prev,
   .swiper-button-next {
