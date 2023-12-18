@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/scss/index.scss" />
+    <title>Вже дома</title>
+</head>
+<body>
+    <include src="./assets/partials/header.html"></include>
+    <main>
+        <include
+        src="./assets/partials/breadcrumbs.html"
+        locals='{"title": "Вже дома", 
+        "currentPage": "Вже дома",
+      "currentPageLink": "athome.html"}'
+      ></include>
+      <include src="./assets/partials/domestic.html"></include>
+      <include src="./assets/partials/help-shelter.html"></include>
+      <include src="./assets/partials/care-shelter.html"></include>
+      <include src="./assets/partials/tails.html"></include>
+      <include src="./assets/partials/location.html"></include>
+    </main>
+    <include src="./assets/partials/footer.html"></include>
+    <script type="module" src="./assets/js/index.js"></script>
+</body>
+</html>

@@ -628,18 +628,15 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _swiper = require("swiper");
 var _swiperDefault = parcelHelpers.interopDefault(_swiper);
 var _modules = require("swiper/modules");
-function swiperSlider() {
-    const bigSlider = document.querySelector('[data-slider="big-slider"]');
-    const teamSlider = document.querySelector('[data-slider="team-slider"]');
-    const partnersSlider = document.querySelector('[data-slider="partners-slider"]');
-    if (bigSlider) {
-        const slider = new (0, _swiperDefault.default)('[data-slider="big-slider"]', {
+const fullWSlider = (el)=>{
+    const elExs = document.querySelector(el);
+    if (elExs) {
+        const slider = new (0, _swiperDefault.default)(el, {
             modules: [
                 (0, _modules.Pagination),
                 (0, _modules.EffectFade),
                 (0, _modules.Autoplay)
             ],
-            // loop: true,
             slidesPerView: 1,
             spaceBetween: 0,
             centeredSlides: true,
@@ -659,6 +656,12 @@ function swiperSlider() {
             speed: 1000
         });
     }
+};
+function swiperSlider() {
+    const teamSlider = document.querySelector('[data-slider="team-slider"]');
+    const partnersSlider = document.querySelector('[data-slider="partners-slider"]');
+    fullWSlider('[data-slider="big-slider"]');
+    fullWSlider('[data-slider="athome-slider"]');
     if (teamSlider) {
         const slider = new (0, _swiperDefault.default)('[data-slider="team-slider"]', {
             modules: [

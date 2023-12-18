@@ -1,14 +1,11 @@
 import Swiper from "swiper";
 import { Autoplay, Pagination, EffectFade, Navigation, Scrollbar } from 'swiper/modules';
 
-function swiperSlider() {
-    const bigSlider = document.querySelector('[data-slider="big-slider"]');
-    const teamSlider = document.querySelector('[data-slider="team-slider"]');
-    const partnersSlider = document.querySelector('[data-slider="partners-slider"]');
-    if (bigSlider) {
-        const slider = new Swiper('[data-slider="big-slider"]', {
+const fullWSlider = (el) => {
+    const elExs = document.querySelector(el);
+    if (elExs) {
+        const slider = new Swiper(el, {
             modules: [Pagination, EffectFade, Autoplay],
-            // loop: true,
             slidesPerView: 1,
             spaceBetween: 0,
             centeredSlides: true,
@@ -28,6 +25,13 @@ function swiperSlider() {
             speed: 1000,
         });
     }
+}
+
+function swiperSlider() {
+    const teamSlider = document.querySelector('[data-slider="team-slider"]');
+    const partnersSlider = document.querySelector('[data-slider="partners-slider"]');
+    fullWSlider('[data-slider="big-slider"]');
+    fullWSlider('[data-slider="athome-slider"]');
     if (teamSlider) {
         const slider = new Swiper('[data-slider="team-slider"]', {
             modules: [Navigation],
