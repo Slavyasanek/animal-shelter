@@ -1,11 +1,4 @@
 .tails {
-  padding-top: 5rem;
-  @include media-maxM {
-    padding-bottom: 5rem;
-  }
-  @include media-L {
-    padding-top: 9.38rem;
-  }
   &__list {
     display: grid;
     grid-gap: 0.5rem;

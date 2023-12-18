@@ -1,6 +1,26 @@
 .care-shelter {
   @extend %section--gradient;
   overflow: hidden;
+  &--gradient {
+    @extend %section--gradient;
+    @include media-M {
+      position: absolute;
+      width: 100%;
+      height: 230%;
+      top: 0;
+      left: 0;
+      transform: translateY(-25%);
+      z-index: -1;
+    }
+  }
+  &--mobile-bottom {
+    @include media-maxM {
+      padding-bottom: 5rem;
+    }
+  } 
+  @include media-maxM {
+    overflow: hidden;
+  }
   &__wrapper {
     display: flex;
     flex-direction: row;
@@ -25,7 +45,7 @@
       font-size: 1.5rem;
     }
   }
-  // * image of cat 
+  // * image of cat
   &__img-wr {
     @include media-maxM {
       position: absolute;
