@@ -1,0 +1,71 @@
+.caretaker {
+  &__wrapper {
+    position: relative;
+    &::before,
+    &::after {
+      @include pseudo;
+      background-color: var(--dark-blue);
+      width: 0.5rem;
+      height: 3rem;
+      position: absolute;
+      top: 1.25rem;
+      @include media-M {
+        height: 6.25rem;
+      }
+    }
+    &::before {
+      left: 0;
+      @include media-L {
+        left: 25%;
+        transform: translateX(-25%);
+      }
+    }
+    &::after {
+      right: 0;
+      @include media-L {
+        right: 25%;
+        transform: translateX(25%);
+      }
+    }
+    @include media-M {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__title {
+    @include subtitle(var(--main-text-color), 2rem);
+    text-align: center;
+    line-height: 1.23;
+    @include media-M {
+      font-size: 4rem;
+    }
+  }
+  &__text {
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+    margin-block: 2rem;
+    @include media-M {
+      font-size: 1.5rem;
+      margin-block: 4rem;
+    }
+  }
+  &__btn {
+    width: 100%;
+    @include p-y(1rem);
+    display: block;
+    font-size: 1.75rem;
+    line-height: 1.23;
+    @include media-M {
+      font-size: 2.5rem;
+      @include p-y(1.625rem);
+      width: 46vw;
+    }
+    @include media-L {
+      font-size: 3rem;
+      width: 32.8vw;
+    }
+  }
+}
