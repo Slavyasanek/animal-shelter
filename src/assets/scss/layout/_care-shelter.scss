@@ -13,11 +13,6 @@
       z-index: -1;
     }
   }
-  &--mobile-bottom {
-    @include media-maxM {
-      padding-bottom: 5rem;
-    }
-  } 
   @include media-maxM {
     overflow: hidden;
   }
