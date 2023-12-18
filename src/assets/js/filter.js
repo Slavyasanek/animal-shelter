@@ -1,6 +1,6 @@
 import { refs } from "./refs";
 
-const optionsRef = refs.filter;
+const {filterOptions, filter, filterBtnOpen, filterBtnClose, body, mobileMenuBtn, header} = refs;
 
 const toggleOptions = e => {
     const btn = e.target;
@@ -17,6 +17,34 @@ const toggleOptions = e => {
     }
 }
 
-if (optionsRef) {
-    optionsRef.addEventListener("click", toggleOptions)
+const openFilter = () => {
+    filter.classList.add('open');
+    body.classList.add('lock');
+    mobileMenuBtn.disabled = true;
+    header.classList.add('shown');
+    if (filterBtnClose) {
+        filterBtnClose.addEventListener("click", closeFilter);
+    }
 }
+
+const closeFilter = () => {
+    filter.classList.remove('open');
+    body.classList.remove('lock');
+    mobileMenuBtn.disabled = false;
+    filterBtnClose.removeEventListener("click", closeFilter)
+}
+
+const resizeObserver = e => {
+    if (!e.matches) return;
+    closeFilter();
+}
+
+if (filterOptions) {
+    filterOptions.addEventListener("click", toggleOptions)
+}
+
+if (filter && filterBtnOpen) {
+    filterBtnOpen.addEventListener("click", openFilter)
+}
+
+window.matchMedia('(min-width: 1200px)').addEventListener('change', resizeObserver)

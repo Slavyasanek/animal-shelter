@@ -67,6 +67,17 @@
   overflow: hidden;
   display: -webkit-box;
 }
+@mixin media-minCustom($s) {
+  @media screen and (min-width: $s) {
+    @content;
+  }
+}
+
+@mixin media-maxCustom($s) {
+  @media screen and (max-width: $s) {
+    @content;
+  }
+}
 
 @mixin media-S() {
   @media screen and (min-width: 425px) {

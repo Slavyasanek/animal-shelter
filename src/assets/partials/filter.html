@@ -1,4 +1,9 @@
 <div class="filter">
+    <button type="button" class="btn btn-reset filter__close" data-filter="close">
+        <svg width="32" height="32" class="icon icon-sky-blue">
+            <use href="./assets/static/icons.svg#icon-cross"></use>
+        </svg>
+    </button>
     <p class="filter__title">Фільтр</p>
     <ul class="filter__options">
         <li class="filter__block">
@@ -37,14 +42,14 @@
                         <input type="radio" name="priority" id="all-priority" class="custom-input" value="all-priority" checked>
                         <div class="custom-radio filter-radio"></div>
                     </div>
-                    <label for="all-priority">Всі</label>
+                    <label class="filter__label" for="all-priority">Всі</label>
                 </li>
                 <li class="filter__item">
                     <div class="custom-input__wrapper filter-radio__wrapper">
                         <input type="radio" name="priority" id="caretaker" class="custom-input" value="caretaker">
                         <div class="custom-radio filter-radio"></div>
                     </div>
-                    <label for="caretaker">Стати опікуном</label>
+                    <label class="filter__label" for="caretaker">Стати опікуном</label>
                 </li>
             </ul>
         </li>
@@ -61,18 +66,18 @@
                         <input type="radio" name="gender" id="all-gender" value="all-gender" class="custom-input" checked>
                         <div class="custom-radio filter-radio"></div>
                     </div>
-                    <label for="all-gender">Всі</label></li>
+                    <label class="filter__label" for="all-gender">Всі</label></li>
                 <li class="filter__item">
                     <div class="custom-input__wrapper filter-radio__wrapper">
                         <input type="radio" name="gender" id="girls" value="girls" class="custom-input">
                         <div class="custom-radio filter-radio"></div>
                     </div>
-                    <label for="girls">Дівчинка</label></li>
+                    <label class="filter__label" for="girls">Дівчинка</label></li>
                 <li class="filter__item">
                     <div class="custom-input__wrapper filter-radio__wrapper">
                         <input type="radio" name="gender" id="boys" value="boys" class="custom-input">
                         <div class="custom-radio filter-radio"></div>
-                    </div><label for="boys">Хлопчик</label></li>
+                    </div><label class="filter__label" for="boys">Хлопчик</label></li>
             </ul>
         </li>
         <li class="filter__block">
@@ -88,31 +93,31 @@
                         <input type="checkbox" name="age" id="all-age" class="custom-input" checked>
                         <div class="custom-checkbox filter-checkbox"></div>
                     </div>
-                    <label for="all-age">Всі</label></li>
+                    <label class="filter__label" for="all-age">Всі</label></li>
                 <li class="filter__item">
                     <div class="custom-input__wrapper filter-checkbox__wrapper">
                         <input type="checkbox" name="age" id="up-to-one" class="custom-input">
                         <div class="custom-checkbox filter-checkbox"></div>
                     </div>
-                    <label for="up-to-one">до 1р.</label></li>
+                    <label class="filter__label" for="up-to-one">до 1р.</label></li>
                 <li class="filter__item">
                     <div class="custom-input__wrapper filter-checkbox__wrapper">
                         <input type="checkbox" name="age" id="one-two" class="custom-input">
                         <div class="custom-checkbox filter-checkbox"></div>
                     </div>
-                    <label for="one-two">1-2р.</label></li>
+                    <label class="filter__label" for="one-two">1-2р.</label></li>
                 <li class="filter__item">
                                         <div class="custom-input__wrapper filter-checkbox__wrapper">
                         <input type="checkbox" name="age" id="two-five" class="custom-input">
                         <div class="custom-checkbox filter-checkbox"></div>
                     </div>
-                    <label for="two-five">2-5р.</label></li>
+                    <label class="filter__label" for="two-five">2-5р.</label></li>
                 <li class="filter__item">
                     <div class="custom-input__wrapper filter-checkbox__wrapper">
                         <input type="checkbox" name="age" id="up-five" class="custom-input">
                         <div class="custom-checkbox filter-checkbox"></div>
                     </div>
-                    <label for="up-five">більше 5р.</label></li>
+                    <label class="filter__label" for="up-five">більше 5р.</label></li>
             </ul>
         </li>
         <li class="filter__block">
@@ -128,25 +133,25 @@
                         <input class="custom-input" type="checkbox" name="size" value="all-size" id="all-size" checked>
                         <div class="custom-checkbox filter-checkbox"></div>
                     </div>
-                   <label for="all-size">Усі</label></li>
+                   <label class="filter__label" for="all-size">Усі</label></li>
                 <li class="filter__item">
                     <div class="custom-input__wrapper filter-checkbox__wrapper">
                         <input class="custom-input" type="checkbox" name="size" value="big" id="big">
                         <div class="custom-checkbox filter-checkbox"></div>
                     </div>
-                   <label for="big">Великі</label></li>
+                   <label class="filter__label" for="big">Великі</label></li>
                 <li class="filter__item">
                     <div class="custom-input__wrapper filter-checkbox__wrapper">
                         <input class="custom-input" type="checkbox" name="size" value="medium" id="medium">
                         <div class="custom-checkbox filter-checkbox"></div>
                     </div>
-                    <label for="medium">Середні</label></li>
+                    <label class="filter__label" for="medium">Середні</label></li>
                 <li class="filter__item">
                     <div class="custom-input__wrapper filter-checkbox__wrapper">
                         <input class="custom-input" type="checkbox" name="size" value="small" id="small">
                         <div class="custom-checkbox filter-checkbox"></div>
                     </div>
-                   <label for="small">Маленькі</label></li>
+                   <label class="filter__label" for="small">Маленькі</label></li>
             </ul>
         </li>
         <li class="filter__block">
@@ -162,19 +167,19 @@
                         <input type="radio" name="sterilization" id="all-sterilization" value="all-sterilization" class="custom-input" checked>
                         <div class="custom-radio filter-radio"></div>
                     </div>
-                    <label for="all-sterilization">Всі</label></li>
+                    <label class="filter__label" for="all-sterilization">Всі</label></li>
                 <li class="filter__item">
                     <div class="custom-input__wrapper filter-radio__wrapper">
                         <input type="radio" name="sterilization" id="sterilized" value="sterilized" class="custom-input"/>
                         <div class="custom-radio filter-radio"></div>
                     </div>
-                    <label for="sterilized">Зроблена</label></li>
+                    <label class="filter__label" for="sterilized">Зроблена</label></li>
                 <li class="filter__item">
                     <div class="custom-input__wrapper filter-radio__wrapper">
                         <input type="radio" name="sterilization" id="without" value="without" class="custom-input">
                         <div class="custom-radio filter-radio"></div>
                     </div>
-                    <label for="without">Немає</label></li>
+                    <label class="filter__label" for="without">Немає</label></li>
             </ul>
         </li>
         <li class="filter__block">
@@ -190,25 +195,25 @@
                         <input type="checkbox" name="fur" value="all-fur" id="all-fur" class="custom-input" checked>
                         <div class="custom-checkbox filter-checkbox"></div>
                     </div>
-                    <label for="all-fur">Всі</label></li>
+                    <label class="filter__label" for="all-fur">Всі</label></li>
                 <li class="filter__item">
                     <div class="custom-input__wrapper filter-checkbox__wrapper">
                         <input type="checkbox" name="fur" value="short" id="short" class="custom-input">
                         <div class="custom-checkbox filter-checkbox"></div>
                     </div>
-                    <label for="short">Коротка</label></li>
+                    <label class="filter__label" for="short">Коротка</label></li>
                 <li class="filter__item">
                     <div class="custom-input__wrapper filter-checkbox__wrapper">
                         <input type="checkbox" name="fur" value="average" id="average" class="custom-input">
                         <div class="custom-checkbox filter-checkbox"></div>
                     </div>
-                   <label for="average">Середня</label></li>
+                   <label class="filter__label" for="average">Середня</label></li>
                 <li class="filter__item">
                     <div class="custom-input__wrapper filter-checkbox__wrapper">
                         <input type="checkbox" name="fur" value="long" id="long" class="custom-input">
                         <div class="custom-checkbox filter-checkbox"></div>
                     </div>                  
-                    <label for="long">Довга</label></li>
+                    <label class="filter__label" for="long">Довга</label></li>
             </ul>
         </li>
         <li class="filter__block">
@@ -224,19 +229,19 @@
                         <input type="radio" name="personality" value="all-personality" id="all-personality" class="custom-input" checked>
                         <div class="custom-radio filter-radio"></div>
                     </div>
-                    <label for="all-personality">Всі</label></li>
+                    <label class="filter__label" for="all-personality">Всі</label></li>
                 <li class="filter__item">
                     <div class="custom-input__wrapper filter-radio__wrapper">
                         <input type="radio" name="personality" value="calm" id="calm" class="custom-input">
                         <div class="custom-radio filter-radio"></div>
                     </div>
-                   <label for="calm">Спокійний</label></li>
+                   <label class="filter__label" for="calm">Спокійний</label></li>
                 <li class="filter__item">
                     <div class="custom-input__wrapper filter-radio__wrapper">
                         <input type="radio" name="personality" value="active" id="active" class="custom-input">
                         <div class="custom-radio filter-radio"></div>
                     </div>
-                   <label for="active">Активний</label></li>
+                   <label class="filter__label" for="active">Активний</label></li>
             </ul>
         </li>
     </ul>

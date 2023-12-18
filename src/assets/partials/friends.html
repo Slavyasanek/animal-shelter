@@ -1,6 +1,11 @@
-<section class="friends section--mt-header">
+<section class="friends">
   <div class="container">
-    <form class="friends__input--wrapper">
+    <form class="friends__input-wrapper">
+      <button type="button" class="btn btn-reset friends__filter" data-filter="open">
+        <svg width="32" height="32" class="icon icon-sky-blue icon-trans-scale">
+          <use href="./assets/static/icons.svg#icon-filter"></use>
+        </svg>
+      </button>
       <input
         type="text"
         name="animal"
@@ -14,9 +19,9 @@
         </svg>
       </button>
     </form>
-    <div class="friends--wrapper">
+    <div class="friends__wrapper">
       <include src="assets/partials/filter.html"></include>
-      <div class="friends__list--wrapper">
+      <div class="friends__list-wrapper">
         <ul class="friends__list">
           <li class="friends__card">
             <picture>
@@ -84,9 +89,9 @@
         </ul>
         <button
           type="button"
-          class="btn btn-font--sec btn-dashed btn-dashed--dark friends__btn"
+          class="btn btn-font--sec btn-dashed btn-dashed--dark btn-dashed--small friends__btn"
         >
-          Детальніше
+          Завантажити ще
         </button>
       </div>
     </div>

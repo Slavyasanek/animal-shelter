@@ -677,6 +677,7 @@ button.swiper-pagination-bullet {
   --text-grey: #9f9f9f;
   --overlay-light-color: #eee;
   --inactive-link: #c8c8c8;
+  --species-btn-bcg: #e2e2e2;
 }
 
 @font-face {
@@ -1197,31 +1198,101 @@ address {
 }
 
 .filter {
-  border: 1px solid var(--text-grey);
-  border-radius: 1.25rem;
   height: 100%;
-  padding: 1.25rem;
+  padding: 1.25rem 1.25rem 5.5rem;
+  top: 4.25rem;
+}
+
+@media screen and (min-width: 768px) {
+  .filter {
+    padding-bottom: 7rem;
+    top: 5.75rem;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .filter {
+    z-index: 4;
+    background-color: var(--white);
+    transition: var(--transition);
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-y: scroll;
+    transform: translateX(-10%);
+  }
+
+  .filter.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0%);
+  }
+}
+
+@media screen and (min-width: 991px) {
+  .filter {
+    border: 1px solid var(--text-grey);
+    border-radius: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+}
+
+.filter__close {
+  position: absolute;
+  right: 1rem;
+}
+
+@media screen and (min-width: 991px) {
+  .filter__close {
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
 }
 
 .filter__options {
   flex-direction: column;
-  row-gap: 2.5rem;
+  row-gap: 2rem;
   display: flex;
 }
 
+@media screen and (min-width: 768px) {
+  .filter__options {
+    row-gap: 2.5rem;
+  }
+}
+
 .filter__title {
-  margin-bottom: 1.75rem;
-  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
   font-weight: 300;
+}
+
+@media screen and (min-width: 768px) {
+  .filter__title {
+    margin-bottom: 1.75rem;
+    font-size: 1.5rem;
+  }
 }
 
 .filter__subtitle {
   background-color: var(--white);
   z-index: 1;
-  margin-bottom: 1.25rem;
-  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
   font-weight: 200;
   position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .filter__subtitle {
+    margin-bottom: 1.25rem;
+    font-size: 1.5rem;
+  }
 }
 
 .filter__block {
@@ -1234,7 +1305,13 @@ address {
   width: 100%;
   height: 1px;
   position: absolute;
-  bottom: -1.25rem;
+  bottom: -1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .filter__block:not(:last-child):after {
+    bottom: -1.25rem;
+  }
 }
 
 .filter__expand {
@@ -1255,15 +1332,40 @@ address {
 
 .filter__btns {
   flex-direction: row;
-  column-gap: .75rem;
   display: flex;
 }
 
+@media screen and (max-width: 767px) {
+  .filter__btns {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .filter__btns {
+    column-gap: .75rem;
+  }
+}
+
 .filter__btn {
+  background-color: var(--species-btn-bcg);
   border: none;
   border-radius: .625rem;
-  width: 6.77vw;
+  width: 25vw;
   height: 5rem;
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .filter__btn {
+    width: 20vw;
+  }
+}
+
+@media screen and (min-width: 991px) {
+  .filter__btn {
+    width: 6.77vw;
+  }
 }
 
 .filter__btn-title {
@@ -1290,14 +1392,28 @@ address {
 }
 
 .filter-radio__wrapper {
-  width: 1.75rem;
-  height: 1.75rem;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+@media screen and (min-width: 768px) {
+  .filter-radio__wrapper {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
 }
 
 .filter-radio:before {
   background-color: var(--main-text-color);
-  width: .875rem;
-  height: .875rem;
+  width: .5rem;
+  height: .5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .filter-radio:before {
+    width: .875rem;
+    height: .875rem;
+  }
 }
 
 .filter-checkbox {
@@ -1335,6 +1451,12 @@ address {
 
 .filter__list .filter__item {
   margin: 0;
+}
+
+.filter__label {
+  font-size: 1rem;
+  font-weight: 200;
+  line-height: 1.4;
 }
 
 .js-expand-list {
@@ -1543,6 +1665,15 @@ address {
 
 .header__btn:hover .header__btn-line, .header__btn:focus .header__btn-line, .header__btn:active .header__btn-line {
   background-color: var(--dark-blue-hover);
+}
+
+.header__btn:disabled {
+  cursor: auto;
+}
+
+.header__btn:disabled .header__btn-line {
+  background-color: var(--text-grey);
+  cursor: auto;
 }
 
 .header__btn-line {
@@ -3902,7 +4033,12 @@ address {
 
 .friends {
   padding-top: 2.5rem;
-  padding-bottom: 9.375rem;
+}
+
+@media screen and (max-width: 767px) {
+  .friends {
+    padding-bottom: 2.5rem;
+  }
 }
 
 .friends__input {
@@ -3919,10 +4055,20 @@ address {
   color: #818181;
 }
 
-.friends__input--wrapper {
-  justify-content: flex-end;
+.friends__input-wrapper {
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 1rem;
+  margin-bottom: 2rem;
   display: flex;
   position: relative;
+}
+
+@media screen and (min-width: 991px) {
+  .friends__input-wrapper {
+    justify-content: flex-end;
+    margin-bottom: 4rem;
+  }
 }
 
 .friends__input-btn {
@@ -3935,38 +4081,88 @@ address {
   stroke: var(--dark-blue);
 }
 
-.friends--wrapper {
-  flex-direction: row;
-  column-gap: 2.08vw;
-  margin-top: 4rem;
-  display: flex;
+.friends__filter {
+  height: 2rem;
+}
+
+@media screen and (min-width: 991px) {
+  .friends__filter {
+    pointer-events: none;
+    display: none;
+  }
+
+  .friends__wrapper {
+    flex-direction: row;
+    flex-shrink: 0;
+    column-gap: 2.08vw;
+    display: flex;
+  }
 }
 
 .friends__btn {
   align-self: center;
-  padding: 1.625rem 6.6vw;
+  width: 100%;
+  margin-top: 2rem;
 }
 
-.friends__list {
-  flex-flow: wrap;
-  gap: 4rem 1.75rem;
-  margin-bottom: 4.5rem;
-  display: flex;
+@media screen and (min-width: 768px) {
+  .friends__btn {
+    width: 50vw;
+  }
 }
 
-.friends__list--wrapper {
+@media screen and (min-width: 1200px) {
+  .friends__btn {
+    width: 20vw;
+    margin-top: 4.5rem;
+  }
+}
+
+.friends__list-wrapper {
   flex-direction: column;
   align-items: center;
   height: 100%;
   display: flex;
 }
 
+@media screen and (min-width: 425px) {
+  .friends__list {
+    flex-flow: wrap;
+    gap: 1rem;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .friends__list {
+    gap: 4rem 1.75rem;
+  }
+}
+
 .friends__card {
   border-radius: 1.25rem;
-  width: calc(50% - .875rem);
+  width: 100%;
   height: 100%;
   position: relative;
   overflow: hidden;
+}
+
+@media screen and (max-width: 767px) {
+  .friends__card:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .friends__card {
+    width: calc(50% - .5rem);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .friends__card {
+    width: calc(50% - .875rem);
+  }
 }
 
 .friends__card picture, .friends__card img {
@@ -3977,11 +4173,25 @@ address {
 
 .friends__name {
   z-index: 1;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 400;
   position: absolute;
-  bottom: 2.25rem;
-  left: 1.75rem;
+  bottom: 1.5rem;
+  left: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .friends__name {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .friends__name {
+    font-size: 2rem;
+    bottom: 2.25rem;
+    left: 1.75rem;
+  }
 }
 
 .friends__state {
@@ -3989,11 +4199,18 @@ address {
   border-top-left-radius: .625rem;
   border-bottom-left-radius: .625rem;
   padding: .5rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 300;
   position: absolute;
-  top: 2.5rem;
+  top: 1rem;
   right: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .friends__state {
+    font-size: 1.5rem;
+    top: 2.5rem;
+  }
 }
 
 .partners__title {

@@ -1,39 +1,94 @@
 .filter {
-  border: 1px solid var(--text-grey);
-  border-radius: 1.25rem;
+  // * main filter aside
   padding: 1.25rem;
   height: 100%;
+  top: 4.25rem;
+  padding-bottom: 5.5rem;
+  @include media-M {
+    top: 5.75rem;
+    padding-bottom: 7rem;
+  }
+  @include media-maxCustom(990px) {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 4;
+    background-color: var(--white);
+    overflow-y: scroll;
+    transform: translateX(-10%);
+    transition: var(--transition);
+    @include el-hide;
+    &.open {
+      transform: translateX(0%);
+      @include el-show;
+    }
+  }
+  @include media-minCustom(991px) {
+    border: 1px solid var(--text-grey);
+    border-radius: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+  // * mobile filter close btn
+  &__close {
+    position: absolute;
+    right: 1rem;
+    @include media-minCustom(991px) {
+      display: none;
+      pointer-events: none;
+      @include el-hide;
+    }
+  }
+  // * all block separeted to add lines
   &__options {
     display: flex;
     flex-direction: column;
-    row-gap: 2.5rem;
+    row-gap: 2rem;
+    @include media-M {
+      row-gap: 2.5rem;
+    }
   }
+  // * title
   &__title {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 300;
-    margin-bottom: 1.75rem;
+    margin-bottom: 1rem;
+    @include media-M {
+      font-size: 1.5rem;
+      margin-bottom: 1.75rem;
+    }
   }
+  //  * subtitle for each subcategory range
   &__subtitle {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
     font-weight: 200;
-    font-size: 1.5rem;
+    font-size: 1rem;
     background-color: var(--white);
     position: relative;
     z-index: 1;
+    @include media-M {
+      margin-bottom: 1.25rem;
+      font-size: 1.5rem;
+    }
   }
+  //  * block to add seperated lines
   &__block {
     position: relative;
     &:not(:last-child) {
       &::after {
         content: "";
         position: absolute;
-        bottom: -1.25rem;
+        bottom: -1rem;
         width: 100%;
         height: 1px;
         background-color: #cecece;
+        @include media-M {
+          bottom: -1.25rem;
+        }
       }
     }
   }
+  // * button to expand or hide variants
   &__expand {
     position: absolute;
     top: 0;
@@ -47,16 +102,31 @@
       transform: rotate(180deg);
     }
   }
+  // * buttons of animal species
   &__btns {
     display: flex;
     flex-direction: row;
-    column-gap: 0.75rem;
+    @include media-maxM {
+      justify-content: space-between;
+    }
+    @include media-M {
+      column-gap: 0.75rem;
+    }
   }
+  // * single species btn
   &__btn {
-    width: 6.77vw;
+    width: 25vw;
     height: 5rem;
     border-radius: 0.625rem;
     border: none;
+    padding: 0;
+    background-color: var(--species-btn-bcg);
+    @include media-M {
+      width: 20vw;
+    }
+    @include media-minCustom(991px) {
+      width: 6.77vw;
+    }
     &-title {
       transition: var(--transition);
       font-size: 1rem;
@@ -75,18 +145,28 @@
       }
     }
   }
+  // * custom radio specific styles
   &-radio {
     &__wrapper {
-      width: 1.75rem;
-      height: 1.75rem;
+      width: 1.25rem;
+      height: 1.25rem;
+      @include media-M {
+        width: 1.75rem;
+        height: 1.75rem;
+      }
     }
     border: 2px solid var(--main-text-color);
     &::before {
-      width: 0.875rem;
-      height: 0.875rem;
+      width: 0.5rem;
+      height: 0.5rem;
+      @include media-M {
+        width: 0.875rem;
+        height: 0.875rem;
+      }
       background-color: var(--main-text-color);
     }
   }
+  // * custom checkbox specific styles
   &-checkbox {
     &__wrapper {
       width: 1.25rem;
@@ -99,6 +179,7 @@
       background-color: var(--black);
     }
   }
+  // * wrapper for input+label
   &__item {
     display: flex;
     flex-direction: row;
@@ -108,6 +189,7 @@
       margin-bottom: 0.75rem;
     }
   }
+  // * special class for list of inputs in row
   &__list {
     display: flex;
     flex-direction: row;
@@ -117,8 +199,15 @@
       margin: 0;
     }
   }
+  // * label
+  &__label {
+    font-size: 1rem;
+    font-weight: 200;
+    line-height: 1.4;
+  }
 }
 
+// * special class for js
 .js-expand-list {
   transition: var(--transition);
   transform: translateY(0%);

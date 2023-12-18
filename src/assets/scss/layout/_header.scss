@@ -108,6 +108,13 @@
         background-color: var(--dark-blue-hover);
       }
     }
+    &:disabled {
+      cursor: auto;
+      .header__btn-line {
+        background-color: var(--text-grey);
+        cursor: auto;
+      }
+    }
     &-line {
       display: block;
       width: 100%;

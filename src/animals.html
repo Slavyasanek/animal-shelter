@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="uk">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/scss/index.scss" />
-   <title>Усі хвостики</title>
-</head>
-<body>
+    <title>Усі хвостики</title>
+  </head>
+  <body>
     <include src="./assets/partials/header.html"></include>
     <main>
-        <include src="./assets/partials/friends.html"></include>
-        <include src="./assets/partials/help-shelter.html"></include>
-        <include src="./assets/partials/news.html"></include>
+      <include
+        src="./assets/partials/breadcrumbs.html"
+        locals='{"title": "Хвостики", 
+        "currentPage": "Усі хвостики",
+      "currentPageLink": "animals.html"}'
+      ></include>
+      <include src="./assets/partials/friends.html"></include>
+      <include src="./assets/partials/help-shelter.html"></include>
+      <include src="./assets/partials/news.html"></include>
     </main>
     <include src="./assets/partials/footer.html"></include>
-    <script type="module" src="./assets/js/index.js"></script> 
-</body>
+    <script type="module" src="./assets/js/index.js"></script>
+  </body>
 </html>

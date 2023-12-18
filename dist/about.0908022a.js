@@ -587,7 +587,10 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "refs", ()=>refs);
 const refs = {
     header: document.querySelector("#header"),
-    filter: document.querySelector(".filter__options"),
+    filterOptions: document.querySelector(".filter__options"),
+    filter: document.querySelector(".filter"),
+    filterBtnOpen: document.querySelector('[data-filter="open"]'),
+    filterBtnClose: document.querySelector('[data-filter="close"]'),
     mobileMenuBtn: document.querySelector("#mobile-menu-btn"),
     mobileMenu: document.querySelector("#mobile-menu"),
     body: document.body
@@ -8633,7 +8636,7 @@ function EffectCards(_ref) {
 
 },{"../shared/create-shadow.mjs":"345EC","../shared/effect-init.mjs":"kZ0Ma","../shared/effect-target.mjs":"cz4TW","../shared/effect-virtual-transition-end.mjs":"aaZrc","../shared/utils.mjs":"1mpIk","@parcel/transformer-js/src/esmodule-helpers.js":"5oERU"}],"dAgNH":[function(require,module,exports) {
 var _refs = require("./refs");
-const optionsRef = (0, _refs.refs).filter;
+const { filterOptions, filter, filterBtnOpen, filterBtnClose, body, mobileMenuBtn, header } = (0, _refs.refs);
 const toggleOptions = (e)=>{
     const btn = e.target;
     if (btn.classList.contains("filter__expand") || btn.closest(".filter__expand")) {
@@ -8645,7 +8648,26 @@ const toggleOptions = (e)=>{
         }
     }
 };
-if (optionsRef) optionsRef.addEventListener("click", toggleOptions);
+const openFilter = ()=>{
+    filter.classList.add("open");
+    body.classList.add("lock");
+    mobileMenuBtn.disabled = true;
+    header.classList.add("shown");
+    if (filterBtnClose) filterBtnClose.addEventListener("click", closeFilter);
+};
+const closeFilter = ()=>{
+    filter.classList.remove("open");
+    body.classList.remove("lock");
+    mobileMenuBtn.disabled = false;
+    filterBtnClose.removeEventListener("click", closeFilter);
+};
+const resizeObserver = (e)=>{
+    if (!e.matches) return;
+    closeFilter();
+};
+if (filterOptions) filterOptions.addEventListener("click", toggleOptions);
+if (filter && filterBtnOpen) filterBtnOpen.addEventListener("click", openFilter);
+window.matchMedia("(min-width: 1200px)").addEventListener("change", resizeObserver);
 
 },{"./refs":"jtE1V"}],"g3deX":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
