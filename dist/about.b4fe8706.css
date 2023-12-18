@@ -3454,7 +3454,11 @@ address {
 
 @media screen and (min-width: 1200px) {
   .tails__item:nth-child(9) {
+    flex-direction: column;
     grid-area: 1 / 3 / 3 / 5;
+    justify-content: center;
+    align-items: center;
+    display: flex;
   }
 }
 
