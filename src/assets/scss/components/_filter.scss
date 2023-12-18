@@ -101,6 +101,11 @@
     &.active {
       transform: rotate(180deg);
     }
+    &:hover, &:focus {
+      & > svg {
+        fill: var(--dark-blue);
+      }
+    }
   }
   // * buttons of animal species
   &__btns {

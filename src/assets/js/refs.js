@@ -6,5 +6,6 @@ export const refs = {
     filterBtnClose: document.querySelector('[data-filter="close"]'),
     mobileMenuBtn: document.querySelector('#mobile-menu-btn'),
     mobileMenu: document.querySelector('#mobile-menu'),
-    body: document.body
+    body: document.body,
+    questions: document.querySelector('.js-questions')
 }

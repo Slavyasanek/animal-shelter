@@ -1330,6 +1330,10 @@ address {
   transform: rotate(180deg);
 }
 
+.filter__expand:hover > svg, .filter__expand:focus > svg {
+  fill: var(--dark-blue);
+}
+
 .filter__btns {
   flex-direction: row;
   display: flex;
@@ -4456,6 +4460,113 @@ address {
   .domestic .swiper-pagination .swiper-pagination-bullet {
     margin: 0 .7rem;
   }
+}
+
+.questions__title {
+  font-family: var(--secondary-font);
+  text-transform: uppercase;
+  color: var(--main-text-color);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.23;
+}
+
+@media screen and (min-width: 768px) {
+  .questions__title {
+    margin-bottom: 4rem;
+    font-size: 4rem;
+  }
+
+  .questions__list-wrapper {
+    flex-direction: row;
+    column-gap: 2rem;
+    display: flex;
+  }
+
+  .questions__list {
+    width: calc(50% - 1rem);
+  }
+}
+
+.questions__list:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .questions__list:not(:last-child) {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.questions__item {
+  background-color: var(--light-blue);
+  transition: var(--transition);
+  border-radius: 1.25rem;
+  width: 100%;
+  height: min-content;
+  padding: 1rem;
+}
+
+.questions__item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .questions__item:not(:last-child) {
+    margin-bottom: 1.25rem;
+  }
+
+  .questions__item {
+    padding: 1.75rem;
+  }
+}
+
+.questions__block {
+  flex-direction: row;
+  justify-content: space-between;
+  display: flex;
+}
+
+.questions__text {
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+@media screen and (min-width: 1200px) {
+  .questions__text {
+    font-size: 1.5rem;
+  }
+}
+
+.questions__answer {
+  transition: var(--transition);
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  padding-top: 0;
+  transform: translateY(-10%);
+}
+
+.questions__answer.open {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+  padding-top: 1rem;
+  transform: translateY(0%);
+}
+
+.questions__btn > svg {
+  transform: rotate(90deg);
+}
+
+.questions__btn.active {
+  transform: rotate(-180deg);
+}
+
+.questions__btn:hover > svg, .questions__btn:focus > svg {
+  fill: var(--dark-blue);
 }
 
 .not-found {

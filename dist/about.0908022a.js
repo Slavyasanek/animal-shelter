@@ -576,12 +576,13 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"9LTvW":[function(require,module,exports) {
 var _refs = require("./refs");
+var _mobileMenu = require("./mobile-menu");
 var _swiper = require("./swiper");
 var _filter = require("./filter");
 var _header = require("./header");
-var _mobileMenu = require("./mobile-menu");
+var _questions = require("./questions");
 
-},{"./refs":"jtE1V","./swiper":"39fp9","./filter":"dAgNH","./header":"g3deX","./mobile-menu":"lOkkh"}],"jtE1V":[function(require,module,exports) {
+},{"./refs":"jtE1V","./swiper":"39fp9","./filter":"dAgNH","./header":"g3deX","./mobile-menu":"lOkkh","./questions":"jz6Fe"}],"jtE1V":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "refs", ()=>refs);
@@ -593,7 +594,8 @@ const refs = {
     filterBtnClose: document.querySelector('[data-filter="close"]'),
     mobileMenuBtn: document.querySelector("#mobile-menu-btn"),
     mobileMenu: document.querySelector("#mobile-menu"),
-    body: document.body
+    body: document.body,
+    questions: document.querySelector(".js-questions")
 };
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"5oERU"}],"5oERU":[function(require,module,exports) {
@@ -9053,6 +9055,22 @@ const resizeMenuObserver = (e)=>{
 };
 if (mobileMenuBtn) mobileMenuBtn.addEventListener("click", toggleMenu);
 window.matchMedia("(min-width: 1200px)").addEventListener("change", resizeMenuObserver);
+
+},{"./refs":"jtE1V"}],"jz6Fe":[function(require,module,exports) {
+var _refs = require("./refs");
+const { questions } = (0, _refs.refs);
+const toggleAnswer = (e)=>{
+    const btn = e.target;
+    if (btn.classList.contains(".questions__btn") || btn.closest(".questions__btn")) {
+        const answer = btn.closest(".questions__item").querySelector(".questions__answer");
+        if (answer) {
+            answer.classList.toggle("open");
+            if (btn.classList.contains(".questions__btn")) btn.classList.toggle("active");
+            else if (btn.closest(".questions__btn")) btn.closest(".questions__btn").classList.toggle("active");
+        }
+    }
+};
+if (questions) questions.addEventListener("click", toggleAnswer);
 
 },{"./refs":"jtE1V"}]},["kHGI7","9LTvW"], "9LTvW", "parcelRequirec19d")
 
