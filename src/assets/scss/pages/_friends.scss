@@ -93,6 +93,8 @@
     height: 100%;
     overflow: hidden;
     position: relative;
+    transition: var(--transition);
+    cursor: pointer;
     @include media-maxM {
       &:not(:last-child) {
         margin-bottom: 1rem;
@@ -107,6 +109,9 @@
     & picture,
     img {
       @include cover-image;
+    }
+    &:hover, &:focus {
+      transform: scale(1.05);
     }
   }
   &__name {

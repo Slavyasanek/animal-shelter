@@ -18,6 +18,9 @@
     font-weight: 400;
     font-size: 1rem;
     margin-bottom: 1rem;
+    @include media-maxM {
+      text-align: center;
+    }
     @include media-L {
       font-size: 2rem;
       margin-bottom: 2rem;
