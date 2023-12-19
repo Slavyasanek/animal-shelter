@@ -1,4 +1,5 @@
 .friends {
+  @extend %section--gradient;
   padding-top: 2.5rem;
   @include media-maxM {
     padding-bottom: 2.5rem;

@@ -2,8 +2,6 @@
   &__list {
     display: grid;
     grid-gap: 0.5rem;
-    // grid-template-columns: repeat(3, 1fr);
-    // grid-template-rows: 150px 190px 50px 200px 100px 200px;
     @include media-M {
         grid-gap: 1rem;
         grid-template-rows: 9.38rem 18.5rem repeat(2, 10.5rem);
@@ -102,6 +100,7 @@
     // * text grid item
     &:nth-child(9) {
       grid-area: 2/3/4/4;
+      padding: 0.4rem;
       @include media-maxM {
         display: flex;
         flex-direction: column;

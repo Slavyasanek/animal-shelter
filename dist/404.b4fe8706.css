@@ -839,7 +839,7 @@ address {
   }
 }
 
-.about-shelter, .care-shelter--gradient, .care-shelter, .not-found:after, .hero__gradient:before {
+.about-shelter, .care-shelter--gradient, .care-shelter, .not-found:after, .friends, .hero__gradient:before {
   background-image: radial-gradient(circle at 68%, #04397b0f 27rem, #04397b0a 27rem 42.625rem, #04397b05 42.625rem 58.93rem, #0000 58.93rem);
 }
 
@@ -2280,7 +2280,7 @@ address {
 
 .custody {
   padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -2855,6 +2855,12 @@ address {
   border-radius: 0%;
 }
 
+@media screen and (max-width: 767px) {
+  .stories {
+    padding-bottom: 4rem;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .stories--align {
     flex-direction: column;
@@ -2931,12 +2937,6 @@ address {
 .stories__btn {
   width: 100%;
   margin-top: 1rem;
-}
-
-@media screen and (max-width: 767px) {
-  .stories__btn {
-    margin-bottom: 2rem;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -4545,6 +4545,7 @@ address {
 
 .tails__item:nth-child(9) {
   grid-area: 2 / 3 / 4 / 4;
+  padding: .4rem;
 }
 
 @media screen and (max-width: 767px) {

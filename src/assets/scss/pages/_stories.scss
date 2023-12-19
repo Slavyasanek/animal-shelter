@@ -1,4 +1,7 @@
 .stories {
+  @include media-maxM {
+    padding-bottom: 4rem;
+  }
   &--align {
     @include media-M {
         display: flex;
@@ -54,9 +57,6 @@
   &__btn {
     width: 100%;
     margin-top: 1rem;
-    @include media-maxM {
-        margin-bottom: 2rem;
-    }
     @include media-M {
         width: 40vw;
     }

@@ -1,5 +1,6 @@
 .custody {
-  @include p-y(2rem);
+  padding-top: 2rem;
+  padding-bottom: 4rem;
   @include media-M {
     padding-top: 4rem;
     padding-bottom: 8.38rem;
