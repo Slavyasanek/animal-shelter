@@ -1,0 +1,68 @@
+.stories {
+  &--align {
+    @include media-M {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+  }
+  &__wrapper {
+    @include media-L {
+        display: flex;
+        flex-direction: row;
+        column-gap: 2.25rem;
+    }
+  }
+  &__subtitle {
+    @include subtitle(var(--main-text-color), 2rem);
+    text-align: center;
+    line-height: 1.23;
+    margin-bottom: 2rem;
+    @include media-M {
+      font-size: 4rem;
+      margin-bottom: 4rem;
+    }
+  }
+  &__img {
+    width: 100%;
+    height: 20rem;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    flex-shrink: 0;
+    & picture,
+    img {
+      @include cover-image;
+      aspect-ratio: 2/1;
+    }
+    @include media-maxL {
+      margin-bottom: 2rem;
+    }
+    @include media-L {
+        max-width: 44.2vw;
+        height: 100%;
+    }
+  }
+  &__text {
+    font-size: 1.125rem;
+    font-weight: 100;
+    height: 100%;
+    & > p:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__btn {
+    width: 100%;
+    margin-top: 1rem;
+    @include media-maxM {
+        margin-bottom: 2rem;
+    }
+    @include media-M {
+        width: 40vw;
+    }
+    @include media-L {
+        margin-top: 4rem;
+        width: 15vw;
+    }
+  }
+}
