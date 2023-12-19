@@ -1,45 +1,91 @@
 <div class="site">
-    <div class="container">
-        <div class="site__wrapper">
-            <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5489.381967068849!2d30.512038145318567!3d50.436628448891724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cefc648ccd2f%3A0x1b871d253685c27e!2z0LLRg9C7LiDQkNC90YLQvtC90L7QstC40YfQsCwgMjEsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1701964670929!5m2!1suk!2sua"
-            width="800"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            class="site__map"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-          <div class="site__block">
-            <div class="location__block">
-                <div class="location__info">
-                  <div class="location__text-block">
-                    <p class="location__name">Адреса</p>
-                    <address>вул. Антоновича, 21</address>
-                  </div>
-                  <div class="location__text-block">
-                    <p class="location__name">Години роботи</p>
-                    <p>Пн-Нд</p>
-                    <time>10:00 - 16:00</time>
-                  </div>
-                  <div class="location__text-block">
-                    <p class="location__name">Контакти</p>
-                    <a href="tel:+380993554433">+38(099)355-44-33</a>
-                  </div>
-                  <a
-                    href="http://"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn btn-yellow btn-font--sec btn-yellow--paw btn-paw location__btn"
+  <div class="container">
+    <h2 class="site__title">Де нас знайти</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5489.381967068849!2d30.512038145318567!3d50.436628448891724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cefc648ccd2f%3A0x1b871d253685c27e!2z0LLRg9C7LiDQkNC90YLQvtC90L7QstC40YfQsCwgMjEsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1701964670929!5m2!1suk!2sua"
+        width="800"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        class="site__map"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <div class="site__block">
+        <ul class="site__list">
+          <li class="site__item">
+            <p class="site__name">Адреса</p>
+            <address>вул. Антоновича, 21</address>
+          </li>
+          <li class="site__item">
+            <p class="site__name">Години роботи</p>
+            <p>Пн-Нд</p>
+            <time>10:00 - 16:00</time>
+          </li>
+          <li class="site__item">
+            <p class="site__name">Контакти</p>
+            <a href="tel:+380993554433">+38(099)355-44-33</a>
+          </li>
+          <li>
+            <ul class="site__socials">
+              <li>
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                  <svg
+                    width="40"
+                    height="40"
+                    class="icon icon-fill-white icon-trans-scale"
                   >
-                    <svg width="35" height="35" class="icon icon-fill-black">
-                      <use href="./assets/static/icons.svg#icon-paw" />
-                    </svg>
-                    Прокласти маршрут</a
+                    <use href="./assets/static/icons.svg#icon-facebook" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                  <svg
+                    width="40"
+                    height="40"
+                    class="icon icon-fill-white icon-trans-scale"
                   >
-                </div>
-          </div>
-        </div>
-    </div>
+                    <use href="./assets/static/icons.svg#icon-instagram" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                  <svg
+                    width="40"
+                    height="40"
+                    class="icon icon-fill-white icon-trans-scale"
+                  >
+                    <use href="./assets/static/icons.svg#icon-telegram" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                  <svg
+                    width="40"
+                    height="40"
+                    class="icon icon-fill-white icon-trans-scale"
+                  >
+                    <use href="./assets/static/icons.svg#icon-youtube" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <a
+          href="http://"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-yellow btn-font--sec btn-yellow--paw btn-paw site__btn"
+        >
+          <svg width="35" height="35" class="icon icon-fill-black">
+            <use href="./assets/static/icons.svg#icon-paw" />
+          </svg>
+          Прокласти маршрут</a
+        >
+      </div>
+  </div>
 </div>
