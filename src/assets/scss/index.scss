@@ -2,13 +2,13 @@
 @import './utils/variables';
 @import './utils/mixins';
 
-// page common style, reset default styles
+// pages common styles, reset default browser styles
 @import './base/common';
 @import './base/fonts';
 @import './base/reset';
 @import './base/container';
 
-// components ot common styles, resets
+// components common styles or parts of other sections, resets
 @import './components/section';
 @import './components/icons';
 @import './components/btns';
@@ -17,10 +17,20 @@
 @import './components/filter';
 @import './components/slider-reset';
 
-// sections specific styles
+// * header+footer
 @import './layout/header';
 @import './layout/footer';
-@import './layout/hero';
+
+// * unique sections, which appear only once
+@import './pages/hero';
+@import './pages/custody';
+@import './pages/domestic';
+@import './pages/assortment';
+@import './pages/friends';
+@import './pages/partners';
+@import './pages/not-found';
+
+// * sections specific styles, which repeats 
 @import './layout/war-shelter';
 @import './layout/care-shelter';
 @import './layout/subscription';
@@ -32,10 +42,7 @@
 @import './layout/slider';
 @import './layout/about-shelter';
 @import './layout/team';
-@import './layout/friends';
-@import './layout/partners';
-@import './layout/assortment';
-@import './layout/domestic';
 @import './layout/questions';
 @import './layout/caretaker';
-@import './layout/not-found';
+
+

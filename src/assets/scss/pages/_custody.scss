@@ -1,0 +1,91 @@
+.custody {
+  @include p-y(2rem);
+  @include media-M {
+    padding-top: 4rem;
+    padding-bottom: 8.38rem;
+  }
+  &__title {
+    @include subtitle(var(--main-text-color), 2rem);
+    text-align: center;
+    margin-bottom: 1rem;
+    @include media-M {
+      font-size: 4rem;
+      margin-bottom: 2.25rem;
+    }
+  }
+  &__subtitle {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    @include media-L {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+  &__text {
+    font-size: 1rem;
+    font-weight: 300;
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+    @include media-L {
+      font-size: 1.5rem;
+    }
+  }
+  &__list {
+    list-style: decimal;
+    padding-left: 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+    @include media-L {
+      font-size: 1.5rem;
+      padding-left: 2rem;
+    }
+    margin-bottom: 1rem;
+    & > li {
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  .swiper {
+    margin-bottom: 2rem;
+  }
+  .swiper-slide {
+    position: relative;
+    width: 100%;
+    height: 30rem;
+    @include media-L {
+        height: 55rem;
+    }
+    & picture,
+    img {
+      @include cover-image;
+      position: absolute;
+      @include inset;
+      @include full-wh;
+      z-index: -1;
+    }
+  }
+  .swiper-pagination {
+    bottom: 1.5rem;
+    .swiper-pagination-bullet {
+      margin: 0 0.3rem;
+      @include media-M {
+        margin: 0 0.7rem;
+      }
+    }
+  }
+  &__duty {
+    @include subtitle(var(--white), 1.5rem);
+    margin-top: 2rem;
+    @include media-M {
+      font-size: 2rem;
+    }
+    @include media-L {
+      font-size: 4rem;
+      margin-top: 4rem;
+    }
+  }
+}
