@@ -2314,6 +2314,12 @@ address {
   font-weight: 400;
 }
 
+@media screen and (max-width: 767px) {
+  .custody__subtitle {
+    text-align: center;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .custody__subtitle {
     margin-bottom: 2rem;
@@ -2698,6 +2704,8 @@ address {
 }
 
 .friends__card {
+  transition: var(--transition);
+  cursor: pointer;
   border-radius: 1.25rem;
   width: 100%;
   height: 100%;
@@ -2727,6 +2735,10 @@ address {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.friends__card:hover, .friends__card:focus {
+  transform: scale(1.05);
 }
 
 .friends__name {
@@ -2841,6 +2853,103 @@ address {
 .partners__slider .swiper-scrollbar .swiper-scrollbar-drag {
   background-color: var(--dark-blue);
   border-radius: 0%;
+}
+
+@media screen and (min-width: 768px) {
+  .stories--align {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .stories__wrapper {
+    flex-direction: row;
+    column-gap: 2.25rem;
+    display: flex;
+  }
+}
+
+.stories__subtitle {
+  font-family: var(--secondary-font);
+  text-transform: uppercase;
+  color: var(--main-text-color);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.23;
+}
+
+@media screen and (min-width: 768px) {
+  .stories__subtitle {
+    margin-bottom: 4rem;
+    font-size: 4rem;
+  }
+}
+
+.stories__img {
+  border-radius: 1.25rem;
+  flex-shrink: 0;
+  width: 100%;
+  height: 20rem;
+  overflow: hidden;
+}
+
+.stories__img picture, .stories__img img {
+  object-fit: cover;
+  aspect-ratio: 2;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1199px) {
+  .stories__img {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .stories__img {
+    max-width: 44.2vw;
+    height: 100%;
+  }
+}
+
+.stories__text {
+  height: 100%;
+  font-size: 1.125rem;
+  font-weight: 100;
+}
+
+.stories__text > p:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.stories__btn {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .stories__btn {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .stories__btn {
+    width: 40vw;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .stories__btn {
+    width: 15vw;
+    margin-top: 4rem;
+  }
 }
 
 .not-found {
