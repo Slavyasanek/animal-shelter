@@ -1,0 +1,94 @@
+.all-news {
+  @include p-y(2rem);
+  @include media-L {
+    padding-top: 4rem;
+    padding-bottom: 9.38rem;
+  }
+  &__subtitle {
+    @include subtitle(var(--main-text-color), 2.5rem);
+    text-align: center;
+    margin-bottom: 4rem;
+    @include media-M {
+      font-size: 3rem;
+    }
+    @include media-L {
+      font-size: 4.5rem;
+      margin-bottom: 5.75rem;
+    }
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+      @include media-L {
+        margin-bottom: 4rem;
+      }
+    }
+    &-title {
+      font-weight: 400;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+      @include media-maxL {
+        text-align: center;
+      }
+      @include media-L {
+        font-size: 2rem;
+      }
+    }
+    &-date {
+      font-weight: 300;
+      line-height: 1.4;
+      font-size: 1.125rem;
+      margin-bottom: 1rem;
+      @include media-maxL {
+        text-align: center;
+      }
+      @include media-M {
+        margin-bottom: 2.5rem;
+      }
+    }
+    @include media-M {
+        &:nth-of-type(2n) .all-news__item-wr {
+            flex-direction: row-reverse;
+        }
+    }
+    &-wr {
+      @include media-M {
+        display: flex;
+        flex-direction: row;
+        column-gap: 1rem;
+      }
+      @include media-L {
+        column-gap: 5.2vw;
+      }
+    }
+  }
+  &__img {
+    width: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    height: 20rem;
+    flex-shrink: 0;
+    @include media-maxM {
+      margin-bottom: 2rem;
+    }
+    @include media-M {
+      max-width: 30vw;
+      height: auto;
+    }
+    @include media-L {
+        max-width: 42vw;
+    }
+    & picture,
+    img {
+      @include cover-image;
+    }
+  }
+  &__text {
+    font-weight: 200;
+    font-size: 1.125rem;
+    @include media-L {
+      font-size: 1.5rem;
+    }
+  }
+}
