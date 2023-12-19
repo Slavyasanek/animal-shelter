@@ -32,6 +32,7 @@ function swiperSlider() {
     const partnersSlider = document.querySelector('[data-slider="partners-slider"]');
     fullWSlider('[data-slider="big-slider"]');
     fullWSlider('[data-slider="athome-slider"]');
+    fullWSlider('[data-slider="custody-slider"]');
     if (teamSlider) {
         const slider = new Swiper('[data-slider="team-slider"]', {
             modules: [Navigation],

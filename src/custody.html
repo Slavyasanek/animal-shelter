@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/scss/index.scss" />
+    <title>Що означає взяти хвостика під опіку?</title>
+  </head>
+  <body>
+    <include src="./assets/partials/header.html"></include>
+    <main>
+      <include
+        src="./assets/partials/breadcrumbs.html"
+        locals='{"title": "Що означає взяти хвостика під опіку?", 
+        "currentPage": "Що означає взяти хвостика під опіку?",
+      "currentPageLink": "custody.html"}'
+      ></include>
+      <include src="./assets/partials/about-custody.html"></include>
+      <include src="./assets/partials/caretaker.html"></include>
+      <include src="./assets/partials/demands.html"></include>
+      <include src="./assets/partials/location.html"></include>
+    </main>
+    <include src="./assets/partials/footer.html"></include>
+    <script type="module" src="./assets/js/index.js"></script>
+  </body>
+</html>
