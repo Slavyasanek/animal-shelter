@@ -1,0 +1,299 @@
+.visit {
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  @extend %section--gradient;
+  background-position: 0 0;
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+  position: relative;
+  &::before {
+    @include pseudo;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../static/paws-track.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transform: scaleY(0.8) rotate(10deg);
+    width: 79.5vw;
+    height: 18.75rem;
+    display: block;
+    z-index: -1;
+  }
+  &--sides {
+    position: relative;
+    &::after,
+    &::before {
+      @include pseudo;
+      position: absolute;
+      width: 0.5rem;
+      height: 3rem;
+      background-color: var(--dark-blue);
+      top: 1rem;
+      @include media-L {
+        height: 6.25rem;
+      }
+    }
+    &-top {
+      &::before {
+        left: 0%;
+        @include media-L {
+          left: -7%;
+        }
+      }
+      &::after {
+        right: 0%;
+        @include media-L {
+          right: -7%;
+        }
+      }
+    }
+    &-bottom {
+      &::before {
+        left: 0;
+        @include media-M {
+          left: -20%;
+        }
+        @include media-L {
+          left: -10%;
+        }
+        @include media-XL {
+          left: -30%;
+        }
+      }
+      &::after {
+        right: 0;
+        @include media-M {
+          right: -20%;
+        }
+        @include media-L {
+          right: -10%;
+        }
+        @include media-XL {
+          right: -30%;
+        }
+      }
+    }
+  }
+  @include media-L {
+    padding-top: 14rem;
+    padding-bottom: 5rem;
+  }
+  &__wrapper {
+    @include media-maxM {
+      padding-bottom: 3rem;
+    }
+    @include media-L {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      column-gap: 2rem;
+    }
+    & .visit__title {
+      @include media-maxL {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+  &__title {
+    text-align: center;
+    @include subtitle(var(--main-text-color), 3rem);
+    @include media-M {
+      font-size: 3.5rem;
+    }
+    @include media-L {
+      font-size: 4.5rem;
+      max-width: 67.7vw;
+    }
+  }
+  &__subtitle {
+    @include subtitle(var(--main-text-color), 2rem);
+    line-height: 1.23;
+    margin-bottom: 1rem;
+    text-align: center;
+    @include media-L {
+      font-size: 4rem;
+      margin-bottom: 2.25rem;
+    }
+    &--color {
+      color: var(--dark-blue);
+      & > span {
+        color: var(--yellow);
+      }
+    }
+  }
+  &__text {
+    text-align: center;
+    font-weight: 300;
+    font-size: 1rem;
+    @include media-L {
+      font-size: 1.5rem;
+    }
+  }
+  &__btn {
+    font-style: 1rem;
+    @include media-S {
+      font-size: 2rem;
+    }
+    @include media-M {
+      width: 40vw;
+    }
+    @include media-L {
+      font-size: 3rem;
+      width: 37vw;
+    }
+  }
+  &__volonteer {
+    &-wr {
+      @include media-M {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    &-txt {
+      margin-bottom: 2rem;
+      @include media-L {
+        margin-bottom: 7rem;
+      }
+    }
+  }
+  &__rules {
+    &-wr {
+      position: relative;
+      padding-bottom: 10rem;
+      @include media-maxM {
+        padding-top: 4rem;
+      }
+      @include media-M {
+        padding-bottom: 14rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      @include media-L {
+        padding-bottom: 18rem;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+    }
+    &-quote {
+      @include media-maxL {
+        margin-bottom: 2rem;
+      }
+    }
+    &-decoration {
+      position: absolute;
+      bottom: 0.5rem;
+      background-image: url("../static/circle-yellow.svg");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      width: 12rem;
+      height: 6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & > p {
+        @include subtitle(var(--main-text-color), 1.5rem);
+        transform: rotate(15deg);
+        @include media-M {
+          font-size: 2rem;
+        }
+        @include media-L {
+          font-size: 3rem;
+        }
+      }
+      @include media-M {
+        width: 18.75rem;
+        height: 10rem;
+        bottom: 1rem;
+      }
+      @include media-L {
+        width: 25rem;
+        height: 12.5rem;
+        bottom: 5rem;
+        left: 40%;
+        transform: translateX(-40%);
+      }
+      &::after {
+        @include pseudo;
+        position: absolute;
+        background-image: url("../static/arrow-yellow.svg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        top: -1.5rem;
+        right: 0rem;
+        width: 5rem;
+        height: 1.5rem;
+        transform: scaleX(-1) rotate(-90deg);
+        @include media-M {
+          width: 7rem;
+          height: 2rem;
+          top: 0rem;
+          right: -3rem;
+        }
+
+        @include media-L {
+          width: 10rem;
+          height: 3rem;
+          right: -8rem;
+          top: 1rem;
+        }
+        @include media-XL {
+          left: 80%;
+          transform: translateX(-80%);
+          top: -4rem;
+        }
+      }
+    }
+  }
+  &__caretaker {
+    background-color: var(--dark-blue);
+    background-image: url("../static/paws-fullwh.svg");
+    background-size: 100% 100%;
+    background-position: bottom left;
+    @include p-y(2rem);
+    @include media-L {
+      @include p-y(4.5rem);
+    }
+    &-wr {
+      @include media-M {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      @include media-L {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+    &-txt {
+      @include subtitle(var(--white), 2rem);
+      text-align: center;
+      @include media-maxL {
+        margin-bottom: 1rem;
+      }
+      @include media-M {
+        font-size: 4rem;
+      }
+    }
+    &-btn {
+      width: 100%;
+      @include media-M {
+        width: 30vw;
+      }
+      @include media-L {
+        width: 19vw;
+      }
+    }
+  }
+  &__alert {
+    padding-top: 2rem;
+    @include media-L {
+      padding-top: 7rem;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
