@@ -64,6 +64,13 @@
         row-gap: 2.375rem;
       }
     }
+    & > li > a {
+      transition: var(--transition);
+      &:hover,
+      &:focus {
+        color: var(--dark-blue);
+      }
+    }
   }
   &__socials {
     align-self: center;

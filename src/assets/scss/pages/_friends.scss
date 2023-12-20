@@ -77,15 +77,17 @@
       align-items: center;
       height: 100%;
     }
-    @include media-S {
+    @include media-M {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       gap: 1rem;
+      width: 100%;
     }
     @include media-L {
       column-gap: 1.75rem;
       row-gap: 4rem;
+      min-width: 62.1vw;
     }
   }
   &__card {
@@ -95,6 +97,7 @@
     overflow: hidden;
     position: relative;
     transition: var(--transition);
+    flex-shrink: 0;
     cursor: pointer;
     @include media-maxM {
       &:not(:last-child) {
@@ -105,14 +108,18 @@
       width: calc((100% - 1rem) / 2);
     }
     @include media-L {
-      width: calc((100% - 1.75rem) / 2);
+      width: calc((100% - 1.75rem) / 2);;
     }
     & picture,
     img {
       @include cover-image;
+      transition: var(--transition);
     }
-    &:hover, &:focus {
-      transform: scale(1.05);
+    &:hover,
+    &:focus {
+      & picture, img {
+        transform: scale(1.05);
+      }
     }
   }
   &__name {

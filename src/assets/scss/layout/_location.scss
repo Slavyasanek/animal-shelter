@@ -2,6 +2,11 @@
   @include media-maxM {
     background-color: var(--dark-blue);
   }
+  &--container {
+    @include media-maxM {
+      width: 100%;
+    }
+  }
   &__subtitle {
     @include subtitle(var(--main-text-color), 4rem);
     text-align: center;

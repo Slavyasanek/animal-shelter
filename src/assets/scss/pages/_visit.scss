@@ -87,7 +87,7 @@
       display: flex;
       flex-direction: row;
       align-items: flex-end;
-      column-gap: 2rem;
+      column-gap: 5vw;
     }
     & .visit__title {
       @include media-maxL {
