@@ -28,6 +28,12 @@
       }
     }
   }
+  &__subtitle {
+    @include subtitle(var(--main-text-color), 1.5rem);
+    @include media-M {
+      font-size: 2rem;
+    }
+  }
   //  * single question
   &__item {
     background-color: var(--light-blue);

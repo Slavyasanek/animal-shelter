@@ -4,27 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/scss/index.scss" />
-    <title>Вже дома</title>
+    <title>Притулок під час війни</title>
 </head>
 <body>
     <include src="./assets/partials/header.html"></include>
     <main>
-        <include
+      <include
         src="./assets/partials/breadcrumbs.html"
-        locals='{"title": "Вже дома", 
-        "currentPage": "Вже дома"}'
+        locals='{"title": "Притулок під час війни", 
+        "currentPage": "Притулок під час війни"}'
       ></include>
-      <include src="./assets/partials/domestic.html"></include>
-      <include src="./assets/partials/help-shelter.html"></include>
-      <section class="section--relative section--hideMob section--mobile-y">
-        <div class="care-shelter--gradient"></div>
-        <include src="./assets/partials/care-shelter.html"></include>
-      </section>
-      <div class="section-top section--mobile-bottom">
+      <include src="./assets/partials/about-war.html"></include>
+      <div class="section-bottom">
+        <include src="./assets/partials/slider.html"></include>
+      </div>
+      <include src="./assets/partials/news.html"></include>
+      <div class="section-top">
         <include src="./assets/partials/tails.html"></include>
       </div>
       <include src="./assets/partials/location.html"></include>
-    </main>
+      </main>
     <include src="./assets/partials/footer.html"></include>
     <script type="module" src="./assets/js/index.js"></script>
 </body>
