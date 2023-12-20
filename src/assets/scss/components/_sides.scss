@@ -1,0 +1,71 @@
+.sides {
+  position: relative;
+  &::before,
+  &::after {
+    @include pseudo;
+    background-color: var(--dark-blue);
+    width: 0.5rem;
+    height: 3rem;
+    position: absolute;
+    top: 1.25rem;
+    @include media-M {
+      height: 6.25rem;
+    }
+  }
+  &--care {
+    &::before {
+      left: 0;
+      @include media-L {
+        left: 25%;
+        transform: translateX(-25%);
+      }
+    }
+    &::after {
+      right: 0;
+      @include media-L {
+        right: 25%;
+        transform: translateX(25%);
+      }
+    }
+  }
+  &--visit {
+    &::before {
+      left: 0;
+      @include media-M {
+        left: -20%;
+      }
+      @include media-L {
+        left: -10%;
+      }
+      @include media-XL {
+        left: -30%;
+      }
+    }
+    &::after {
+      right: 0;
+      @include media-M {
+        right: -20%;
+      }
+      @include media-L {
+        right: -10%;
+      }
+      @include media-XL {
+        right: -30%;
+      }
+    }
+  }
+  &--volonteer {
+    &::before {
+      left: 0%;
+      @include media-L {
+        left: -7%;
+      }
+    }
+    &::after {
+      right: 0%;
+      @include media-L {
+        right: -7%;
+      }
+    }
+  }
+}

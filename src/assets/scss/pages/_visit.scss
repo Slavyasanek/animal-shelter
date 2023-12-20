@@ -20,61 +20,6 @@
     display: block;
     z-index: -1;
   }
-  &--sides {
-    position: relative;
-    &::after,
-    &::before {
-      @include pseudo;
-      position: absolute;
-      width: 0.5rem;
-      height: 3rem;
-      background-color: var(--dark-blue);
-      top: 1rem;
-      @include media-L {
-        height: 6.25rem;
-      }
-    }
-    &-top {
-      &::before {
-        left: 0%;
-        @include media-L {
-          left: -7%;
-        }
-      }
-      &::after {
-        right: 0%;
-        @include media-L {
-          right: -7%;
-        }
-      }
-    }
-    &-bottom {
-      &::before {
-        left: 0;
-        @include media-M {
-          left: -20%;
-        }
-        @include media-L {
-          left: -10%;
-        }
-        @include media-XL {
-          left: -30%;
-        }
-      }
-      &::after {
-        right: 0;
-        @include media-M {
-          right: -20%;
-        }
-        @include media-L {
-          right: -10%;
-        }
-        @include media-XL {
-          right: -30%;
-        }
-      }
-    }
-  }
   @include media-L {
     padding-top: 14rem;
     padding-bottom: 5rem;
@@ -115,12 +60,6 @@
       font-size: 4rem;
       margin-bottom: 2.25rem;
     }
-    &--color {
-      color: var(--dark-blue);
-      & > span {
-        color: var(--yellow);
-      }
-    }
   }
   &__text {
     text-align: center;
@@ -141,22 +80,6 @@
     @include media-L {
       font-size: 3rem;
       width: 37vw;
-    }
-  }
-  &__volonteer {
-    &-wr {
-      @include media-M {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-    }
-    &-txt {
-      margin-bottom: 2rem;
-      @include media-L {
-        margin-bottom: 7rem;
-      }
     }
   }
   &__rules {

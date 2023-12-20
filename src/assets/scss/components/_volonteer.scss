@@ -1,0 +1,47 @@
+.volonteer {
+  @include media-M {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__text {
+    text-align: center;
+    font-weight: 300;
+    font-size: 1rem;
+    @include media-L {
+      font-size: 1.5rem;
+    }
+    margin-bottom: 2rem;
+    @include media-L {
+      margin-bottom: 7rem;
+    }
+  }
+  &__title {
+    @include subtitle(var(--main-text-color), 2rem);
+    line-height: 1.23;
+    margin-bottom: 1rem;
+    text-align: center;
+    @include media-L {
+      font-size: 4rem;
+      margin-bottom: 2.25rem;
+    }
+    color: var(--dark-blue);
+    & > span {
+      color: var(--yellow);
+    }
+  }
+  &__btn {
+    font-style: 1rem;
+    @include media-S {
+      font-size: 2rem;
+    }
+    @include media-M {
+      width: 40vw;
+    }
+    @include media-L {
+      font-size: 3rem;
+      width: 37vw;
+    }
+  }
+}

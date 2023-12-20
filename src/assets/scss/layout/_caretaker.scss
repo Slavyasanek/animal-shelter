@@ -1,32 +1,5 @@
 .caretaker {
   &__wrapper {
-    position: relative;
-    &::before,
-    &::after {
-      @include pseudo;
-      background-color: var(--dark-blue);
-      width: 0.5rem;
-      height: 3rem;
-      position: absolute;
-      top: 1.25rem;
-      @include media-M {
-        height: 6.25rem;
-      }
-    }
-    &::before {
-      left: 0;
-      @include media-L {
-        left: 25%;
-        transform: translateX(-25%);
-      }
-    }
-    &::after {
-      right: 0;
-      @include media-L {
-        right: 25%;
-        transform: translateX(25%);
-      }
-    }
     @include media-M {
       display: flex;
       flex-direction: column;
