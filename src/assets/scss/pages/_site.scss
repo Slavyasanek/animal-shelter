@@ -1,93 +1,110 @@
 .site {
-    padding-top: 2rem;
+  padding-top: 2rem;
+  @include media-L {
+    padding-top: 4rem;
+  }
+  &__title {
+    @include subtitle(var(--main-text-color), 2rem);
+    text-align: center;
+    line-height: 1.23;
+    margin-bottom: 1rem;
     @include media-L {
-        padding-top: 4rem;
+      font-size: 4rem;
+      margin-bottom: 2.5rem;
     }
-    &__title {
-        @include subtitle(var(--main-text-color), 2rem);
-        text-align: center;
-        line-height: 1.23;
-        margin-bottom: 1rem;
-        @include media-L {
-            font-size: 4rem;
-            margin-bottom: 2.5rem;
-        }
+  }
+  &__map {
+    width: 100%;
+    height: 20rem;
+    @include media-L {
+      height: 22rem;
     }
-    &__map {
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  &--container {
+    @include media-maxM {
         width: 100%;
-        height: 20rem;
-        @include media-L{
-            height: 22rem;
-        }
     }
-    &__block {
-        background-color: var(--dark-blue);
-        padding: 2rem 3vw;
-        @include media-M {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-        }
-        @include media-L {
-            padding: 4.5rem 5.2vw 3.5rem;
-        }
+  }
+  &__block {
+    background-color: var(--dark-blue);
+    padding: 2rem 3vw;
+    @include media-M {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
     }
-    &__list {
-        font-size: 1.125rem;
-        font-weight: 300;
-        line-height: 1.4;
-        color: var(--white);
-        margin-bottom: 1rem;
-        @include media-M {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            margin-bottom: 2rem;
-            gap: 1rem;
-        }
-        @include media-L {
-            justify-content: space-between;
-            flex-wrap: nowrap;
-            width: 100%;
-            margin-bottom: 4rem;
-        }
+    @include media-L {
+      padding: 4.5rem 5.2vw 3.5rem;
     }
-    &__item {
-        @include media-maxM {
-            text-align: center;
-            &:not(:last-child) {
-                margin-bottom: 2rem;
-            }
-        }
-        @include media-M {
-            width: calc((100% - 1rem) / 2);
-        }
-        @include media-L {
-            width: 100%;
-        }
+  }
+  &__list {
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.4;
+    color: var(--white);
+    margin-bottom: 1rem;
+    @include media-M {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+      gap: 1rem;
     }
-    &__socials {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        column-gap: 1rem;
-    } 
-    &__btn {
-        width: 100%;
-        @include media-M {
-            width: 35vw;
-        }
-        @include media-L {
-            width: 20vw;
-        }
+    @include media-L {
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+      width: 100%;
+      margin-bottom: 4rem;
     }
-    &__name {
-        margin-bottom: 0.5rem;
-        font-size: 1rem;
-        @include media-L {
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
+  }
+  &__item {
+    @include media-maxM {
+      text-align: center;
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
     }
+    @include media-M {
+      width: calc((100% - 1rem) / 2);
+    }
+    @include media-L {
+      width: 100%;
+    }
+  }
+  &__socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 1rem;
+  }
+  &__btn {
+    width: 100%;
+    @include media-M {
+      width: 35vw;
+    }
+    @include media-L {
+      width: 20vw;
+    }
+  }
+  &__name {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    @include media-L {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+  }
+  &__phone {
+    transition: var(--transition);
+    &:hover, &:focus {
+        color: var(--yellow);
+    }
+  }
 }

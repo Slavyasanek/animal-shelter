@@ -9061,13 +9061,13 @@ window.matchMedia("(min-width: 1200px)").addEventListener("change", resizeMenuOb
 var _refs = require("./refs");
 const { questions } = (0, _refs.refs);
 const toggleAnswer = (e)=>{
-    const btn = e.target;
-    if (btn.classList.contains(".questions__btn") || btn.closest(".questions__btn")) {
-        const answer = btn.closest(".questions__item").querySelector(".questions__answer");
+    if (e.target.closest(".questions__item")) {
+        const card = e.target.closest(".questions__item");
+        const answer = card.querySelector(".questions__answer");
         if (answer) {
             answer.classList.toggle("open");
-            if (btn.classList.contains(".questions__btn")) btn.classList.toggle("active");
-            else if (btn.closest(".questions__btn")) btn.closest(".questions__btn").classList.toggle("active");
+            const btn = card.querySelector(".questions__btn");
+            btn.classList.toggle("active");
         }
     }
 };
