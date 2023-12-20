@@ -1,0 +1,242 @@
+.pet {
+  padding-top: 2rem;
+  @include media-L {
+    padding-top: 4rem;
+  }
+  // *wrapper for animal profile and top image
+  &__card {
+    @include media-M {
+      display: flex;
+      flex-direction: row;
+      column-gap: 1vw;
+    }
+  }
+  //   *animal top image
+  &__img {
+    width: 100%;
+    height: 20rem;
+    position: relative;
+    @include media-M {
+      width: 45vw;
+      height: auto;
+      flex-shrink: 0;
+    }
+    @include media-L {
+      height: 44rem;
+      width: 64vw;
+    }
+    & picture,
+    img {
+      @include cover-image;
+    }
+  }
+  //   *btn back
+  &__back {
+    background-color: var(--yellow);
+    border: 1px dashed var(--black);
+    position: absolute;
+    bottom: -1rem;
+    left: -0.5rem;
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+    text-align: center;
+    @include p-y(2.5rem);
+    @include media-M {
+        width: 13rem;
+        height: 13rem;
+        left: -2rem;
+        bottom: -1rem;
+        @include p-x(2rem);
+        @include p-y(4.5rem);
+    }
+    @include media-L {
+        left: -4.3vw;
+        bottom: -4rem;
+    }
+    transition: var(--transition);
+    &:hover, &:focus {
+        background-color: var(--yellow-hover)
+    }
+    & > p {
+        @include subtitle(var(--main-text-color), 1.125rem);
+        // position: absolute;
+        // top: 50%;
+        // transform: translateY(-50%);
+        @include media-M {
+            font-size: 1.5rem;
+        }
+    }
+  }
+  // *  right card of animal info
+  &__profile {
+    box-shadow: 0px 0px 40px 0px rgba(189, 187, 187, 0.29);
+    border-radius: 1.25rem;
+    padding: 2rem 4vw;
+    width: 100%;
+    @include media-maxM {
+      margin-top: 2rem;
+    }
+    @include media-M {
+      height: 100%;
+      max-width: 50%;
+    }
+    @include media-L {
+      padding: 3.25rem 1.25rem 3.75rem;
+    }
+  }
+  &__name {
+    @include subtitle(var(--main-text-color), 3rem);
+    margin-bottom: 0.5rem;
+  }
+  &__code {
+    font-weight: 100;
+    font-size: 1.125rem;
+    color: var(--pet-text-color);
+    margin-bottom: 2rem;
+    @include media-L {
+      margin-bottom: 2.25rem;
+    }
+  }
+  &__obj {
+    &:not(:last-child) {
+      margin-bottom: 1.25rem;
+      @include media-M {
+        margin-bottom: 1.5rem;
+      }
+    }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    font-weight: 100;
+    font-size: 1.125rem;
+    &::after {
+      @include pseudo;
+      width: 100%;
+      height: 1px;
+      background-color: var(--inactive-link);
+      position: absolute;
+      bottom: -50%;
+      transform: translateY(50%);
+    }
+    &-value {
+      color: var(--pet-text-color);
+    }
+    &-key {
+      color: var(--black);
+    }
+  }
+  &__btns {
+    margin-top: 4rem;
+    @include media-L {
+      margin-top: 6.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__btn {
+    width: 100%;
+    &:nth-child(1) {
+      margin-bottom: 1rem;
+    }
+    @include media-L {
+      width: 15vw;
+    }
+  }
+  &__odd {
+    margin-top: 2rem;
+    @include media-M {
+      display: flex;
+      flex-direction: row;
+      column-gap: 3.6vw;
+    }
+    @include media-L {
+      margin-top: 4rem;
+    }
+  }
+  &__subtitle {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--black);
+    margin-bottom: 1rem;
+    @include media-M {
+      font-size: 1.5rem;
+    }
+  }
+  &__text {
+    font-size: 1rem;
+    font-weight: 200;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+  }
+  &__info {
+    background-color: var(--sky-blue);
+    border-radius: 1.25rem;
+    padding: 1.25rem;
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 200;
+    line-height: 1.4;
+    @include media-maxM {
+      margin-bottom: 1rem;
+    }
+    @include media-M {
+      &:not(:last-of-type) {
+        margin-bottom: 1rem;
+      }
+    }
+    @include media-L {
+      padding: 1.5rem;
+    }
+    &-title {
+      font-size: 1.25rem;
+      font-weight: 300;
+      margin-bottom: 0.5rem;
+      @include media-M {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+      }
+    }
+    &-list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+    }
+  }
+  &__odd-img {
+    width: 100%;
+    height: 20rem;
+    @include media-M {
+      flex-shrink: 0;
+      width: 50%;
+      height: auto;
+    }
+    @include media-L {
+      width: 60%;
+    }
+    & picture,
+    img {
+      @include cover-image;
+    }
+  }
+  &__odd-btn {
+    width: 100%;
+    margin-top: 2rem;
+    @include media-M {
+      margin-top: 4rem;
+      display: flex;
+      justify-content: center;
+    }
+    & > a {
+      width: 100%;
+      @include media-M {
+        width: 40vw;
+      }
+      @include media-L {
+        width: 15vw;
+      }
+    }
+  }
+}

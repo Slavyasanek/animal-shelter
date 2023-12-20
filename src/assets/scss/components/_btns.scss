@@ -81,6 +81,15 @@
         color: var(--light-blue);
       }
     }
+    &--grey {
+      border-radius: 3.125rem;
+      color: var(--text-grey);
+      border-color: var(--text-grey);
+      &:hover, &:focus {
+        color: var(--yellow-hover);
+        border-color: var(--yellow-hover);
+      }
+    }
   }
   &-blue {
     background-color: var(--dark-blue);

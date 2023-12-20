@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +8,19 @@
   </head>
   <body>
     <include src="./assets/partials/header.html"></include>
-    <main></main>
+    <main>
+      <include
+        src="./assets/partials/breadcrumbs.html"
+        locals='{"title": "Хвостик", 
+      "currentPage": "Хвостик"}'
+      ></include>
+      <include src="./assets/partials/about-pet.html"></include>
+      <include src="./assets/partials/questions.html"></include>
+      <include src="./assets/partials/demands.html"></include>
+      <div class="section-bottom">
+        <include src="./assets/partials/stories.html"></include>
+      </div>
+    </main>
     <include src="./assets/partials/footer.html"></include>
     <script type="module" src="./assets/js/index.js"></script>
   </body>
