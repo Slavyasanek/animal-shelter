@@ -4037,13 +4037,38 @@ address {
 
 .about-war {
   padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
+}
+
+.about-war:after {
+  content: "";
+  z-index: -1;
+  background-image: url("paws-track.a5c9fcbc.svg");
+  background-position: left 0 bottom 8rem;
+  background-repeat: no-repeat;
+  background-size: 160%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .about-war:after {
+    background-position: left 0 bottom 12rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .about-war {
     padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-bottom: 7rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about-war {
+    padding-bottom: 17rem;
   }
 }
 
@@ -4178,6 +4203,23 @@ address {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.about-war__volonteer {
+  padding-top: 4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .about-war__volonteer {
+    padding-top: 7rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about-war__volonteer {
+    max-width: 45.6vw;
+    padding-top: 17.5rem;
+  }
 }
 
 .not-found {
