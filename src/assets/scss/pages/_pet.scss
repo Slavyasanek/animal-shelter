@@ -1,5 +1,19 @@
 .pet {
   padding-top: 2rem;
+  position: relative;
+  &::after {
+    @include pseudo;
+    position: absolute;
+    width: 120%;
+    height: 100%;
+    bottom: -60%;
+    right: 0;
+    @extend %section--gradient;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: bottom 0px left 0px;
+    z-index: -1;
+  }
   @include media-L {
     padding-top: 4rem;
   }

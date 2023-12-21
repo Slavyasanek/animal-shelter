@@ -66,7 +66,8 @@
       border-radius: 2.5rem;
       border-color: var(--black);
       color: var(--main-text-color);
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         border-color: var(--dark-blue);
         color: var(--dark-blue);
       }
@@ -81,13 +82,19 @@
         color: var(--light-blue);
       }
     }
-    &--grey {
+    &--yellow {
+      color: var(--yellow-hover);
+      border-color: var(--yellow-hover);
       border-radius: 3.125rem;
-      color: var(--text-grey);
-      border-color: var(--text-grey);
-      &:hover, &:focus {
-        color: var(--yellow-hover);
-        border-color: var(--yellow-hover);
+      &:hover,
+      &:focus {
+        color: var(--dark-blue);
+        border-color: var(--dark-blue);
+      }
+      &:disabled {
+        color: var(--text-grey);
+        border-color: var(--text-grey);
+        cursor: auto;
       }
     }
   }

@@ -841,7 +841,7 @@ address {
   }
 }
 
-.care-shelter--gradient, .care-shelter, .not-found:after, .about-shelter, .visit, .friends, .hero__gradient:before {
+.care-shelter--gradient, .care-shelter, .not-found:after, .pet:after, .about-shelter, .visit, .friends, .hero__gradient:before {
   background-image: radial-gradient(circle at 68%, #04397b0f 27rem, #04397b0a 27rem 42.625rem, #04397b05 42.625rem 58.93rem, #0000 58.93rem);
 }
 
@@ -992,15 +992,21 @@ address {
   color: var(--light-blue);
 }
 
-.btn-dashed--grey {
-  color: var(--text-grey);
-  border-color: var(--text-grey);
+.btn-dashed--yellow {
+  color: var(--yellow-hover);
+  border-color: var(--yellow-hover);
   border-radius: 3.125rem;
 }
 
-.btn-dashed--grey:hover, .btn-dashed--grey:focus {
-  color: var(--yellow-hover);
-  border-color: var(--yellow-hover);
+.btn-dashed--yellow:hover, .btn-dashed--yellow:focus {
+  color: var(--dark-blue);
+  border-color: var(--dark-blue);
+}
+
+.btn-dashed--yellow:disabled {
+  color: var(--text-grey);
+  border-color: var(--text-grey);
+  cursor: auto;
 }
 
 .btn-blue {
@@ -4139,6 +4145,20 @@ address {
 
 .pet {
   padding-top: 2rem;
+  position: relative;
+}
+
+.pet:after {
+  content: "";
+  z-index: -1;
+  background-position: left 0 bottom 0;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 120%;
+  height: 100%;
+  position: absolute;
+  bottom: -60%;
+  right: 0;
 }
 
 @media screen and (min-width: 1200px) {
